@@ -1,0 +1,3310 @@
+[
+      {
+         "id":"1",
+         "name":"Abbottabad"
+      },
+      {
+         "id":"3",
+         "name":"BAGNOTER"
+      },
+      {
+         "id":"5",
+         "name":"GOHARABAD"
+      },
+      {
+         "id":"7",
+         "name":"HARNO"
+      },
+      {
+         "id":"9",
+         "name":"JHUGIAN"
+      },
+      {
+         "id":"10",
+         "name":"JINNAHABAD"
+      },
+      {
+         "id":"11",
+         "name":"KAKOOL ( PMA)"
+      },
+      {
+         "id":"12",
+         "name":"KALA BAGH (P.A."
+      },
+      {
+         "id":"16",
+         "name":"MALIK PURA"
+      },
+      {
+         "id":"17",
+         "name":"MANDIAN"
+      },
+      {
+         "id":"20",
+         "name":"MUSLIMABAD"
+      },
+      {
+         "id":"23",
+         "name":"NAWAN SHER"
+      },
+      {
+         "id":"26",
+         "name":"REHMATABAD"
+      },
+      {
+         "id":"31",
+         "name":"SHIMLA HILL"
+      },
+      {
+         "id":"35",
+         "name":"Attock"
+      },
+      {
+         "id":"36",
+         "name":"ATTOCK KHURD"
+      },
+      {
+         "id":"39",
+         "name":"BROTHA"
+      },
+      {
+         "id":"42",
+         "name":"GHAZI"
+      },
+      {
+         "id":"44",
+         "name":"GONDAL"
+      },
+      {
+         "id":"49",
+         "name":"HATTIAN"
+      },
+      {
+         "id":"50",
+         "name":"Hazro"
+      },
+      {
+         "id":"51",
+         "name":"Kamra"
+      },
+      {
+         "id":"53",
+         "name":"LAWRENCEPUR"
+      },
+      {
+         "id":"54",
+         "name":"MALAN MANSOOR"
+      },
+      {
+         "id":"56",
+         "name":"MANSHERA CAMP"
+      },
+      {
+         "id":"63",
+         "name":"RANGO"
+      },
+      {
+         "id":"71",
+         "name":"SHINKA"
+      },
+      {
+         "id":"72",
+         "name":"Tarbela Dam"
+      },
+      {
+         "id":"73",
+         "name":"WAISA"
+      },
+      {
+         "id":"74",
+         "name":"Badin"
+      },
+      {
+         "id":"75",
+         "name":"GOLARCHI"
+      },
+      {
+         "id":"77",
+         "name":"KHOSKI"
+      },
+      {
+         "id":"78",
+         "name":"Matli"
+      },
+      {
+         "id":"79",
+         "name":"TALHAR"
+      },
+      {
+         "id":"80",
+         "name":"TANDO BAGO"
+      },
+      {
+         "id":"81",
+         "name":"TANDO GHULAM AL"
+      },
+      {
+         "id":"82",
+         "name":"Tando Mohd.khan"
+      },
+      {
+         "id":"83",
+         "name":"Bahawalnagar"
+      },
+      {
+         "id":"84",
+         "name":"Chistian"
+      },
+      {
+         "id":"85",
+         "name":"Haroonabad"
+      },
+      {
+         "id":"88",
+         "name":"CHAK ABDULLAH"
+      },
+      {
+         "id":"90",
+         "name":"DHARANWALA"
+      },
+      {
+         "id":"92",
+         "name":"Faqir Wali"
+      },
+      {
+         "id":"93",
+         "name":"FORT ABBAS"
+      },
+      {
+         "id":"95",
+         "name":"MANDI SADIQ GUN"
+      },
+      {
+         "id":"96",
+         "name":"MINCHIN ABAD"
+      },
+      {
+         "id":"97",
+         "name":"MOHAR SHARIF"
+      },
+      {
+         "id":"99",
+         "name":"Bahawalpur"
+      },
+      {
+         "id":"100",
+         "name":"Ahmad Pur East"
+      },
+      {
+         "id":"101",
+         "name":"Dunya Pur"
+      },
+      {
+         "id":"102",
+         "name":"KAHROR PAKKA"
+      },
+      {
+         "id":"103",
+         "name":"KHAIRPUR TAMIAN"
+      },
+      {
+         "id":"104",
+         "name":"Lodhran"
+      },
+      {
+         "id":"105",
+         "name":"NOORPUR NORANGA"
+      },
+      {
+         "id":"106",
+         "name":"SATIYANA"
+      },
+      {
+         "id":"107",
+         "name":"SYED WALA"
+      },
+      {
+         "id":"108",
+         "name":"UCH SHARIF"
+      },
+      {
+         "id":"109",
+         "name":"Yazman Mandi"
+      },
+      {
+         "id":"110",
+         "name":"Bannu"
+      },
+      {
+         "id":"111",
+         "name":"MIRAN SHAH"
+      },
+      {
+         "id":"112",
+         "name":"DOMAIL"
+      },
+      {
+         "id":"113",
+         "name":"Lakki Marwat"
+      },
+      {
+         "id":"117",
+         "name":"SARAI NAURANG"
+      },
+      {
+         "id":"118",
+         "name":"Batkhela"
+      },
+      {
+         "id":"119",
+         "name":"ABOHA"
+      },
+      {
+         "id":"121",
+         "name":"AMAN DARA"
+      },
+      {
+         "id":"123",
+         "name":"BARIKOT"
+      },
+      {
+         "id":"124",
+         "name":"CHAKDARA"
+      },
+      {
+         "id":"125",
+         "name":"DARBAR(HAJIABAD"
+      },
+      {
+         "id":"126",
+         "name":"DHERI JULAGRAM"
+      },
+      {
+         "id":"127",
+         "name":"GULABAD"
+      },
+      {
+         "id":"129",
+         "name":"KHAR (BATKHELA)"
+      },
+      {
+         "id":"130",
+         "name":"KOTA"
+      },
+      {
+         "id":"131",
+         "name":"Malakand"
+      },
+      {
+         "id":"134",
+         "name":"Bhai Pheru"
+      },
+      {
+         "id":"135",
+         "name":"Manga Mandi"
+      },
+      {
+         "id":"136",
+         "name":"CHANGA MANGA"
+      },
+      {
+         "id":"137",
+         "name":"HEAD BALOKI ROA"
+      },
+      {
+         "id":"140",
+         "name":"Bhakkar"
+      },
+      {
+         "id":"142",
+         "name":"BEHAL"
+      },
+      {
+         "id":"145",
+         "name":"DULEWALA"
+      },
+      {
+         "id":"146",
+         "name":"HYDER ABAD THAL"
+      },
+      {
+         "id":"149",
+         "name":"NAWAN JANDANWAL"
+      },
+      {
+         "id":"153",
+         "name":"Bhimber A. K"
+      },
+      {
+         "id":"154",
+         "name":"AMBRIALA CHOWK"
+      },
+      {
+         "id":"155",
+         "name":"BARNALA (A.K)"
+      },
+      {
+         "id":"156",
+         "name":"BHRING (A.K)"
+      },
+      {
+         "id":"157",
+         "name":"CHOWKI (A.K)"
+      },
+      {
+         "id":"158",
+         "name":"DHANDER (KALAN)"
+      },
+      {
+         "id":"159",
+         "name":"DHOK DAURA (A.K"
+      },
+      {
+         "id":"160",
+         "name":"KADHALA (A.K)"
+      },
+      {
+         "id":"161",
+         "name":"KALARY MORE(A.K"
+      },
+      {
+         "id":"164",
+         "name":"KOT JAMEL (A.K)"
+      },
+      {
+         "id":"165",
+         "name":"LIAQATABAD(A.K)"
+      },
+      {
+         "id":"168",
+         "name":"SMAHNI (A.K)"
+      },
+      {
+         "id":"169",
+         "name":"BUNNER"
+      },
+      {
+         "id":"170",
+         "name":"BAZARGAI"
+      },
+      {
+         "id":"178",
+         "name":"Burewala"
+      },
+      {
+         "id":"179",
+         "name":"GAGGO MANDI"
+      },
+      {
+         "id":"180",
+         "name":"Chakwal"
+      },
+      {
+         "id":"181",
+         "name":"AMIN ABAD"
+      },
+      {
+         "id":"182",
+         "name":"AMIR PUR MANGAN"
+      },
+      {
+         "id":"186",
+         "name":"BHAGWAL"
+      },
+      {
+         "id":"187",
+         "name":"BHAUN"
+      },
+      {
+         "id":"188",
+         "name":"BHIKARI KALAN"
+      },
+      {
+         "id":"189",
+         "name":"BHUBBAR"
+      },
+      {
+         "id":"191",
+         "name":"CHAK BAQAR SHAH"
+      },
+      {
+         "id":"192",
+         "name":"CHAK BELI KHAN"
+      },
+      {
+         "id":"198",
+         "name":"CHAMBI"
+      },
+      {
+         "id":"199",
+         "name":"Choa Saidan Sha"
+      },
+      {
+         "id":"201",
+         "name":"DAHEWAL"
+      },
+      {
+         "id":"202",
+         "name":"DALWAL"
+      },
+      {
+         "id":"206",
+         "name":"DHODA"
+      },
+      {
+         "id":"207",
+         "name":"DHOKE BADIAL"
+      },
+      {
+         "id":"208",
+         "name":"DHOKE MAKEN"
+      },
+      {
+         "id":"209",
+         "name":"DHUDIAL"
+      },
+      {
+         "id":"210",
+         "name":"DHURKANA"
+      },
+      {
+         "id":"212",
+         "name":"DOREY"
+      },
+      {
+         "id":"214",
+         "name":"KALAR KAHAR"
+      },
+      {
+         "id":"215",
+         "name":"KERYALA"
+      },
+      {
+         "id":"219",
+         "name":"MAGHAL"
+      },
+      {
+         "id":"221",
+         "name":"MIANI"
+      },
+      {
+         "id":"222",
+         "name":"MOHARA GULSHER"
+      },
+      {
+         "id":"223",
+         "name":"MOHUTA MOHRA"
+      },
+      {
+         "id":"224",
+         "name":"MULHAL MUGHALAN"
+      },
+      {
+         "id":"225",
+         "name":"MURID"
+      },
+      {
+         "id":"229",
+         "name":"PERIAL"
+      },
+      {
+         "id":"230",
+         "name":"PINDI GUJRAN"
+      },
+      {
+         "id":"234",
+         "name":"SALOI"
+      },
+      {
+         "id":"236",
+         "name":"SARAI CHOWK"
+      },
+      {
+         "id":"237",
+         "name":"SARKALAN"
+      },
+      {
+         "id":"238",
+         "name":"SIRGUDHAN"
+      },
+      {
+         "id":"239",
+         "name":"SOHAWA DEWALIAN"
+      },
+      {
+         "id":"240",
+         "name":"TATRAL"
+      },
+      {
+         "id":"241",
+         "name":"THANIL FATOI"
+      },
+      {
+         "id":"245",
+         "name":"VEHALIZER"
+      },
+      {
+         "id":"248",
+         "name":"Chicha Watni"
+      },
+      {
+         "id":"249",
+         "name":"GHAZIABAD"
+      },
+      {
+         "id":"250",
+         "name":"HARAPPA STATION"
+      },
+      {
+         "id":"252",
+         "name":"KAMALIA"
+      },
+      {
+         "id":"254",
+         "name":"Chiniot"
+      },
+      {
+         "id":"256",
+         "name":"Chitral"
+      },
+      {
+         "id":"257",
+         "name":"DARROSH"
+      },
+      {
+         "id":"258",
+         "name":"Dadu"
+      },
+      {
+         "id":"259",
+         "name":"BHAN SAEED ABAD"
+      },
+      {
+         "id":"260",
+         "name":"PHULJI STATION"
+      },
+      {
+         "id":"262",
+         "name":"Sehwan"
+      },
+      {
+         "id":"263",
+         "name":"SITA ROAD(REHMA"
+      },
+      {
+         "id":"264",
+         "name":"Dadyal (a.k)"
+      },
+      {
+         "id":"265",
+         "name":"AKAL GARH (A.K)"
+      },
+      {
+         "id":"266",
+         "name":"BATHRUI (A.K)"
+      },
+      {
+         "id":"267",
+         "name":"CHAK SWARI(A.K)"
+      },
+      {
+         "id":"268",
+         "name":"DHANGRI BALA (A"
+      },
+      {
+         "id":"269",
+         "name":"EISER (A.K)"
+      },
+      {
+         "id":"270",
+         "name":"HAMID PUR (A.K)"
+      },
+      {
+         "id":"271",
+         "name":"ISLAM GARH(A.K)"
+      },
+      {
+         "id":"273",
+         "name":"KARKRA TOWN(A.K"
+      },
+      {
+         "id":"274",
+         "name":"KHANABAD (A.K)"
+      },
+      {
+         "id":"275",
+         "name":"PANYAM (A.K)"
+      },
+      {
+         "id":"276",
+         "name":"PIND KALAN(A.K)"
+      },
+      {
+         "id":"277",
+         "name":"PIND KHURD(A.K)"
+      },
+      {
+         "id":"278",
+         "name":"PLAK (A.K)"
+      },
+      {
+         "id":"279",
+         "name":"SARANDA (A.K)"
+      },
+      {
+         "id":"280",
+         "name":"TANGDEW (A.K)"
+      },
+      {
+         "id":"281",
+         "name":"TRUTTA (A.K)"
+      },
+      {
+         "id":"282",
+         "name":"Daska"
+      },
+      {
+         "id":"283",
+         "name":"GLOTIAN MORR"
+      },
+      {
+         "id":"284",
+         "name":"JAISERWALA"
+      },
+      {
+         "id":"285",
+         "name":"KANDAL SAYAN"
+      },
+      {
+         "id":"286",
+         "name":"Mandranwala"
+      },
+      {
+         "id":"287",
+         "name":"MITRANWALI"
+      },
+      {
+         "id":"289",
+         "name":"RANJHI"
+      },
+      {
+         "id":"291",
+         "name":"Sohawa"
+      },
+      {
+         "id":"293",
+         "name":"Dera Ghazi Khan"
+      },
+      {
+         "id":"296",
+         "name":"CHOTI"
+      },
+      {
+         "id":"297",
+         "name":"FAZILPUR DHUNDH"
+      },
+      {
+         "id":"298",
+         "name":"Jampur"
+      },
+      {
+         "id":"300",
+         "name":"KOT MITHAN"
+      },
+      {
+         "id":"302",
+         "name":"MOHMMADPUR DIWA"
+      },
+      {
+         "id":"304",
+         "name":"PAIGAH"
+      },
+      {
+         "id":"305",
+         "name":"Rajanpur"
+      },
+      {
+         "id":"306",
+         "name":"Dera Ismail Khan"
+      },
+      {
+         "id":"314",
+         "name":"PAROVA"
+      },
+      {
+         "id":"319",
+         "name":"TANK"
+      },
+      {
+         "id":"322",
+         "name":"Faisalabad"
+      },
+      {
+         "id":"323",
+         "name":"Khurrianwala"
+      },
+      {
+         "id":"324",
+         "name":"CHAK JHUMRA"
+      },
+      {
+         "id":"325",
+         "name":"Sangla Hill"
+      },
+      {
+         "id":"326",
+         "name":"GADOON AMAZAI"
+      },
+      {
+         "id":"327",
+         "name":"GILGIT"
+      },
+      {
+         "id":"329",
+         "name":"CHILAS"
+      },
+      {
+         "id":"330",
+         "name":"ASTORE"
+      },
+      {
+         "id":"331",
+         "name":"BHONE"
+      },
+      {
+         "id":"333",
+         "name":"KARIMABAD(HUNZA"
+      },
+      {
+         "id":"334",
+         "name":"Gojra"
+      },
+      {
+         "id":"336",
+         "name":"ADDA PENSRA"
+      },
+      {
+         "id":"337",
+         "name":"ADDA THIKRIWALA"
+      },
+      {
+         "id":"344",
+         "name":"Gujar Khan"
+      },
+      {
+         "id":"348",
+         "name":"BEWAL"
+      },
+      {
+         "id":"358",
+         "name":"DAUL TALA"
+      },
+      {
+         "id":"363",
+         "name":"HARNAL"
+      },
+      {
+         "id":"364",
+         "name":"ISLAM PURA JABB"
+      },
+      {
+         "id":"365",
+         "name":"JAND NAGAR"
+      },
+      {
+         "id":"368",
+         "name":"KALLAR SAYDIAN"
+      },
+      {
+         "id":"371",
+         "name":"KANYAL"
+      },
+      {
+         "id":"373",
+         "name":"Mandra"
+      },
+      {
+         "id":"380",
+         "name":"MOHRA NOORI"
+      },
+      {
+         "id":"382",
+         "name":"PAKKA KHUH"
+      },
+      {
+         "id":"384",
+         "name":"Rawat"
+      },
+      {
+         "id":"385",
+         "name":"SACOTE"
+      },
+      {
+         "id":"386",
+         "name":"SAGRI"
+      },
+      {
+         "id":"391",
+         "name":"SHAH BAGH"
+      },
+      {
+         "id":"399",
+         "name":"Gujranwala"
+      },
+      {
+         "id":"400",
+         "name":"alipur chattha"
+      },
+      {
+         "id":"401",
+         "name":"Hafizabad"
+      },
+      {
+         "id":"402",
+         "name":"JALAL PUR BHATT"
+      },
+      {
+         "id":"403",
+         "name":"Kamoki"
+      },
+      {
+         "id":"404",
+         "name":"NOWSHERA VIRKAN"
+      },
+      {
+         "id":"405",
+         "name":"QILA DEDAR SING"
+      },
+      {
+         "id":"407",
+         "name":"GHUMAN WALA"
+      },
+      {
+         "id":"409",
+         "name":"JIBBRAN MANDI"
+      },
+      {
+         "id":"412",
+         "name":"KOT JE SING"
+      },
+      {
+         "id":"414",
+         "name":"KOULO TARRAR"
+      },
+      {
+         "id":"416",
+         "name":"MURALI WALA"
+      },
+      {
+         "id":"418",
+         "name":"Rahwali"
+      },
+      {
+         "id":"419",
+         "name":"RAJA SADOKEY"
+      },
+      {
+         "id":"420",
+         "name":"RASOOL PUR TARR"
+      },
+      {
+         "id":"423",
+         "name":"VANKY TARER"
+      },
+      {
+         "id":"426",
+         "name":"Gujrat"
+      },
+      {
+         "id":"427",
+         "name":"BAHUWAL"
+      },
+      {
+         "id":"432",
+         "name":"BOKEN MORE"
+      },
+      {
+         "id":"434",
+         "name":"DAULATPUR SAFAN"
+      },
+      {
+         "id":"435",
+         "name":"Fatehpur"
+      },
+      {
+         "id":"436",
+         "name":"HARIYAWALA"
+      },
+      {
+         "id":"438",
+         "name":"Kotla Arab Ali"
+      },
+      {
+         "id":"444",
+         "name":"SABOOR SHARIF"
+      },
+      {
+         "id":"445",
+         "name":"SAROKI"
+      },
+      {
+         "id":"447",
+         "name":"Haripur"
+      },
+      {
+         "id":"452",
+         "name":"HATTAR IND. EST"
+      },
+      {
+         "id":"453",
+         "name":"HAVELIAN"
+      },
+      {
+         "id":"455",
+         "name":"KANGRA"
+      },
+      {
+         "id":"456",
+         "name":"KHALABAT SECTOR"
+      },
+      {
+         "id":"458",
+         "name":"KOT NAJEEB ULLA"
+      },
+      {
+         "id":"464",
+         "name":"PANIAN"
+      },
+      {
+         "id":"466",
+         "name":"PIND HASHIM KHA"
+      },
+      {
+         "id":"469",
+         "name":"SARAI NAYMAT KH"
+      },
+      {
+         "id":"475",
+         "name":"Hyderabad"
+      },
+      {
+         "id":"476",
+         "name":"Tando Adam"
+      },
+      {
+         "id":"477",
+         "name":"BHIT SHAH"
+      },
+      {
+         "id":"478",
+         "name":"HALA"
+      },
+      {
+         "id":"479",
+         "name":"Jamshoro"
+      },
+      {
+         "id":"481",
+         "name":"Kotri"
+      },
+      {
+         "id":"482",
+         "name":"Matiyari"
+      },
+      {
+         "id":"483",
+         "name":"SAEEDABAD"
+      },
+      {
+         "id":"485",
+         "name":"Shadadpur"
+      },
+      {
+         "id":"486",
+         "name":"Islamabad"
+      },
+      {
+         "id":"487",
+         "name":"BHARA KHU"
+      },
+      {
+         "id":"488",
+         "name":"Jalal Pur Jattan"
+      },
+      {
+         "id":"490",
+         "name":"BHAGOWAL KALAN"
+      },
+      {
+         "id":"492",
+         "name":"HAJIWALA"
+      },
+      {
+         "id":"493",
+         "name":"Karianwala"
+      },
+      {
+         "id":"497",
+         "name":"MOHINUDIN PUR"
+      },
+      {
+         "id":"498",
+         "name":"TANDA"
+      },
+      {
+         "id":"499",
+         "name":"Jaranwala"
+      },
+      {
+         "id":"500",
+         "name":"AWAGUT"
+      },
+      {
+         "id":"501",
+         "name":"Jauhrabad"
+      },
+      {
+         "id":"509",
+         "name":"GROAT SHEHAR/CA"
+      },
+      {
+         "id":"512",
+         "name":"KATTHA SUGHRAL"
+      },
+      {
+         "id":"513",
+         "name":"KHABEKI"
+      },
+      {
+         "id":"515",
+         "name":"KHORRA"
+      },
+      {
+         "id":"516",
+         "name":"Khushab"
+      },
+      {
+         "id":"519",
+         "name":"MITHA TIWANA"
+      },
+      {
+         "id":"520",
+         "name":"NOORPUR THAL"
+      },
+      {
+         "id":"521",
+         "name":"NOWSHERA DT. KH"
+      },
+      {
+         "id":"524",
+         "name":"PADRAR"
+      },
+      {
+         "id":"527",
+         "name":"QAIDABAD"
+      },
+      {
+         "id":"530",
+         "name":"SHAHPUR CITY"
+      },
+      {
+         "id":"531",
+         "name":"SHAHPUR SADDAR"
+      },
+      {
+         "id":"532",
+         "name":"VEGOWAL"
+      },
+      {
+         "id":"533",
+         "name":"WADHI"
+      },
+      {
+         "id":"536",
+         "name":"Jehangira"
+      },
+      {
+         "id":"538",
+         "name":"AKORA KHATTAQ"
+      },
+      {
+         "id":"539",
+         "name":"KHAIRABAD"
+      },
+      {
+         "id":"541",
+         "name":"Jhang"
+      },
+      {
+         "id":"542",
+         "name":"Ahmad Pur Sial"
+      },
+      {
+         "id":"544",
+         "name":"CHUND"
+      },
+      {
+         "id":"545",
+         "name":"GARH MORE"
+      },
+      {
+         "id":"547",
+         "name":"MALHOONA MORE"
+      },
+      {
+         "id":"548",
+         "name":"MANDI SHAH JUIN"
+      },
+      {
+         "id":"550",
+         "name":"ROODO SULTAN"
+      },
+      {
+         "id":"551",
+         "name":"Jhelum"
+      },
+      {
+         "id":"553",
+         "name":"BHOWANJ"
+      },
+      {
+         "id":"557",
+         "name":"CHAK JAMAL"
+      },
+      {
+         "id":"563",
+         "name":"Deena"
+      },
+      {
+         "id":"565",
+         "name":"GUJARPUR"
+      },
+      {
+         "id":"578",
+         "name":"PAKHWAL"
+      },
+      {
+         "id":"579",
+         "name":"PANDORE"
+      },
+      {
+         "id":"580",
+         "name":"PURAN"
+      },
+      {
+         "id":"587",
+         "name":"Sarai Alamgir"
+      },
+      {
+         "id":"589",
+         "name":"SOHAWA (CITY ON"
+      },
+      {
+         "id":"592",
+         "name":"Karachi"
+      },
+      {
+         "id":"594",
+         "name":"Gawadar"
+      },
+      {
+         "id":"596",
+         "name":"Turbat"
+      },
+      {
+         "id":"598",
+         "name":"Hub Chowki"
+      },
+      {
+         "id":"600",
+         "name":"Panjgour"
+      },
+      {
+         "id":"601",
+         "name":"UTHAL"
+      },
+      {
+         "id":"602",
+         "name":"WINDER"
+      },
+      {
+         "id":"608",
+         "name":"BELA"
+      },
+      {
+         "id":"619",
+         "name":"GIDANI"
+      },
+      {
+         "id":"628",
+         "name":"Lasbela"
+      },
+      {
+         "id":"666",
+         "name":"Kark"
+      },
+      {
+         "id":"670",
+         "name":"Kasur"
+      },
+      {
+         "id":"672",
+         "name":"MANDI USMANWALA"
+      },
+      {
+         "id":"673",
+         "name":"KHAIR PUR MEERU"
+      },
+      {
+         "id":"675",
+         "name":"Kandiaro"
+      },
+      {
+         "id":"676",
+         "name":"KOT DIGEE"
+      },
+      {
+         "id":"678",
+         "name":"Mehrabpur"
+      },
+      {
+         "id":"679",
+         "name":"PIR JO GOTH"
+      },
+      {
+         "id":"680",
+         "name":"Rani Pur"
+      },
+      {
+         "id":"681",
+         "name":"THERI MIR WAH"
+      },
+      {
+         "id":"683",
+         "name":"Khanewal"
+      },
+      {
+         "id":"685",
+         "name":"CHAK 168/10R"
+      },
+      {
+         "id":"686",
+         "name":"JAHANIA"
+      },
+      {
+         "id":"688",
+         "name":"Kabir Wala"
+      },
+      {
+         "id":"691",
+         "name":"PANG KASI"
+      },
+      {
+         "id":"693",
+         "name":"SARDARPUR"
+      },
+      {
+         "id":"694",
+         "name":"SHAMKOT"
+      },
+      {
+         "id":"696",
+         "name":"THATTA (SADIQAB"
+      },
+      {
+         "id":"697",
+         "name":"Khanpur"
+      },
+      {
+         "id":"701",
+         "name":"ZAHIR PEER"
+      },
+      {
+         "id":"702",
+         "name":"Kharian"
+      },
+      {
+         "id":"704",
+         "name":"ATTOWALA"
+      },
+      {
+         "id":"705",
+         "name":"BIDDER MARJAN"
+      },
+      {
+         "id":"710",
+         "name":"DHORIA"
+      },
+      {
+         "id":"711",
+         "name":"DHUNNI"
+      },
+      {
+         "id":"712",
+         "name":"Dinga"
+      },
+      {
+         "id":"718",
+         "name":"NOONAWALI"
+      },
+      {
+         "id":"722",
+         "name":"Khewra"
+      },
+      {
+         "id":"723",
+         "name":"DANDOT"
+      },
+      {
+         "id":"724",
+         "name":"Kohat"
+      },
+      {
+         "id":"725",
+         "name":"HANGU"
+      },
+      {
+         "id":"726",
+         "name":"ALI ZAI KURRAM"
+      },
+      {
+         "id":"727",
+         "name":"BABRI BANDA"
+      },
+      {
+         "id":"728",
+         "name":"BAGGAN"
+      },
+      {
+         "id":"731",
+         "name":"CHAKAR KOT KOHA"
+      },
+      {
+         "id":"734",
+         "name":"GUMBAT"
+      },
+      {
+         "id":"738",
+         "name":"LACHI"
+      },
+      {
+         "id":"739",
+         "name":"MANDURI KURRAM"
+      },
+      {
+         "id":"741",
+         "name":"PARACHINAR"
+      },
+      {
+         "id":"743",
+         "name":"SARO ZAI"
+      },
+      {
+         "id":"744",
+         "name":"TAPPI"
+      },
+      {
+         "id":"745",
+         "name":"THALL"
+      },
+      {
+         "id":"747",
+         "name":"Kot Addu"
+      },
+      {
+         "id":"748",
+         "name":"DAIRA DIN PANNA"
+      },
+      {
+         "id":"749",
+         "name":"MIR PUR BAGHAL"
+      },
+      {
+         "id":"751",
+         "name":"SANAWAN"
+      },
+      {
+         "id":"752",
+         "name":"Taunsa Sharif"
+      },
+      {
+         "id":"754",
+         "name":"Kotli (a. K)"
+      },
+      {
+         "id":"755",
+         "name":"AGHAR JAMALPUR"
+      },
+      {
+         "id":"757",
+         "name":"BRUND BATHA(A.K"
+      },
+      {
+         "id":"758",
+         "name":"CHORAI (A.K)"
+      },
+      {
+         "id":"759",
+         "name":"DAMMAS (A.K)"
+      },
+      {
+         "id":"760",
+         "name":"DANDLI (A.K)"
+      },
+      {
+         "id":"762",
+         "name":"DONGI (A.K)"
+      },
+      {
+         "id":"763",
+         "name":"GOI"
+      },
+      {
+         "id":"764",
+         "name":"GULPUR (A.K)"
+      },
+      {
+         "id":"765",
+         "name":"HAJIABAD (A.K)"
+      },
+      {
+         "id":"766",
+         "name":"HOLAR (A.K)"
+      },
+      {
+         "id":"767",
+         "name":"JUNA (A.K)"
+      },
+      {
+         "id":"768",
+         "name":"KALAH"
+      },
+      {
+         "id":"769",
+         "name":"KAMROTTY (A.K)"
+      },
+      {
+         "id":"770",
+         "name":"KERALA MAJHAN"
+      },
+      {
+         "id":"771",
+         "name":"KHAD GUJRAN(A.K"
+      },
+      {
+         "id":"772",
+         "name":"KHURATTA (A.K)"
+      },
+      {
+         "id":"773",
+         "name":"NAKIYAL (A.K)"
+      },
+      {
+         "id":"774",
+         "name":"NAR (A.K.)"
+      },
+      {
+         "id":"775",
+         "name":"NEW AFZALPUR(AK"
+      },
+      {
+         "id":"777",
+         "name":"PANJEERA (A.K.)"
+      },
+      {
+         "id":"778",
+         "name":"POTHA (A.K.)"
+      },
+      {
+         "id":"779",
+         "name":"PULENDRI (A.K)"
+      },
+      {
+         "id":"781",
+         "name":"SARSAWA (A.K.)"
+      },
+      {
+         "id":"782",
+         "name":"SEHAR MANDI(A.K"
+      },
+      {
+         "id":"783",
+         "name":"SEHNSA (A.K.)"
+      },
+      {
+         "id":"785",
+         "name":"SUPPLY (A.K.)"
+      },
+      {
+         "id":"787",
+         "name":"TALIAN (A.K.)"
+      },
+      {
+         "id":"788",
+         "name":"TATA PANI (A.K)"
+      },
+      {
+         "id":"789",
+         "name":"Lahore"
+      },
+      {
+         "id":"790",
+         "name":"Muridke"
+      },
+      {
+         "id":"805",
+         "name":"CHUNG"
+      },
+      {
+         "id":"806",
+         "name":"Ferozwala"
+      },
+      {
+         "id":"807",
+         "name":"KAHNA NAO"
+      },
+      {
+         "id":"808",
+         "name":"KALA SHAH KAKU"
+      },
+      {
+         "id":"809",
+         "name":"KOT ABDUL MALIK"
+      },
+      {
+         "id":"810",
+         "name":"Shahdara"
+      },
+      {
+         "id":"812",
+         "name":"Lalamusa"
+      },
+      {
+         "id":"817",
+         "name":"Larkana"
+      },
+      {
+         "id":"818",
+         "name":"ARIJA"
+      },
+      {
+         "id":"819",
+         "name":"BADAH"
+      },
+      {
+         "id":"822",
+         "name":"DOKRI"
+      },
+      {
+         "id":"823",
+         "name":"GARIH KHAIRO"
+      },
+      {
+         "id":"825",
+         "name":"KAMBER ALI KHAN"
+      },
+      {
+         "id":"826",
+         "name":"KHAIRPUR NATHAN"
+      },
+      {
+         "id":"827",
+         "name":"LALU RAWANK"
+      },
+      {
+         "id":"828",
+         "name":"Mehar"
+      },
+      {
+         "id":"829",
+         "name":"MIROKHAN"
+      },
+      {
+         "id":"831",
+         "name":"NAUDERO"
+      },
+      {
+         "id":"833",
+         "name":"RADHAN"
+      },
+      {
+         "id":"834",
+         "name":"RATODERO"
+      },
+      {
+         "id":"835",
+         "name":"Shahdadkot"
+      },
+      {
+         "id":"837",
+         "name":"WAGGON"
+      },
+      {
+         "id":"838",
+         "name":"WARAH"
+      },
+      {
+         "id":"839",
+         "name":"Layyah"
+      },
+      {
+         "id":"843",
+         "name":"FATEHPUR (CHAK"
+      },
+      {
+         "id":"844",
+         "name":"HERA (CHAK 134"
+      },
+      {
+         "id":"845",
+         "name":"JAMAN SHAH(SURS"
+      },
+      {
+         "id":"846",
+         "name":"KAROR LAL EASAN"
+      },
+      {
+         "id":"847",
+         "name":"KOT SULTAN(BHAI"
+      },
+      {
+         "id":"848",
+         "name":"LADHANA"
+      },
+      {
+         "id":"849",
+         "name":"LALA ZAR(CHAK 1"
+      },
+      {
+         "id":"851",
+         "name":"PIR JAGI(CHAK 1"
+      },
+      {
+         "id":"854",
+         "name":"JAUNPUR"
+      },
+      {
+         "id":"855",
+         "name":"KHAN BELA"
+      },
+      {
+         "id":"856",
+         "name":"Liaqatpur"
+      },
+      {
+         "id":"857",
+         "name":"TRANDA MOHD. PA"
+      },
+      {
+         "id":"858",
+         "name":"Mandi Bahauddin"
+      },
+      {
+         "id":"859",
+         "name":"BADSHAHPUR"
+      },
+      {
+         "id":"861",
+         "name":"BHIKI SHARIF"
+      },
+      {
+         "id":"862",
+         "name":"BHIKO MORE"
+      },
+      {
+         "id":"863",
+         "name":"GOJRA ( MANDI B"
+      },
+      {
+         "id":"864",
+         "name":"HARIAH RAILWAY"
+      },
+      {
+         "id":"866",
+         "name":"KUTHIALA SHEIKH"
+      },
+      {
+         "id":"868",
+         "name":"LAIDHER"
+      },
+      {
+         "id":"873",
+         "name":"PAHRIANWALI ADD"
+      },
+      {
+         "id":"874",
+         "name":"PHALIA"
+      },
+      {
+         "id":"875",
+         "name":"QADIRABAD"
+      },
+      {
+         "id":"878",
+         "name":"WASU"
+      },
+      {
+         "id":"879",
+         "name":"MOHLANWAL"
+      },
+      {
+         "id":"880",
+         "name":"Mansehra"
+      },
+      {
+         "id":"881",
+         "name":"ATTAR SHISHA"
+      },
+      {
+         "id":"883",
+         "name":"BALAKOT"
+      },
+      {
+         "id":"884",
+         "name":"Batgram"
+      },
+      {
+         "id":"886",
+         "name":"BEESHAM"
+      },
+      {
+         "id":"891",
+         "name":"GARHI HABIB ULL"
+      },
+      {
+         "id":"892",
+         "name":"GHAZIKOT TOWNSH"
+      },
+      {
+         "id":"893",
+         "name":"HAJIABAD ICHRIA"
+      },
+      {
+         "id":"895",
+         "name":"NEWDARBAND TOWN"
+      },
+      {
+         "id":"896",
+         "name":"OUGHI"
+      },
+      {
+         "id":"897",
+         "name":"Qalandarabad"
+      },
+      {
+         "id":"898",
+         "name":"SHANKIARI"
+      },
+      {
+         "id":"900",
+         "name":"Mardan"
+      },
+      {
+         "id":"901",
+         "name":"Charsadda"
+      },
+      {
+         "id":"903",
+         "name":"BALA GARHI"
+      },
+      {
+         "id":"904",
+         "name":"GARHI DOULAT ZA"
+      },
+      {
+         "id":"905",
+         "name":"GUJAR GARHI"
+      },
+      {
+         "id":"908",
+         "name":"JAMAL GARI"
+      },
+      {
+         "id":"910",
+         "name":"KATLANG"
+      },
+      {
+         "id":"911",
+         "name":"MAYAR"
+      },
+      {
+         "id":"913",
+         "name":"RAJAR"
+      },
+      {
+         "id":"914",
+         "name":"RASHAKAI"
+      },
+      {
+         "id":"916",
+         "name":"SARDHERI"
+      },
+      {
+         "id":"919",
+         "name":"SHEWA ADDA"
+      },
+      {
+         "id":"921",
+         "name":"UMAR ZAI"
+      },
+      {
+         "id":"923",
+         "name":"Mian Channu"
+      },
+      {
+         "id":"924",
+         "name":"ABDUL HAKIM"
+      },
+      {
+         "id":"925",
+         "name":"AGWANA"
+      },
+      {
+         "id":"926",
+         "name":"ARIFABAD"
+      },
+      {
+         "id":"930",
+         "name":"KOT ISLAM"
+      },
+      {
+         "id":"931",
+         "name":"KOT SUJAN SING"
+      },
+      {
+         "id":"932",
+         "name":"MAKADOOMPUR POK"
+      },
+      {
+         "id":"934",
+         "name":"PULL BAGER"
+      },
+      {
+         "id":"935",
+         "name":"PULL NO. 12 MEL"
+      },
+      {
+         "id":"938",
+         "name":"TULAMBA"
+      },
+      {
+         "id":"939",
+         "name":"Mianwali"
+      },
+      {
+         "id":"940",
+         "name":"BALOKHEL CITY"
+      },
+      {
+         "id":"941",
+         "name":"CHASHMA"
+      },
+      {
+         "id":"944",
+         "name":"DAUDKHEL"
+      },
+      {
+         "id":"945",
+         "name":"EASAKHEL"
+      },
+      {
+         "id":"946",
+         "name":"GULAN KHEL"
+      },
+      {
+         "id":"949",
+         "name":"KALA BAGH"
+      },
+      {
+         "id":"950",
+         "name":"KALOR KOT"
+      },
+      {
+         "id":"951",
+         "name":"KOT CHANDNAN"
+      },
+      {
+         "id":"952",
+         "name":"KUNDIAN"
+      },
+      {
+         "id":"953",
+         "name":"LIAQATABAD(PIPL"
+      },
+      {
+         "id":"956",
+         "name":"PHAKI SHAH MARD"
+      },
+      {
+         "id":"964",
+         "name":"Mingora (swat)"
+      },
+      {
+         "id":"966",
+         "name":"CHAR BAGH (SWAT"
+      },
+      {
+         "id":"968",
+         "name":"GUMBAT MERA"
+      },
+      {
+         "id":"969",
+         "name":"JOR (BUNNER)"
+      },
+      {
+         "id":"974",
+         "name":"MATTA (SWAT)"
+      },
+      {
+         "id":"975",
+         "name":"SAIDU SHARIF (S"
+      },
+      {
+         "id":"976",
+         "name":"Mirpur (a. K)"
+      },
+      {
+         "id":"977",
+         "name":"CHECHIAN (A.K.)"
+      },
+      {
+         "id":"978",
+         "name":"CHITTAR PARI"
+      },
+      {
+         "id":"979",
+         "name":"JATLAN (A.K.)"
+      },
+      {
+         "id":"980",
+         "name":"KHALIQ ABAD(A.K"
+      },
+      {
+         "id":"981",
+         "name":"Mangla Hamlet (a.k.)"
+      },
+      {
+         "id":"982",
+         "name":"MANGLA DAM"
+      },
+      {
+         "id":"984",
+         "name":"PANDI SABARWAL"
+      },
+      {
+         "id":"985",
+         "name":"PULL MANDA (A.K"
+      },
+      {
+         "id":"986",
+         "name":"TARIQ ABAD (A.K"
+      },
+      {
+         "id":"988",
+         "name":"Mirpur Khas"
+      },
+      {
+         "id":"989",
+         "name":"BACHA BAND"
+      },
+      {
+         "id":"990",
+         "name":"DIGRI"
+      },
+      {
+         "id":"991",
+         "name":"HINGORNO"
+      },
+      {
+         "id":"992",
+         "name":"JHUDO"
+      },
+      {
+         "id":"993",
+         "name":"KHIPRO"
+      },
+      {
+         "id":"994",
+         "name":"KOT GHULAM MOHD"
+      },
+      {
+         "id":"995",
+         "name":"Kunri"
+      },
+      {
+         "id":"997",
+         "name":"MITHI"
+      },
+      {
+         "id":"999",
+         "name":"PITHORO"
+      },
+      {
+         "id":"1000",
+         "name":"SAMARO"
+      },
+      {
+         "id":"1001",
+         "name":"TANDO JAN MOHD."
+      },
+      {
+         "id":"1002",
+         "name":"THARPARKER"
+      },
+      {
+         "id":"1003",
+         "name":"Umer Kot"
+      },
+      {
+         "id":"1004",
+         "name":"Mirpur Mathelo"
+      },
+      {
+         "id":"1005",
+         "name":"Ghotki"
+      },
+      {
+         "id":"1006",
+         "name":"ADIL PUR"
+      },
+      {
+         "id":"1007",
+         "name":"DAD LAGHARI"
+      },
+      {
+         "id":"1008",
+         "name":"Dharki"
+      },
+      {
+         "id":"1009",
+         "name":"JARWAR"
+      },
+      {
+         "id":"1010",
+         "name":"KHANPUR MEHER"
+      },
+      {
+         "id":"1012",
+         "name":"Moro"
+      },
+      {
+         "id":"1015",
+         "name":"MITHIANI"
+      },
+      {
+         "id":"1016",
+         "name":"NEW JATOI"
+      },
+      {
+         "id":"1017",
+         "name":"Multan"
+      },
+      {
+         "id":"1018",
+         "name":"JHARIAN"
+      },
+      {
+         "id":"1019",
+         "name":"Narang Mandi"
+      },
+      {
+         "id":"1020",
+         "name":"Murree"
+      },
+      {
+         "id":"1025",
+         "name":"BHURBAN PEARL C"
+      },
+      {
+         "id":"1036",
+         "name":"LOWER TOPA"
+      },
+      {
+         "id":"1039",
+         "name":"SEHER BAGLA"
+      },
+      {
+         "id":"1043",
+         "name":"Muzaffarabad(ak)"
+      },
+      {
+         "id":"1044",
+         "name":"AMBOR AREA"
+      },
+      {
+         "id":"1045",
+         "name":"Bagh (a.k.)"
+      },
+      {
+         "id":"1047",
+         "name":"CHAKOTHI (A.K.)"
+      },
+      {
+         "id":"1048",
+         "name":"CHAMANKOT (A.K)"
+      },
+      {
+         "id":"1049",
+         "name":"CHATTAR AREA"
+      },
+      {
+         "id":"1050",
+         "name":"CHELLA BANDI (A"
+      },
+      {
+         "id":"1052",
+         "name":"DHANI BOMBIAN"
+      },
+      {
+         "id":"1054",
+         "name":"EIDGAH ROAD"
+      },
+      {
+         "id":"1055",
+         "name":"GARHI DOPATTA"
+      },
+      {
+         "id":"1056",
+         "name":"HARI GHEL"
+      },
+      {
+         "id":"1058",
+         "name":"JALABAD (A.K.)"
+      },
+      {
+         "id":"1059",
+         "name":"KOHRI (A.K.)"
+      },
+      {
+         "id":"1062",
+         "name":"NOMANPURA"
+      },
+      {
+         "id":"1063",
+         "name":"PATTIKA (A.K.)"
+      },
+      {
+         "id":"1064",
+         "name":"RANGLA (A.K.)"
+      },
+      {
+         "id":"1065",
+         "name":"SARRAN (A.K.)"
+      },
+      {
+         "id":"1066",
+         "name":"SHOUKAT LINES"
+      },
+      {
+         "id":"1067",
+         "name":"Muzaffargarh"
+      },
+      {
+         "id":"1068",
+         "name":"Alipur"
+      },
+      {
+         "id":"1071",
+         "name":"Chowk Sarwar Sh"
+      },
+      {
+         "id":"1073",
+         "name":"Khangarh"
+      },
+      {
+         "id":"1074",
+         "name":"KHANPUR SHOMALI"
+      },
+      {
+         "id":"1075",
+         "name":"LALPIR (THERMA"
+      },
+      {
+         "id":"1076",
+         "name":"Mehmoodkot"
+      },
+      {
+         "id":"1077",
+         "name":"QADIRPUR RAWAN"
+      },
+      {
+         "id":"1078",
+         "name":"QASBA GRT. CHAK"
+      },
+      {
+         "id":"1082",
+         "name":"narowal"
+      },
+      {
+         "id":"1084",
+         "name":"ALIPUR SAYYADAN"
+      },
+      {
+         "id":"1087",
+         "name":"SHAKAR GARH"
+      },
+      {
+         "id":"1088",
+         "name":"ZAFARWAL"
+      },
+      {
+         "id":"1089",
+         "name":"Nawab Shah"
+      },
+      {
+         "id":"1090",
+         "name":"SANGHAR"
+      },
+      {
+         "id":"1091",
+         "name":"AKRI"
+      },
+      {
+         "id":"1092",
+         "name":"BUCHERI"
+      },
+      {
+         "id":"1093",
+         "name":"DAUR"
+      },
+      {
+         "id":"1094",
+         "name":"KAROONDI"
+      },
+      {
+         "id":"1095",
+         "name":"KHADRO"
+      },
+      {
+         "id":"1096",
+         "name":"PACCA CHANG"
+      },
+      {
+         "id":"1097",
+         "name":"QAZI AHMAD"
+      },
+      {
+         "id":"1098",
+         "name":"SAKRAND"
+      },
+      {
+         "id":"1099",
+         "name":"SHAH PUR CHAKAR"
+      },
+      {
+         "id":"1100",
+         "name":"REHMANI NAGAR"
+      },
+      {
+         "id":"1101",
+         "name":"Nowshera"
+      },
+      {
+         "id":"1110",
+         "name":"KHAT KALI"
+      },
+      {
+         "id":"1112",
+         "name":"PAR NOWSHERA"
+      },
+      {
+         "id":"1114",
+         "name":"Risal Pur"
+      },
+      {
+         "id":"1115",
+         "name":"TARNAB FARM(AGR"
+      },
+      {
+         "id":"1117",
+         "name":"DARBELLO"
+      },
+      {
+         "id":"1118",
+         "name":"DARYA KHAN MARI"
+      },
+      {
+         "id":"1120",
+         "name":"Nowshero Feroz"
+      },
+      {
+         "id":"1123",
+         "name":"THARU SHAH"
+      },
+      {
+         "id":"1124",
+         "name":"Okara"
+      },
+      {
+         "id":"1125",
+         "name":"BASSER PUR"
+      },
+      {
+         "id":"1126",
+         "name":"Depalpur"
+      },
+      {
+         "id":"1127",
+         "name":"HUJRA SHAH MUKE"
+      },
+      {
+         "id":"1128",
+         "name":"MANDI HEERA SIN"
+      },
+      {
+         "id":"1129",
+         "name":"RENALAKHURD"
+      },
+      {
+         "id":"1131",
+         "name":"CHAWINDA"
+      },
+      {
+         "id":"1132",
+         "name":"KALASWALA"
+      },
+      {
+         "id":"1133",
+         "name":"Pasrur"
+      },
+      {
+         "id":"1135",
+         "name":"Pattoki"
+      },
+      {
+         "id":"1137",
+         "name":"KANGANPUR"
+      },
+      {
+         "id":"1138",
+         "name":"TALVANDI"
+      },
+      {
+         "id":"1139",
+         "name":"THEENG MORE(ALL"
+      },
+      {
+         "id":"1140",
+         "name":"Peshawar"
+      },
+      {
+         "id":"1142",
+         "name":"DARA ADAM KHEL"
+      },
+      {
+         "id":"1143",
+         "name":"SHABQADAR"
+      },
+      {
+         "id":"1145",
+         "name":"Pind Dadan Khan"
+      },
+      {
+         "id":"1148",
+         "name":"JALALPUR SHARIF"
+      },
+      {
+         "id":"1151",
+         "name":"Quetta"
+      },
+      {
+         "id":"1152",
+         "name":"Khuzdar"
+      },
+      {
+         "id":"1153",
+         "name":"PISHIN"
+      },
+      {
+         "id":"1154",
+         "name":"CHAMAN"
+      },
+      {
+         "id":"1156",
+         "name":"KALAT"
+      },
+      {
+         "id":"1157",
+         "name":"LORALAI"
+      },
+      {
+         "id":"1158",
+         "name":"MASTUNG"
+      },
+      {
+         "id":"1159",
+         "name":"NUSHKI"
+      },
+      {
+         "id":"1160",
+         "name":"Zhob",
+         "shipment_type":[
+            "OVERNIGHT",
+            "DETAIN",
+            "OVERLAND"
+         ],
+         "allow_as_origin":false,
+         "allow_as_destination":true
+      },
+      {
+         "id":"1161",
+         "name":"AWARAN"
+      },
+      {
+         "id":"1162",
+         "name":"JIWANI"
+      },
+      {
+         "id":"1163",
+         "name":"KHARAN"
+      },
+      {
+         "id":"1165",
+         "name":"MACH"
+      },
+      {
+         "id":"1167",
+         "name":"MUSLIM BAGH"
+      },
+      {
+         "id":"1168",
+         "name":"OREMARA TOWN"
+      },
+      {
+         "id":"1169",
+         "name":"Rabwa"
+      },
+      {
+         "id":"1170",
+         "name":"Rahim Yar Khan"
+      },
+      {
+         "id":"1171",
+         "name":"Raiwind"
+      },
+      {
+         "id":"1172",
+         "name":"KOT RADHA KISHA"
+      },
+      {
+         "id":"1173",
+         "name":"Rawalakot (a.k)"
+      },
+      {
+         "id":"1174",
+         "name":"ABBASPUR (A.K)"
+      },
+      {
+         "id":"1175",
+         "name":"AWAN ABAD(BATHI"
+      },
+      {
+         "id":"1176",
+         "name":"AZIZ ABAD (A.K."
+      },
+      {
+         "id":"1177",
+         "name":"BLOOUCH (A.K.)"
+      },
+      {
+         "id":"1179",
+         "name":"CHAK BAZAAR(A.K"
+      },
+      {
+         "id":"1181",
+         "name":"CHOTTAGLA (A.K)"
+      },
+      {
+         "id":"1183",
+         "name":"GALA KNATHA"
+      },
+      {
+         "id":"1184",
+         "name":"HAJIRA (A.K.)"
+      },
+      {
+         "id":"1186",
+         "name":"JUNDATHI (A.K)"
+      },
+      {
+         "id":"1187",
+         "name":"KHAIGALA (A.K.)"
+      },
+      {
+         "id":"1188",
+         "name":"KHARICK"
+      },
+      {
+         "id":"1191",
+         "name":"MONG (A.K.)"
+      },
+      {
+         "id":"1192",
+         "name":"MUJAHID ABAD (A"
+      },
+      {
+         "id":"1193",
+         "name":"NAKKAH BAZAR(A."
+      },
+      {
+         "id":"1195",
+         "name":"PANYIOLA (A.K.)"
+      },
+      {
+         "id":"1196",
+         "name":"QILLAN (A.K.)"
+      },
+      {
+         "id":"1197",
+         "name":"SINGOLA (A.K.)"
+      },
+      {
+         "id":"1198",
+         "name":"TANGI GALA (A."
+      },
+      {
+         "id":"1199",
+         "name":"THORAR (A.K.)"
+      },
+      {
+         "id":"1200",
+         "name":"TOPA (A.K.)"
+      },
+      {
+         "id":"1201",
+         "name":"TRARKHAIL (A.K)"
+      },
+      {
+         "id":"1202",
+         "name":"Rawalpindi"
+      },
+      {
+         "id":"1203",
+         "name":"Fateh Jang"
+      },
+      {
+         "id":"1204",
+         "name":"Jand"
+      },
+      {
+         "id":"1205",
+         "name":"Pindi Gheb"
+      },
+      {
+         "id":"1209",
+         "name":"CHAKLALA"
+      },
+      {
+         "id":"1213",
+         "name":"IKHLAS (DIST. A"
+      },
+      {
+         "id":"1215",
+         "name":"Kahuta"
+      },
+      {
+         "id":"1216",
+         "name":"KHORE"
+      },
+      {
+         "id":"1227",
+         "name":"Tarnol"
+      },
+      {
+         "id":"1228",
+         "name":"Sadiqabad"
+      },
+      {
+         "id":"1230",
+         "name":"GOTH MACHI"
+      },
+      {
+         "id":"1232",
+         "name":"KASHMOOR"
+      },
+      {
+         "id":"1235",
+         "name":"SUI"
+      },
+      {
+         "id":"1236",
+         "name":"Sahiwal"
+      },
+      {
+         "id":"1237",
+         "name":"Arifwala"
+      },
+      {
+         "id":"1238",
+         "name":"Pakpattan"
+      },
+      {
+         "id":"1239",
+         "name":"BONGA HAYAT"
+      },
+      {
+         "id":"1241",
+         "name":"NOOR SHAH"
+      },
+      {
+         "id":"1243",
+         "name":"QABOOLA SHARIF"
+      },
+      {
+         "id":"1244",
+         "name":"Samundri"
+      },
+      {
+         "id":"1246",
+         "name":"ADDA PHLOOR ONL"
+      },
+      {
+         "id":"1247",
+         "name":"DIJKOT"
+      },
+      {
+         "id":"1251",
+         "name":"KHIDAR WALA"
+      },
+      {
+         "id":"1252",
+         "name":"MAMON KANJAN"
+      },
+      {
+         "id":"1254",
+         "name":"MURID WALA"
+      },
+      {
+         "id":"1258",
+         "name":"TANDLIANWALA"
+      },
+      {
+         "id":"1260",
+         "name":"Sargodha"
+      },
+      {
+         "id":"1262",
+         "name":"ALI PUR SYEDAN"
+      },
+      {
+         "id":"1263",
+         "name":"BHAGATANWALA"
+      },
+      {
+         "id":"1264",
+         "name":"Bhalwal"
+      },
+      {
+         "id":"1265",
+         "name":"BHERA"
+      },
+      {
+         "id":"1266",
+         "name":"FAROOQA"
+      },
+      {
+         "id":"1267",
+         "name":"HAZOOR PUR"
+      },
+      {
+         "id":"1269",
+         "name":"Kot Momin"
+      },
+      {
+         "id":"1270",
+         "name":"Lallian"
+      },
+      {
+         "id":"1272",
+         "name":"NEHANG"
+      },
+      {
+         "id":"1274",
+         "name":"PHULLARWAN"
+      },
+      {
+         "id":"1275",
+         "name":"PULL 111 CHAK"
+      },
+      {
+         "id":"1276",
+         "name":"RADHEN"
+      },
+      {
+         "id":"1277",
+         "name":"SAHIWAL (NAWAN"
+      },
+      {
+         "id":"1278",
+         "name":"Sial Sharif"
+      },
+      {
+         "id":"1279",
+         "name":"SILLANWALI"
+      },
+      {
+         "id":"1280",
+         "name":"Sheikhupura"
+      },
+      {
+         "id":"1283",
+         "name":"BURG ATTARI"
+      },
+      {
+         "id":"1284",
+         "name":"DERA MALLA SIN"
+      },
+      {
+         "id":"1286",
+         "name":"FAIZPUR KHURD"
+      },
+      {
+         "id":"1287",
+         "name":"Farooqabad"
+      },
+      {
+         "id":"1288",
+         "name":"Feroz Watwan"
+      },
+      {
+         "id":"1290",
+         "name":"KHAN GAH DOGRAN"
+      },
+      {
+         "id":"1293",
+         "name":"Manawala"
+      },
+      {
+         "id":"1294",
+         "name":"MANDI DHABA SIN"
+      },
+      {
+         "id":"1296",
+         "name":"MANDI SAFDAR AB"
+      },
+      {
+         "id":"1299",
+         "name":"Nankana Sahib"
+      },
+      {
+         "id":"1300",
+         "name":"Pindi Bhattian"
+      },
+      {
+         "id":"1302",
+         "name":"SAFDARABAD"
+      },
+      {
+         "id":"1303",
+         "name":"Shahkot"
+      },
+      {
+         "id":"1304",
+         "name":"SHARAQPUR SHARI"
+      },
+      {
+         "id":"1306",
+         "name":"KHAN KA SHARIF"
+      },
+      {
+         "id":"1307",
+         "name":"Shujabad"
+      },
+      {
+         "id":"1308",
+         "name":"JALALPUR PIRWAL"
+      },
+      {
+         "id":"1309",
+         "name":"Sialkot"
+      },
+      {
+         "id":"1311",
+         "name":"BHOPALWALA"
+      },
+      {
+         "id":"1313",
+         "name":"GHUENKE"
+      },
+      {
+         "id":"1314",
+         "name":"JHETEKE"
+      },
+      {
+         "id":"1316",
+         "name":"KOTLI LOHARAN"
+      },
+      {
+         "id":"1318",
+         "name":"QILA SAIFULLAH",
+         "shipment_type":[
+            "OVERNIGHT"
+         ],
+         "allow_as_origin":true,
+         "allow_as_destination":true
+      },
+      {
+         "id":"1321",
+         "name":"Sambrial"
+      },
+      {
+         "id":"1323",
+         "name":"SKARDU"
+      },
+      {
+         "id":"1324",
+         "name":"Jacobabad"
+      },
+      {
+         "id":"1325",
+         "name":"Shikarpur"
+      },
+      {
+         "id":"1326",
+         "name":"Sukkur"
+      },
+      {
+         "id":"1328",
+         "name":"Dera ala yar"
+      },
+      {
+         "id":"1329",
+         "name":"Dera Murad Jama"
+      },
+      {
+         "id":"1330",
+         "name":"DHADAR"
+      },
+      {
+         "id":"1331",
+         "name":"GAMBAT"
+      },
+      {
+         "id":"1332",
+         "name":"GARHI KHERO"
+      },
+      {
+         "id":"1333",
+         "name":"GARHI YASIN"
+      },
+      {
+         "id":"1335",
+         "name":"HALANI"
+      },
+      {
+         "id":"1336",
+         "name":"HARNAI"
+      },
+      {
+         "id":"1340",
+         "name":"JOHI"
+      },
+      {
+         "id":"1341",
+         "name":"KANDHKOT"
+      },
+      {
+         "id":"1342",
+         "name":"KHAN PUR DISTT."
+      },
+      {
+         "id":"1346",
+         "name":"KOT DEJI"
+      },
+      {
+         "id":"1349",
+         "name":"LAKHI GHULAM SH"
+      },
+      {
+         "id":"1353",
+         "name":"Pano Aqil"
+      },
+      {
+         "id":"1356",
+         "name":"Rohri"
+      },
+      {
+         "id":"1359",
+         "name":"SIBBI"
+      },
+      {
+         "id":"1360",
+         "name":"Sultan Kot"
+      },
+      {
+         "id":"1361",
+         "name":"THEHRI"
+      },
+      {
+         "id":"1362",
+         "name":"THULL"
+      },
+      {
+         "id":"1363",
+         "name":"USTA MUHAMMAD"
+      },
+      {
+         "id":"1364",
+         "name":"SWABI"
+      },
+      {
+         "id":"1366",
+         "name":"KALABAT"
+      },
+      {
+         "id":"1367",
+         "name":"KHOTA"
+      },
+      {
+         "id":"1370",
+         "name":"MARGAZ"
+      },
+      {
+         "id":"1372",
+         "name":"TAND KOI"
+      },
+      {
+         "id":"1373",
+         "name":"TOPI"
+      },
+      {
+         "id":"1376",
+         "name":"Takht-e-Bhai"
+      },
+      {
+         "id":"1377",
+         "name":"DARGAI"
+      },
+      {
+         "id":"1378",
+         "name":"HARI CHAND"
+      },
+      {
+         "id":"1380",
+         "name":"JALALA"
+      },
+      {
+         "id":"1384",
+         "name":"Talagang"
+      },
+      {
+         "id":"1399",
+         "name":"Tamirgaraha"
+      },
+      {
+         "id":"1400",
+         "name":"Dir"
+      },
+      {
+         "id":"1403",
+         "name":"DARRORA"
+      },
+      {
+         "id":"1404",
+         "name":"HAJI ABAD"
+      },
+      {
+         "id":"1405",
+         "name":"HAYA SERAI"
+      },
+      {
+         "id":"1406",
+         "name":"KHAAL"
+      },
+      {
+         "id":"1407",
+         "name":"KHAR (BAJORE AG"
+      },
+      {
+         "id":"1411",
+         "name":"SAHIB ABAD"
+      },
+      {
+         "id":"1412",
+         "name":"SHER KHANIE"
+      },
+      {
+         "id":"1415",
+         "name":"Tando ala yar"
+      },
+      {
+         "id":"1416",
+         "name":"Tando Jam"
+      },
+      {
+         "id":"1417",
+         "name":"Thatha"
+      },
+      {
+         "id":"1418",
+         "name":"CHOHAR JAMALI"
+      },
+      {
+         "id":"1419",
+         "name":"DHABEJI"
+      },
+      {
+         "id":"1420",
+         "name":"Gharo"
+      },
+      {
+         "id":"1421",
+         "name":"MAKLI"
+      },
+      {
+         "id":"1422",
+         "name":"MIR PUR SAKRO"
+      },
+      {
+         "id":"1423",
+         "name":"SUJAWAL"
+      },
+      {
+         "id":"1424",
+         "name":"Toba Tek Sing"
+      },
+      {
+         "id":"1426",
+         "name":"Pirmahal"
+      },
+      {
+         "id":"1427",
+         "name":"RAJANA"
+      },
+      {
+         "id":"1428",
+         "name":"SANDHIANWALI"
+      },
+      {
+         "id":"1429",
+         "name":"Shorkot Cantt."
+      },
+      {
+         "id":"1434",
+         "name":"Vehari"
+      },
+      {
+         "id":"1435",
+         "name":"ADDA PAKHI MORE"
+      },
+      {
+         "id":"1436",
+         "name":"DOKOTA"
+      },
+      {
+         "id":"1438",
+         "name":"Hasilpur"
+      },
+      {
+         "id":"1439",
+         "name":"LUDDAN"
+      },
+      {
+         "id":"1440",
+         "name":"MACHIWAL"
+      },
+      {
+         "id":"1441",
+         "name":"Mailsi"
+      },
+      {
+         "id":"1442",
+         "name":"THAINGI"
+      },
+      {
+         "id":"1443",
+         "name":"TIBBA SULTAN PU"
+      },
+      {
+         "id":"1444",
+         "name":"Wah Cantt"
+      },
+      {
+         "id":"1446",
+         "name":"Hassan Abdal"
+      },
+      {
+         "id":"1448",
+         "name":"POURMIANA"
+      },
+      {
+         "id":"1449",
+         "name":"Taxila"
+      },
+      {
+         "id":"1450",
+         "name":"Wazirabad"
+      },
+      {
+         "id":"1451",
+         "name":"ADDA AUJLA KALA"
+      },
+      {
+         "id":"1452",
+         "name":"AHMAD NAGAR"
+      },
+      {
+         "id":"1453",
+         "name":"Elahabad"
+      },
+      {
+         "id":"1454",
+         "name":"AZIZ CHAK"
+      },
+      {
+         "id":"1456",
+         "name":"Gakkhar Mandi"
+      },
+      {
+         "id":"1459",
+         "name":"KARMABAD"
+      },
+      {
+         "id":"1460",
+         "name":"KHAIW WALI"
+      },
+      {
+         "id":"1462",
+         "name":"Nizamabad"
+      },
+      {
+         "id":"1679",
+         "name":"NOORIABAD"
+      },
+      {
+         "id":"1681",
+         "name":"DOLTA"
+      },
+      {
+         "id":"1684",
+         "name":"SHER SHAH"
+      },
+      {
+         "id":"1685",
+         "name":"MIRUPR BATHORO"
+      },
+      {
+         "id":"1687",
+         "name":"HAYATABAD"
+      },
+      {
+         "id":"1709",
+         "name":"BADOMALHI"
+      },
+      {
+         "id":"1713",
+         "name":"QILA KALLARWALA"
+      },
+      {
+         "id":"1741",
+         "name":"JHAWARIYA"
+      },
+      {
+         "id":"1753",
+         "name":"MOUCH"
+      },
+      {
+         "id":"1768",
+         "name":"BHABRRA"
+      },
+      {
+         "id":"1786",
+         "name":"ZIABAD"
+      },
+      {
+         "id":"1803",
+         "name":"SARA-E- KARISHAN"
+      },
+      {
+         "id":"2504",
+         "name":"HABIBABAD"
+      },
+      {
+         "id":"2505",
+         "name":"DHURNAL"
+      },
+      {
+         "id":"2506",
+         "name":"FAQIRABAD"
+      },
+      {
+         "id":"2507",
+         "name":"SANGHI"
+      },
+      {
+         "id":"2509",
+         "name":"DAULAT PUR"
+      },
+      {
+         "id":"2521",
+         "name":"MALAKWAL"
+      },
+      {
+         "id":"2603",
+         "name":"Ghous Pur"
+      },
+      {
+         "id":"2604",
+         "name":"Sobho Dero"
+      },
+      {
+         "id":"2605",
+         "name":"Chak"
+      },
+      {
+         "id":"2632",
+         "name":"SHADUN LUND"
+      },
+      {
+         "id":"2633",
+         "name":"KARAM PUR"
+      },
+      {
+         "id":"2643",
+         "name":"JAMAL PUR"
+      },
+      {
+         "id":"2644",
+         "name":"DHANOT"
+      },
+      {
+         "id":"2652",
+         "name":"MUBARAK PUR"
+      },
+      {
+         "id":"2653",
+         "name":"DERA BAKHA"
+      },
+      {
+         "id":"2661",
+         "name":"JAFFARABAD"
+      },
+      {
+         "id":"2675",
+         "name":"CHOWK MUNDA"
+      },
+      {
+         "id":"2677",
+         "name":"MITRO"
+      },
+      {
+         "id":"2693",
+         "name":"JAMAL DIN WALI"
+      },
+      {
+         "id":"4016",
+         "name":"JHAMPEER"
+      },
+      {
+         "id":"4021",
+         "name":"ISLAMKOT"
+      },
+      {
+         "id":"9013",
+         "name":"Khairpur"
+      },
+      {
+         "id":"9019",
+         "name":"Ghari Khero"
+      }
+   ]
