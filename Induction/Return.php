@@ -696,6 +696,11 @@ $(document).ready(function()
                         toastr.error('There might be some error!');
                         
                     }
+                    
+                    if(data == 2)
+                    {
+                         toastr.error('Rack not exists on this category please allocate manual!');
+                    }
                   
                  }
             });

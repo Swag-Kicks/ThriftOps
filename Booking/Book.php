@@ -96,9 +96,70 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            //old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "PostEx",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -106,15 +167,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "PostEx",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "PostEx",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -122,9 +192,11 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
+         
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -220,9 +292,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            //old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "Leopard",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -230,15 +361,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "Leopard",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "Leopard",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -246,9 +386,10 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -344,9 +485,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            // old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "Trax",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -354,15 +554,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "Trax",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "Trax",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -370,9 +579,10 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -457,9 +667,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            //old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "Rider",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -467,15 +736,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "Rider",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "Rider",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -483,9 +761,10 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -554,9 +833,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            // old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "Call Courier",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -564,15 +902,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "Call Courier",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "Call Courier",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -580,9 +927,10 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -675,9 +1023,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            //old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "TCS",
+            //             "tracking_number" : "'.$num.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -685,15 +1092,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "TCS",
-                        "tracking_number" : "'.$num.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "TCS",
+                        "number" : "'.$num.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -701,9 +1117,10 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success
@@ -757,9 +1174,68 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
             $row1 = mysqli_fetch_assoc($sh);
             $shop_token=$row1['API_Pass'];
             
+            // old
+            
+            // $curl = curl_init();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://$SHOP_URL/admin/api/2023-07/orders/$id/fulfillments.json",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => '',
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => 'POST',
+            //   CURLOPT_POSTFIELDS =>'
+            //     {
+            //         "fulfillment" :{
+            //             "location_id" : 63487475898,
+            //             "tracking_company" : "SwagKicks",
+            //             "tracking_number" : "'.$tt.'",
+            //             "tracking_url" :"'.$url.'"
+            //         }
+            //     }',
+            //   CURLOPT_HTTPHEADER => array(
+            //     "X-Shopify-Access-Token: $shop_token",
+            //     'Content-Type: application/json',
+            //     'Cookie: request_method=POST'
+            //   ),
+            // ));
+            
+            // $response1 = curl_exec($curl);
+            // curl_close($curl);
+            // $result1 = json_decode($response1,true);
+            
+            //get fulfillment order id
+            $curl23 = curl_init();
+            curl_setopt_array($curl23, array(
+              CURLOPT_URL => "https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/orders/$id/fulfillment_orders.json",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => '',
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => 'GET',
+              CURLOPT_HTTPHEADER => array(
+               "X-Shopify-Access-Token: $shop_token",
+                'Content-Type: application/json',
+                'Cookie: request_method=POST'
+              ),
+            ));
+            
+            $response23 = curl_exec($curl23);
+            
+            curl_close($curl);
+            $work = json_decode($response23,true);
+            $fullfilment_order_id=$work['fulfillment_orders']['0']['line_items']['0']['fulfillment_order_id'];
+                        
+            
+            //post
             $curl = curl_init();
+            
             curl_setopt_array($curl, array(
-              CURLOPT_URL => "https://$SHOP_URL/admin/api/2022-01/orders/$id/fulfillments.json",
+              CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-07/fulfillments.json',
               CURLOPT_RETURNTRANSFER => true,
               CURLOPT_ENCODING => '',
               CURLOPT_MAXREDIRS => 10,
@@ -767,15 +1243,24 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               CURLOPT_FOLLOWLOCATION => true,
               CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
               CURLOPT_CUSTOMREQUEST => 'POST',
-              CURLOPT_POSTFIELDS =>'
-                {
-                    "fulfillment" :{
-                        "location_id" : 63487475898,
-                        "tracking_company" : "SwagKicks",
-                        "tracking_number" : "'.$tt.'",
-                        "tracking_url" :"'.$url.'"
+              CURLOPT_POSTFIELDS =>'{
+                "fulfillment":{
+                    
+            
+                    "line_items_by_fulfillment_order" : [
+                        {
+                            "fulfillment_order_id" : "'.$fullfilment_order_id.'"
+                        }
+                    ],
+                     "tracking_info":
+                    {
+                        "company" : "SwagKicks",
+                        "number" : "'.$tt.'",
+                        "url" : "'.$url.'"
                     }
-                }',
+                   
+                }
+            }',
               CURLOPT_HTTPHEADER => array(
                 "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json',
@@ -783,9 +1268,11 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
               ),
             ));
             
-            $response1 = curl_exec($curl);
+            $response = curl_exec($curl);
+            
             curl_close($curl);
-            $result1 = json_decode($response1,true);
+            $result1 = json_decode($response,true);
+            
 
             $doneid=$result1['fulfillment']['order_id'];//order id
             $status=$result1['fulfillment']['status'];//success

@@ -20,7 +20,7 @@ if(isset($_POST["id"]))
         $que="UPDATE `Order` SET Status='Not_Found' where SKU='".$id."' AND Order_ID='".$order."'";
         $result1 = mysqli_query($mysql, $que);
         
-         $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '', 'Not_Found', '$C_Date')";
+         $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '$id', 'Not_Found', '$C_Date')";
          $result1 = mysqli_query($mysql, $sql1);
         echo '1';
 

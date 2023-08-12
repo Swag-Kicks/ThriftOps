@@ -1,7 +1,4 @@
 <?php
-// $dir = sys_get_temp_dir();
-// session_save_path($dir);
-
 session_start();
 include_once("include/mysql_connection.php"); 
 error_reporting(0);
@@ -17,30 +14,22 @@ if(isset($_POST['submit']))
   $pass=md5($pass);
   
 
-  
   $sql = "SELECT * FROM User WHERE Username='$user' AND Password='$pass'";
   $result = mysqli_query($mysql, $sql);
 
   $row=mysqli_fetch_array($result);
   $name=$row['Username'];
-  $counter=mysqli_num_rows($result);
+  $counter=mysqli_num_rows ($result);
   $id=$row['User_ID'];
-  if($counter == 0) 
+  if ($counter == 0) 
   {
     echo '<script>alert("Invalid ID Or Password");window.location.href="index.php";</script>';
 
   }
   else
   {
-    $redis = new Redis();
-    $redis->connect('http://master.ele1ssox8ehhkpeu.uevwsk.aps1.cache.amazonaws.com',6379);
-    $sessionId = uniqid();
-    $redis->set('session:', $id);
-    // $_SESSION['id']=$id;
-    // $_SESSION['Username']=$name;
-
-
-    // print_r("Session user id login ".$_SESSION['id']);
+    $_SESSION['id']=$id;
+    $_SESSION['Username']=$name;
 
     echo '<script>window.location.href="Dashboard/Home";</script>';
   }

@@ -150,8 +150,17 @@ echo $id1;
                         // echo $ite;
                         $p++;
                        // echo "<br>";
-                        $sql= "INSERT INTO `Order`(`Order_ID`, `Order_Number`, `Date`, `Name`, `Address`, `Contact`, `Email`, `City`, `SKU`, `Quantity`, `Price`, `Shipping`, `Discount`, `Total`, `Status`) VALUES ('".$a."', '".$b."', '".$c."', '".$d."', '".$e."', '".$f."', '".$email."', '".$g."', '".$ite."', '".$quan."', '".$itep."', '".$j."', '".$dis."', '".$io."', '$status')";
-    			        $result = mysqli_query($mysql, $sql);
+                       if($dis!=0)
+                       {
+                           $sql= "INSERT INTO `Order`(`Order_ID`, `Order_Number`, `Date`, `Name`, `Address`, `Contact`, `Email`, `City`, `SKU`, `Quantity`, `Price`, `Shipping`, `Discount`, `Discount_From`, `Total`, `Status`) VALUES ('".$a."', '".$b."', '".$c."', '".$d."', '".$e."', '".$f."', '".$email."', '".$g."', '".$ite."', '".$quan."', '".$itep."', '".$j."', '".$dis."', 'Shopify', '".$io."', '$status')";
+    			            $result = mysqli_query($mysql, $sql);
+                       }
+                       else
+                       {
+                            $sql= "INSERT INTO `Order`(`Order_ID`, `Order_Number`, `Date`, `Name`, `Address`, `Contact`, `Email`, `City`, `SKU`, `Quantity`, `Price`, `Shipping`, `Discount`, `Total`, `Status`) VALUES ('".$a."', '".$b."', '".$c."', '".$d."', '".$e."', '".$f."', '".$email."', '".$g."', '".$ite."', '".$quan."', '".$itep."', '".$j."', '".$dis."', '".$io."', '$status')";
+    			            $result = mysqli_query($mysql, $sql);
+                           
+                       }
                     }
                 }
                 else

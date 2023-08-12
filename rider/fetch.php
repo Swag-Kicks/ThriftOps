@@ -107,7 +107,9 @@ $output = '
   <tr>
         <th scope="col">Order Num</th>
         <th scope="col">Item Qty</th>
-        <th scope="col">Amount</th>
+        <th scope="col">Sub Total</th>
+        <th scope="col">Discount</th>
+        <th scope="col">Total</th>
         <th scope="col"></th>
   </tr>
   </thead>
@@ -130,12 +132,23 @@ while($row = mysqli_fetch_array($result))
     
     
     $qty = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM `Order` Where Order_ID='".$row['Order_ID']."'"));
+    $sub=$row["Total"]+$row["Discount"];
+    // $totr=$row["Total"]-$row["Discount"];
     $output .= '
     <tbody>
     <tr>
       <td><a target = "_blank" href="../ord/Order_View.php?GETID='. $row["Order_ID"].'"<i></i><b>'.$row["Order_Number"].'</b></a></td>
       <td>'.$qty.'</td>
+      <td>'.$sub.'</td>
+      <td>'.$row["Discount"].'</td>
       <td>'.$row["Total"].'</td>
+      <td><select class="form-control" name="stat" id="stat">
+          <option value="" disabled selected>Select Status</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Returned">Returned</option>
+          <option value="Intransit">Intransit</option>
+          <option value="Loss/Conflict">Loss/Conflict</option>
+       </select></td>
        <td class="align-middle text-center">
             
               <div class="btn-group align-top" style="margin-top: 5px;">

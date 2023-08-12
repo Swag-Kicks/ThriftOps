@@ -18,7 +18,7 @@ if(isset($_POST['order']) && isset($_POST['name']) && isset($_POST['address']) &
         $ship=$_POST['ship'];
         $C_Date = date('Y-m-d/h:i:a'); 
         //update order value
-        $var="Update `Order` SET Shipping='$ship',Discount='$discount',Total='$total',Adjusment_Reason='$reason' WHERE Order_ID='$order'";
+        $var="Update `Order` SET Shipping='$ship',Discount='$discount',Discount_From='Thriftops',Total='$total',Adjusment_Reason='$reason' WHERE Order_ID='$order'";
         $update=mysqli_query($mysql,$var);
         if($update)
         {

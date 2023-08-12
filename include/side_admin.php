@@ -211,6 +211,8 @@
                 <li><a href="../Dashboard2/frameReport.php">Couriers Bi</a></li>
                 <li><a href="../Dashboard2/InboundStockReportBi.php">Inbound Stock Report</a></li>
                 <li><a href="../orderbystatus/View.php">Orders By Status</a></li>
+                <li><a href="../Dashboard2/newVsRet.php">New vs Returning Customers</a></li>
+                <li><a href="../Dashboard2/OrdersProcessed.php">Orders Processed</a></li>
 
                 <!--<li><a href="../PO/PO_View">Purchase Orders</a></li>-->
                 <!--<li><a href="../GRN/GRN_View">Goods Received Notes</a></li>-->

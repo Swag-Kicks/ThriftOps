@@ -106,7 +106,7 @@ th {
                 <div class="">
        <div class="row" style="background-color:#F9FCFF;margin:0.8px;">
                
-                <div class="col-md-4 p-r-20" style="margin-top:30px;">
+                <div class="col-md-2 p-r-20" style="margin-top:30px;">
                   
                <div class="form-group has-search">
     <span class="fa fa-search form-control-feedback"></span>
@@ -143,6 +143,10 @@ th {
                         </select>
                 </div>
                  <div class="col-md-2 text-end " style="margin-top:34px;">
+                     <a href="#" id="discard" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-success" >Discard</a>
+                </div>
+                 <div class="col-md-2 text-end " style="margin-top:34px;">
+                    
                 <a href="#" id="ref" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary" >Refresh</a>
                 </div>
               </div>
@@ -151,6 +155,57 @@ th {
                 
                 <div id="dynamic_content"></div>
                   </div>
+                                          <!--update tracking-->
+                                <div id="bacth_discard" class="modal fade" role="dialog">
+                                   <div class="modal-dialog modal-lg modal-dialog-centered cstm-pop">
+                                     <div class="modal-content">
+                                       <div class="modal-header p-t-20">
+                                             <div class="col-md-8 p-l-15">
+                                          <h3 class="modal-title">Discard Batch</h3>
+                                          </div>
+                                          
+                                         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title="" title=""></button>
+                                       </div>
+                                       <div class="row">
+                                           <br>
+                                                 <div class="col-md-3 m-b-10">&nbsp;&nbsp;&nbsp;
+                                                     <label id="prshow">&nbsp;&nbsp;&nbsp;<b></b></label>
+                                                 </div>
+                                                 <div class="col-md-3 ">
+                                                     
+                                                 </div>
+                                                 <div class="col-md-3 ">
+                                                     
+                                                 </div>
+                                                 <div class="col-md-3  ">
+                                                    
+                                                 </div>
+                                                 
+                                             </div>
+                                       <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label class="col-form-label pt-0">Batch ID</label>
+                                                    <input type="text" class="form-control" id="batch_discard_id" placeholder="Enter Batch ID"/> 
+                                                </div>
+                                          
+                                                <div class="mb-3"> 
+                                                    <label class="col-form-label pt-0">Reason</label>
+                                                    <textarea class="form-control" id="message" row="20" col="203"></textarea>   
+                                                </div>
+                                          
+                                        <br>
+                                      
+                                       <div class="modal-footer">
+                                         <button type="button" class="btn btn-outline-primary pull-left" id="modclear" data-bs-dismiss="modal">Close</button>
+                                         <a href="#" data-role="conf_save" id="upd" class="btn btn-md btn-primary ref  f-right" style="padding: 6px 24px;" disabled>Update</a>
+                                       </div>
+                                     </div>
+                                   
+                      </div>
+                   </div>
+                   
+                         </div>
+                        <!--update tracking-->
               
         
                 </div>
@@ -190,6 +245,7 @@ th {
   </div>
 </div>
 </div>
+
 <!--PURCHASE ORDER end--> 
         
              <!--<div id="newmodal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">-->
@@ -335,6 +391,34 @@ th {
         $('#dynamic_content1').html(val);
          
         
+    
+    });
+    $(document).on('click', '#discard', function(){
+        
+        $('#bacth_discard').modal('toggle');
+        var batch = document.getElementById("batch_discard_id").value;
+        var reason = document.getElementById("message").value;
+         $(document).on('click', '#upd', function(){
+            $.ajax({
+                url:"Discard.php",
+                method:"POST",
+                data:{batch:batch,reason:reason},
+                success:function(data)
+                {
+                  $('#bacth_discard').modal('toggle');
+                  
+                  if(data==1)
+                  {
+                      toastr.success('Batch has beeen marked discard!');
+                  }
+                  if(data==2)
+                  {
+                      toastr.error('Batch not exists');
+                  }
+                }
+            });
+        });
+    
     
     });
    
