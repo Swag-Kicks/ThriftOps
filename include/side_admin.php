@@ -866,9 +866,9 @@
 <script>
     
     var uname = $("#uname").val()
-    
+    var base=document.location.origin;
 var settings = {
-  "url": "https://backup.thriftops.com/include/api/fetchid.php?id="+uname,
+  "url": base+"/include/api/fetchid.php?id="+uname,
   "method": "POST",
   "timeout": 0,
   "processData": false,
