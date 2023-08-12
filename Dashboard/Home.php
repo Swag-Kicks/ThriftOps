@@ -17,11 +17,9 @@ $name="Wellcome, ".$cr."!!";
 
 ?>
 
-<?php include ("../include/header.php"); ?>
-<?php  
-include ("../include/side_admin.php");
-   
-   ?>
+<?php include ("../include/header.php");
+include ("../include/side_admin.php"); ?>
+
    <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="../assets/css/daterange-picker.css">
     <!-- Plugins JS start-->
