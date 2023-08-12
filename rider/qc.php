@@ -8,21 +8,37 @@ $cr=$_SESSION['id'];
 
 
 
-if(isset($_POST["id"]))
+if(isset($_POST["id"]) && isset($_POST["order"]) && isset($_POST["stats"]))
 {
      $id=$_POST["id"];
      $order=$_POST["order"];
+     $stats=$_POST["stats"];
+     $message=$_POST["message"];
      $date=date('Y-m-d/h:i:a');
      
      $C_Date = date('Y-m-d/h:i:a');
-
-        
-        $que="UPDATE `Order` SET Status='Delivered',Shipping_Status='Delivered' where Order_ID='".$order."'";
+     
+     if($message!='')
+     {
+        $que="UPDATE `Order` SET Status='$stats',Shipping_Status='$stats',Shipping_Reason='$message' where Order_ID='".$order."'";
         $result1 = mysqli_query($mysql, $que);
         
-        $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '', 'Delivered', '$C_Date')";
+        $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', $message, '$stats', '$C_Date')";
         $result1 = mysqli_query($mysql, $sql1);
         echo '1';
+     }
+     else
+     {
+        $que="UPDATE `Order` SET Status='$stats',Shipping_Status='$stats' where Order_ID='".$order."'";
+        $result1 = mysqli_query($mysql, $que);
+        
+        $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '', '$stats', '$C_Date')";
+        $result1 = mysqli_query($mysql, $sql1);
+        echo '1';
+     }
+
+        
+       
 
 }
 

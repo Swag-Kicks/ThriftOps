@@ -19,7 +19,7 @@
     if(sessionId == '') {
       window.location.href = '../index.php';
     } else {
-      //console.log("present");
+      console.log("present");
     }
   }, 5000); // 5000 milliseconds = 5 seconds
 });

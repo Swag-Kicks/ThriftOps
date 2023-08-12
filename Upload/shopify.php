@@ -28,6 +28,53 @@ $size=$_POST['size'];
 $weight=$row['weight'];
  
  
+ 
+ //tagsfix according to csv condition
+ if($Category=='Footwear' && $subCat =='Slipper' || $subCat=='Sandal' || $subCat='Sneakers')
+ {
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+     $lower=lcfirst($subCat);
+     $gen=$mod.$lower;
+     $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
+ }
+if ($Category=='Footwear' &&$subCat='Formal Shoe')
+ {
+     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+      $gen=$mod.'formal';
+      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
+ }
+//   else if($Category=='Accessories' && $subCat=='Bag')
+//  {
+//     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+//      $lower=lcfirst($subCat);
+//      $gen=$mod.$lower;
+//      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
+//  }
+if($Category=='Accessories' && $subCat!='Bag')
+ {
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+     $lower=lcfirst($subCat);
+     $gen=$mod.$lower;
+     $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
+ }
+if($Category=='Topwear')
+ {
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+     $lower=lcfirst($subCat);
+     $gen=$mod.$lower;
+     $Custom="Clothes";
+     $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Custom.','.$sku.','.$size.','.$subCat;
+ }
+if($Category=='Bottomwear')
+ {
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+     $lower=lcfirst($subCat);
+     $gen=$mod.$lower;
+     $Custom="Clothes";
+     $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Custom.','.$sku.','.$size.','.$subCat;
+ }
+ 
+ 
 //check sku in table
 //vendor-batch
 $pr="Select Vendor_ID,Batch_ID,SKU from `addition` Where SKU='$sku'";
@@ -70,7 +117,8 @@ else
           "body_html" => $desc,
             "status" => $status,
             "vendor" => $vendor,
-          "tags" => $gender.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat,
+            "tags"=> $tags,
+        //   "tags" => $gender.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat,
           "variants" => array(
                         array(
                              "title" => $title,
@@ -86,13 +134,18 @@ else
                     ),
                       "metafields" => array(
                         array(
-                            "namespace" => "my_fields",
+                            "namespace" => "custom",
                             "key" => "size",
                             "value" => $size
                         ),
                         array(
-                            "namespace" => "my_fields",
+                            "namespace" => "custom",
                             "key" => "condition",
+                            "value" => $size
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "newcondition",
                             "value" => $condi
                         ),
                         array(

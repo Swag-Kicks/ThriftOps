@@ -52,8 +52,8 @@ $Total=$row['Total'];
 
 $count=0;
 
-$sql1="Select * from Logs Where Type_ID='$order_Num'";
-$result1 = mysqli_query($mysql, $sql1);
+// $sql1="Select * from Logs Where Type='Order' AND Type_ID='$id' OR Type='Order' AND Type_ID='$order_Num";
+$result123 = mysqli_query($mysql," Select * from Logs Where Type='Order' AND Type_ID='$id' OR Type='Order' AND Type_ID='$order_Num'");
 
 ?>
 <?php include ("../include/header.php"); ?>
@@ -266,7 +266,7 @@ $result1 = mysqli_query($mysql, $sql1);
         
         <?php
         
-        while($row1 =mysqli_fetch_array($result1))
+        while($row1 =mysqli_fetch_assoc($result123))
         {
             $userid=$row1['User_ID'];
             $sql3="Select * from `User` Where User_ID='$userid'";
@@ -278,9 +278,10 @@ $result1 = mysqli_query($mysql, $sql1);
             $status=$row1['Status'];
             
             $sku=$row1['Reference'];
+            // echo $status;
             
-            //waiting
-            if($status=='Waiting')
+            ///waiting
+            if($status == 'Waiting')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -291,7 +292,7 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             //confirmed
-            else if($status=='Confirmed')
+          else if($status == 'Confirmed')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -302,8 +303,8 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             
-            //hold
-            else if($status=='Hold')
+            ///hold
+            else if($status == 'Hold')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -314,7 +315,7 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             //cancel
-            else if($status=='Cancel')
+            else if($status == 'Cancel')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -325,7 +326,7 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             //booked
-            else if($status=='Booked')
+            else if($status == 'Booked')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -336,37 +337,37 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             //picked
-            else if($status=='Picked')
+            else if($status == 'Picked')
             {   
                 echo "<li>
                         <i class='fa fa-circle '></i>
                         <div class='timelineleft-item'>
                             <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>
-                            <h3 class='timelineleft-header no-border'><a>● $sku <span class='text-muted'> has been Picked by $name</span></h3>
+                            <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has ($sku) been Picked by $name</span></h3>
                         </div>
                     </li>";
                     
             }
             //qc
-            else if($status =='QC Rejected')
+            else if($status == 'QC_Rejected')
             {
                 echo "<li>
                         <i class='fa fa-circle '></i>
                        
                         <div class='timelineleft-item'>
                             <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>
-                            <h3 class='timelineleft-header no-border'><a>● $sku</a> <span class='text-muted'> has been marked QC by $name</span></h3>
+                            <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has ($sku) been marked QC by $name</span></h3>
                         </div>
                     </li>";
             }
             //not found
-            else if($status=='Not Found')
+            else if($status =='Not_Found')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
                     <div class='timelineleft-item'>
                         <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>
-                        <h3 class='timelineleft-header no-border'><a>● $sku</a> <span class='text-muted'> has been Not Found by $name</span></h3>
+                        <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has ($sku) been Not Found by $name</span></h3>
                     </div>
                 </li>";
             }
@@ -377,7 +378,7 @@ $result1 = mysqli_query($mysql, $sql1);
                     <i class='fa fa-circle '></i>
                     <div class='timelineleft-item'>
                         <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>
-                        <h3 class='timelineleft-header no-border'><a>● $sku</a> <span class='text-muted'> has been Received by $name</span></h3>
+                        <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has ($sku) been Received by $name</span></h3>
                     </div>
                 </li>";
             }
@@ -393,18 +394,18 @@ $result1 = mysqli_query($mysql, $sql1);
                 </li>";
             }
             //updated
-            else if($status=='Updated')
+            else if($status == 'Update')
             {
-               echo "<li>
+              echo "<li>
                     <i class='fa fa-circle '></i>
                     <div class='timelineleft-item'>
                         <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>
-                        <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has been Updated by $name</span></h3>
+                        <h3 class='timelineleft-header no-border'><a>● Order</a> <span class='text-muted'><b>$order_Num</b> has been Updated by $name with Reference: $sku</span></h3>
                     </div>
                 </li>";
             }
             //dispatch
-            else if($status=='Dispatched')
+             if($status == 'Dispatched')
             {
                 echo "<li>
                     <i class='fa fa-circle '></i>
@@ -428,7 +429,7 @@ $result1 = mysqli_query($mysql, $sql1);
             //received return
             else if($status=='Received Return')
             {
-               echo "<li>
+              echo "<li>
                     <i class='fa fa-circle '></i>
                     <div class='timelineleft-item'>
                         <span class='time'><i class='fa fa-clock-o text-danger'>&nbsp;</i>$datetime</span>

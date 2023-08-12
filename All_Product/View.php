@@ -24,7 +24,7 @@ $cr=$_SESSION['id'];
             </div>
             <div class="col-md-6"> 
             <a href="javascript:void(0)" name="pick" id="addorder" class="btn btn-outline-danger m-l-15 f-right" data-bs-toggle="modal" data-bs-target="#barcodeModalCenter" data-bs-original-title="" title="" onclick="getFocus()"><i class="icofont icofont-qr-code" ></i> Add via QR Code</a>
-             <a href="../ShopifyPush/addProduct.php" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right">Add New</a>
+             <a href="../Upload/new" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right">Add New</a>
              
          </div>
          <div class='col-md-3 mt-3'>
@@ -1599,7 +1599,7 @@ function JSDropDown() {
             }
           if(option =='View')
           {
-            href='../ShopifyPush/viewProduct.php?id='+skdu;
+            href='../ShopifyPush/viewProduct.php?GETID='+skdu;
             window.open(href);
             currentRow.find("#mark").val('');
           }

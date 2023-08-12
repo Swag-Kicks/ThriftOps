@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-print_r("Session user id ".$_SESSION['id']);
-
-print_r("redis var get".$redis->get('session'));
+// session_start();
 
 //   if (isset($_SESSION['id']) && $_SESSION['id'] == true) {
       
@@ -130,7 +126,7 @@ print_r("redis var get".$redis->get('session'));
 
   // Run the session check every 5 seconds
   setInterval(function() {
-    var sessionId = "<?php $redis->get('session:' . $sessionId); ?>";
+    var sessionId = "<?php echo $_SESSION['id'] ?>";
     if(sessionId == '') {
       window.location.href = '../include/session.php';
     } else {

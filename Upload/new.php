@@ -106,18 +106,16 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-12 row">
-                                       <div class="col-sm-6">
-                                          <label class="col-form-label pt-0" >Price</label>
-                                          <input type="hidden" id="predi" />
-                                          <input class="form-control " id="price" type="number"   onchange="iDetails();button();" name="price"  placeholder="Enter Price" required>
-                                          <p class="col-form-label pt-0" id="predict" ></p>
+                                        <div class="col-sm-6">
+                                          <label class="col-form-label pt-0" >Product Code</label>
+                                          <input class="form-control " id="pcode" type="text" onchange="iDetails();button();" name="pcode"  placeholder="Enter Product Code">
                                        </div>
                                        <div class="col-sm-6">
                                           <label class="col-form-label pt-0">Gender</label>
                                           <select class="form-control form-select  "   onchange="iDetails();button();" name="gender">
                                              <option value=" ">Select Gender</option>
-                                             <option value="Male">Male</option>
-                                             <option value="Female">Female</option>
+                                             <option value="Male">Men</option>
+                                             <option value="Female">Women</option>
                                              <option value="Unisex">Unisex</option>
                                              <option value="Kids">Kids</option>
                                           </select>
@@ -205,7 +203,7 @@
                                                 <option value="Small">Small</option>
                                                 <option value="Medium">Medium</option>
                                                 <option value="Large">Large</option>
-                                                <option value="ExtraLarge">Extra Large</option>
+                                                <option value="ExtraLarge">Extra  Large</option>
                                                 <option value="ExtraLarge">2X Large</option>
                                                 <option value="ExtraLarge">3X Large</option>
                                                 <option value="ExtraLarge">4X Large</option>
@@ -214,8 +212,10 @@
                                              </select>
                                         </div>
                                         <div class="col-sm-6">
-                                          <label class="col-form-label pt-0" >Product Code</label>
-                                          <input class="form-control " id="pcode" type="text" onchange="iDetails();button();" name="pcode"  placeholder="Enter Product Code">
+                                          <label class="col-form-label pt-0" >Price</label>
+                                          <input type="hidden" id="predi" />
+                                          <input class="form-control " id="price" type="number"   onchange="iDetails();button();" name="price"  placeholder="Enter Price" required>
+                                          <p class="col-form-label pt-0" id="predict" ></p>
                                        </div>
                                     </div>
                               </div>
@@ -288,6 +288,14 @@
                                     <h5>Sub-Category</h5>
                                     <select class="form-control  form-select  " id="Select1" name="subcatValue"  onChange="subcatchange();button();"  required>
                                        <option selected="true" disabled="disabled">-SELECT SUB-CATEGORY</option>
+                                    </select>
+                                 </div>
+                                 <div class="mb-3" id="shoetypediv">
+                                    <h5>Shoe Type</h5>
+                                    <select class="form-control form-select" id="shoetype" name="shoetype"  onchange="predict2();"   required>
+                                       <option selected="true" disabled="disabled">-SELECT Shoe Type</option>
+                                       <option value="0">Normal</option>
+                                       <option value="1">Premium</option>
                                     </select>
                                  </div>
                               </div>
@@ -452,12 +460,13 @@
 
 
 <script>
+$('#shoetypediv').hide();
     //price algo start
     const predict2 = () =>{
         // iDetails();
        var conS = $("select[name=condition]").val();
          var Cond = ( conS == "9/10") ? "Nine" : ( conS == "8/10") ? "Eight" :  ( conS == "7/10") ? "Seven" :( conS == "10/10") ? "Ten" : "Ten";
-   
+        var shoe_type=document.getElementById("shoetype").value;
         // var Price = $("input[name=Price]").val(Cond);
         var Brand = $("#selUser option:selected").text();
         var Size = $("select[name=SizeEURO]").val();
@@ -467,8 +476,11 @@
         var subcats=document.getElementById("Select1").value;
         if(subcats==71)
         {
+           
+            // $('#shoetypediv').show();
+            
             var settings = {
-                      "url": "Pricecurl.php?Brand="+Brand+"&Size="+Size+"&Cond="+Cond+"&SKU="+SKU,
+                      "url": "Pricecurl.php?Brand="+Brand+"&Size="+Size+"&Cond="+Cond+"&SKU="+SKU+"&Type="+shoe_type,
                       "method": "GET",
                       "timeout": 0,
                 };
@@ -648,6 +660,7 @@
    
    
    function addShopify(){
+        $('#Sbutton').addClass("disabled");
     //   $('#Sbutton').prop("disabled", true);
        
     //   document.getElementById('Sbutton').innerHTML= `Publishing  <i class="fa fa-circle-o-notch fa-spin"></i>`
@@ -1223,7 +1236,17 @@
        
         d = document.getElementById("Select1").value;
         
-        console.log(catname1);
+        // console.log(catname1);
+        if(d==71)
+        {
+
+            $('#shoetypediv').show();
+            
+        }
+        else
+        {
+             $('#shoetypediv').hide();
+        }
        //  alert(d);
        var settings = {
      "url": "api/getSubattr.php?id="+d,
@@ -1420,7 +1443,7 @@
            function myNewFunction(sel) {
                
                
-             var value = sel.options[sel.selectedIndex].text;    
+             var value = sel.options[sel.selectedIndex].text;    a
                
                var settings = {
          "url": "api/SKU.php?name=" + value,
@@ -1909,20 +1932,42 @@
    
    
    const checkAlocation =() =>{
-       
+       var warehouse=$("#SelectW").val();
        var SKU_INPUT = $("#SKU").val();
-       var SKUP = SKU_INPUT[0]
+       var SKUP = SKU_INPUT;
        var WSKU =  $("input[name=sku]").val
        
       
        
        var settings = {
-     "url": "api/racksalocation.php?id="+SKUP,
+     "url": "api/racksalocation.php?id="+SKUP+"&warehouse="+warehouse,
      "method": "POST",
      "timeout": 0,
    };
    
    $.ajax(settings).done(function (response) {
+       
+       if(response==2)
+       {
+            toastr.error('SKU Discard/Batch Discard');
+            // setTimeout(function() {
+            //     location.reload(); 
+            // }, 9000);
+       }
+       if(response==3)
+       {
+            toastr.error('SKU already allocated');
+            // setTimeout(function() {
+            //     location.reload(); 
+            // }, 9000);
+       }
+       if(response==4)
+       {
+            toastr.error('Rack not found on this category');
+            // setTimeout(function() {
+            //     location.reload(); 
+            // }, 9000);
+       }
      
      var JRES = JSON.parse(response)
      

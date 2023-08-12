@@ -32,7 +32,7 @@ if(isset($_POST["id"]))
     
     
     
-     $sql3 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '', 'Picked', '$C_Date')";
+     $sql3 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Order','$order', '$id', 'Picked', '$C_Date')";
      $result3 = mysqli_query($mysql, $sql3);
      
      
