@@ -507,7 +507,7 @@
               <h3>Session Timeout</h3>
               <p class="sub-content">Due to browser inactivity your session has timed out<br>
               you must login again to access your data.</p>
-<a class="btn btn-primary btn-lg" href="../index">BACK TO LOGIN PAGE</a><br>
+<a class="btn btn-primary btn-lg" href="../index.php">BACK TO LOGIN PAGE</a><br>
 <small>We apologize for the inconvience, but session timeouts were added for security reasons to ensure that your data is protected.</small>
             </div>
           </div>
