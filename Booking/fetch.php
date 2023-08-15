@@ -3,7 +3,7 @@
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
 
-$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order` where Date > '2023-08-13'";
+$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order`";
 
 
 if(isset($_POST['cond']))
