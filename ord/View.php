@@ -193,67 +193,7 @@ function JSDropDown() {
         to=document.getElementById("todate").value;
         
         
-        if(from!='' && to!='')
-        {
-            $.ajax({
-                    url:"count.php",
-                    method:"POST",
-                    data:{from:from,to:to},
-                     success:function(response)
-                     {
-                        var test=JSON.parse(response);
-                        var pending=test[0];
-                        var confirm=test[1];
-                        var cancel=test[2];
-                        var hold=test[3];
-                        var reattempt=test[4];
-                        var all=test[5];
-                        var wfr=test[6]
-                        
-                        $('#pendingc').html('('+pending+')');
-                        $('#confirmc').html('('+confirm+')');
-                        $('#cancelc').html('('+cancel+')');
-                        $('#holdc').html('('+hold+')');
-                        $('#reatemptc').html('('+reattempt+')');
-                        $('#waitforretc').html('('+wfr+')');
-                        $('#allc').html('('+all+')');
-                        
-                     }
-                });
-        }
-        else
-        {
-            $.ajax({
-                url:"count.php",
-                method:"POST",
-             
-                 success:function(response)
-                 {
-                    var test=JSON.parse(response);
-                        var pending=test[0];
-                        var confirm=test[1];
-                        var cancel=test[2];
-                        var hold=test[3];
-                        var reattempt=test[4];
-                        var all=test[5];
-                        var wfr=test[6]
-                        
-                        $('#pendingc').html('('+pending+')');
-                        $('#confirmc').html('('+confirm+')');
-                        $('#cancelc').html('('+cancel+')');
-                        $('#holdc').html('('+hold+')');
-                        $('#reatemptc').html('('+reattempt+')');
-                        $('#waitforretc').html('('+wfr+')');
-                        $('#allc').html('('+all+')');
-
-                 }
-      });
-        }
-                
-           
-            
-         
-     }, 5000);  
+          
     var cond="all";
     load_data(1,'','10','','','','','','','',cond);
     
@@ -291,43 +231,14 @@ function JSDropDown() {
       var page = $(this).data('page_number');
       
       //condition
-      //all
-      $(document).on('click', '#all_ord', function(){
-          cond='all';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //pending
-      $(document).on('click', '#pen_ord', function(){
-          cond='Pending';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-          
-      });
+     
+     
       //confirmed
       $(document).on('click', '#conf_ord', function(){
           cond='Confirmed';
           load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
       });
-      //cancel
-      $(document).on('click', '#can_ord', function(){
-          cond='Cancel';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //hold
-      $(document).on('click', '#hold_ord', function(){
-          cond='Hold';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //reattempt
-      $(document).on('click', '#re_ord', function(){
-          cond='Reattempt';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //waitforreturn
-      $(document).on('click', '#wait_ord', function(){
-          cond='WFR';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      
+    
       //for default page load 
       
       load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
@@ -414,40 +325,10 @@ function JSDropDown() {
       
       
       //condition
-      //all
-      $(document).on('click', '#all_ord', function(){
-          cond='all';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //pending
-      $(document).on('click', '#pen_ord', function(){
-          cond='Pending';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-          
-      });
+
       //confirmed
       $(document).on('click', '#conf_ord', function(){
           cond='Confirmed';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //cancel
-      $(document).on('click', '#can_ord', function(){
-          cond='Cancel';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //hold
-      $(document).on('click', '#hold_ord', function(){
-          cond='Hold';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //reattempt
-      $(document).on('click', '#re_ord', function(){
-          cond='Reattempt';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //waitforreturn
-      $(document).on('click', '#wait_ord', function(){
-          cond='WFR';
           load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
       });
       //for default page load 
@@ -470,43 +351,11 @@ function JSDropDown() {
       var limit=document.getElementById("limit").value;
       var sort=document.getElementById("sort").value;
       //condition
-      //all
-      $(document).on('click', '#all_ord', function(){
-          cond='all';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //pending
-      $(document).on('click', '#pen_ord', function(){
-          cond='Pending';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-          
-      });
       //confirmed
       $(document).on('click', '#conf_ord', function(){
           cond='Confirmed';
           load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
       });
-      //cancel
-      $(document).on('click', '#can_ord', function(){
-          cond='Cancel';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //hold
-      $(document).on('click', '#hold_ord', function(){
-          cond='Hold';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //reattempt
-      $(document).on('click', '#re_ord', function(){
-          cond='Reattempt';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //waitforreturn
-      $(document).on('click', '#wait_ord', function(){
-          cond='WFR';
-          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
-      });
-      //for default page load 
       
       load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond);
     });
