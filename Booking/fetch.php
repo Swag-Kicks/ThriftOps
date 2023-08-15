@@ -3,7 +3,7 @@
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
 
-$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order` where Date > '2023-08-13'";
+$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order`";
 
 
 if(isset($_POST['cond']))
@@ -18,11 +18,11 @@ if(isset($_POST['cond']))
              {
                  if($_POST['courier'] != '')
                  {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND  Date > "2023-08-13"';
+                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
                  }
                  if($_POST['courier'] == '')
                  {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND  Date > "2023-08-13"';
+                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
                  }
              }
         }
@@ -143,7 +143,7 @@ if(isset($_POST['limit']))
 }
 else
 {
-  $limit = '1000';
+  $limit = '10';
   $page = 1;
   if($_POST['page'] > 1)
   {
@@ -195,7 +195,7 @@ while($row = mysqli_fetch_array($result))
     $records2 = "SELECT * FROM `Order` WHERE Order_ID='".$row["Order_ID"]."'"; 
     $quantity = mysqli_num_rows(mysqli_query($mysql, $records2));
     
-    if($stat=='Confirmed')
+    if($stat=='RConfirmed')
     {
         $s="Unbooked";
         $output .= '
