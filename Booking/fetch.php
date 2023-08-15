@@ -10,7 +10,7 @@ if(isset($_POST['cond']))
 {
     $cond=$_POST['cond'];
     
-    if($cond=="Confirmed")
+    if($cond=="RConfirmed")
     {
         if(!empty($_POST['from']))
         {
@@ -38,7 +38,7 @@ if(isset($_POST['cond']))
 }
 // else
 // {
-//     $query .= ' WHERE Status LIKE "%None%" OR Status LIKE "%Confirmed%" OR Status LIKE "%Cancel%" OR Status LIKE "%Hold%" OR Status LIKE "%Reattempt%" ';
+//     $query .= ' WHERE Status LIKE "%None%" OR Status LIKE "%RConfirmed%" OR Status LIKE "%Cancel%" OR Status LIKE "%Hold%" OR Status LIKE "%Reattempt%" ';
 // }
 
 
@@ -47,11 +47,11 @@ if(!empty($_POST['ordernum']))
     $ord=$_POST['ordernum'];
     if(is_numeric($cut))
     {
-        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("Confirmed","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Picked","Received")';
+        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("RConfirmed","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Picked","Received")';
     }
     else
     {
-       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("Confirmed","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Picked","Received")';
+       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("RConfirmed","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Picked","Received")';
     }
     
 }
@@ -60,35 +60,35 @@ if($_POST['customer'] != '')
     $cut=$_POST['customer'];
     if(is_numeric($cut))
     {
-        $query .= ' WHERE Contact LIKE "%'.str_replace(' ', '%', $_POST['customer']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+        $query .= ' WHERE Contact LIKE "%'.str_replace(' ', '%', $_POST['customer']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
     }
     else
     {
-       $query .= ' WHERE Name LIKE "%'.str_replace(' ', '%', $_POST['customer']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")'; 
+       $query .= ' WHERE Name LIKE "%'.str_replace(' ', '%', $_POST['customer']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")'; 
     }
     
 }
 if($_POST['city'] != '')
 {
-  $query .= ' WHERE City LIKE "%'.str_replace(' ', '%', $_POST['city']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+  $query .= ' WHERE City LIKE "%'.str_replace(' ', '%', $_POST['city']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
 }
 if($_POST['items'] != '')
 {
-  $query .= ' WHERE SKU LIKE "%'.str_replace(' ', '%', $_POST['items']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+  $query .= ' WHERE SKU LIKE "%'.str_replace(' ', '%', $_POST['items']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
 }
 if($_POST['amount'] != '')
 {
-  $query .= ' WHERE Total LIKE "%'.str_replace(' ', '%', $_POST['amount']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+  $query .= ' WHERE Total LIKE "%'.str_replace(' ', '%', $_POST['amount']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
 }
 
 if($_POST['tracking'] != '')
 {
-  $query .= ' WHERE Tracking LIKE "%'.str_replace(' ', '%', $_POST['tracking']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+  $query .= ' WHERE Tracking LIKE "%'.str_replace(' ', '%', $_POST['tracking']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
 }
 
 // if($_POST['courier'] != '')
 // {
-//   $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+//   $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status in ("RConfirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
 // }
 
 
@@ -195,7 +195,7 @@ while($row = mysqli_fetch_array($result))
     $records2 = "SELECT * FROM `Order` WHERE Order_ID='".$row["Order_ID"]."'"; 
     $quantity = mysqli_num_rows(mysqli_query($mysql, $records2));
     
-    if($stat=='RConfirmed')
+    if($stat=='RRConfirmed')
     {
         $s="Unbooked";
         $output .= '
