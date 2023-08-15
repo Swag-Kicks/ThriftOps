@@ -3,7 +3,7 @@
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
 
-$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order` where Date > '2023-08-12'";
+$query = "SELECT *,GROUP_Concat(SKU) as con FROM `Order` where Date > '2023-08-13'";
 
 
 if(isset($_POST['cond']))
@@ -18,7 +18,7 @@ if(isset($_POST['cond']))
              {
                  if($_POST['courier'] != '')
                  {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date > 2023-08-12';
+                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date > 2023-08-13';
                  }
                  if($_POST['courier'] == '')
                  {
