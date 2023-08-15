@@ -18,7 +18,7 @@ if(isset($_POST['cond']))
              {
                  if($_POST['courier'] != '')
                  {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date 2023-08-12';
                  }
                  if($_POST['courier'] == '')
                  {
