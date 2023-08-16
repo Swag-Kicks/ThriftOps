@@ -558,8 +558,8 @@ session_Start();
                                <td>${values.Warehouse_ID}</td>
                                  <td>${values.Fments}</td>
                                   <td>${values.batches}</td>
-                                  <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
-                                  <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                  <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="../assets/images/icons/eye.png"></a>
+                                  <a href="#" data-role="infrm" ><img class=""  src="../assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                   
                           </tr > `;
    
