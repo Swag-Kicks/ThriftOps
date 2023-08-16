@@ -43,13 +43,13 @@ else if ($Category=='Footwear' && $subCat='Formal Shoe')
       $gen=$mod.'formal';
       $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
  }
-//   else if($Category=='Accessories' && $subCat=='Bag')
-//  {
-//     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
-//      $lower=lcfirst($subCat);
-//      $gen=$mod.$lower;
-//      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
-//  }
+  else if($Category=='Bags' && $subCat =='Clutch' || $subCat=='Shoulder bags' || $subCat='Top handle bags'|| $subCat=='Shoulder bags'|| $subCat=='Hobo bags'|| $subCat=='Tote bags'|| $subCat=='Duffel bags'|| $subCat=='Pouches'|| $subCat=='hand Bag')
+ {
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+     $lower=lcfirst($subCat);
+     $gen=$mod.$lower;
+     $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
+ }
 else if($Category=='Accessories' && $subCat!='Bag')
  {
     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
