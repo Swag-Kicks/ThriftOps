@@ -37,7 +37,7 @@ $weight=$row['weight'];
      $gen=$mod.$lower;
      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
  }
-if ($Category=='Footwear' &&$subCat='Formal Shoe')
+else if ($Category=='Footwear' && $subCat='Formal Shoe')
  {
      $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
       $gen=$mod.'formal';
@@ -50,14 +50,14 @@ if ($Category=='Footwear' &&$subCat='Formal Shoe')
 //      $gen=$mod.$lower;
 //      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
 //  }
-if($Category=='Accessories' && $subCat!='Bag')
+else if($Category=='Accessories' && $subCat!='Bag')
  {
     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
      $lower=lcfirst($subCat);
      $gen=$mod.$lower;
      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
  }
-if($Category=='Topwear')
+else if($Category=='Topwear')
  {
     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
      $lower=lcfirst($subCat);
@@ -65,7 +65,7 @@ if($Category=='Topwear')
      $Custom="Clothes";
      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Custom.','.$sku.','.$size.','.$subCat;
  }
-if($Category=='Bottomwear')
+else if($Category=='Bottomwear')
  {
     $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
      $lower=lcfirst($subCat);
