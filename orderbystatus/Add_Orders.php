@@ -41,7 +41,7 @@ $cr=$_SESSION['Username'];
             </div>
             <div class="col-sm-6">
            
-                <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">Button</a>
+                <a href="Create.php" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">Button</a>
             </div>
             
          </div>

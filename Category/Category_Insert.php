@@ -39,7 +39,7 @@ date_default_timezone_set("Asia/Karachi");
                </br>
                </div>
                 <div class="col-md-6">
-                                 <a href="Category_View"> <input type="button" value="View Category" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                                 <a href="Category_View.php"> <input type="button" value="View Category" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
                          <input type="button" name="pick" value="⟳ Refresh" id="refresh" class="btn btn-primary f-right ref">
                      </div>
                      </div>
