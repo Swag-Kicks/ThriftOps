@@ -61,7 +61,17 @@ session_Start();
        <div class="row" style="background-color:#F9FCFF;margin:0.8px;height:100px;">
                 <div class="col-md-9 " style="margin-top:34px;">
               <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
-                      <li class="nav-item"><a class="nav-link" id="conf_ord" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false">Unbooked<span id="unbookedb"></span></a></li>                
+                      <li class="nav-item"><a class="nav-link active" id="all_ord" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="true">All<span id="allb"></span></a></li>
+                      <li class="nav-item"><a class="nav-link" id="conf_ord" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false">Unbooked<span id="unbookedb"></span></a></li>
+                      <li class="nav-item"><a class="nav-link" id="dis_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Dispatched <span id="dispatchedb"></span> </a></li>
+                      <li class="nav-item"><a class="nav-link" id="ins_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">InTransit<span id="intransitb"></span> </a></li>
+                      <li class="nav-item"><a class="nav-link" id="del_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Delivered<span id="deliveredb"></span> </a></li>
+                      <li class="nav-item"><a class="nav-link" id="ret_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Returned<span id="returnedb"></span></a></li>
+                      <li class="nav-item"><a class="nav-link" id="loss_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Conflict/Lost<span id="lostb"></span></a></li>
+                      <li class="nav-item"><a class="nav-link" id="book_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Booked<span id="bookb"></span></a></li>
+
+                  
+                
                     </ul>
                 </div>
                 <div class="col-md-3 p-r-20" style="margin-top:30px;">
@@ -518,6 +528,69 @@ function JSDropDown() {
         from=document.getElementById("fromdate").value;
         to=document.getElementById("todate").value;
         
+        
+        if(from!='' && to!='')
+        {
+            $.ajax({
+                    url:"count.php",
+                    method:"POST",
+                    data:{from:from,to:to},
+                     success:function(response)
+                     {
+                        var test=JSON.parse(response);
+                        var confirm=test[0];
+                        var dispatch=test[1];
+                        var intransit=test[2];
+                        var delivered=test[3];
+                        var returned=test[4];
+                        var lost=test[5];
+                        var book=test[6];
+                        var all=test[7];
+                        
+                        $('#unbookedb').html('('+confirm+')');
+                        $('#dispatchedb').html('('+dispatch+')');
+                        $('#intransitb').html('('+intransit+')');
+                        $('#deliveredb').html('('+delivered+')');
+                        $('#returnedb').html('('+returned+')');
+                        $('#lostb').html('('+lost+')');
+                        $('#bookb').html('('+book+')');
+                        $('#allb').html('('+all+')');
+                        
+                     }
+                });
+        }
+        else
+        {
+            $.ajax({
+                url:"count.php",
+                method:"POST",
+             
+                 success:function(response)
+                 {
+                    var test=JSON.parse(response);
+                    var confirm=test[0];
+                        var test=JSON.parse(response);
+                        var confirm=test[0];
+                        var dispatch=test[1];
+                        var intransit=test[2];
+                        var delivered=test[3];
+                        var returned=test[4];
+                        var lost=test[5];
+                        var book=test[6];
+                        var all=test[7];
+                        
+                        $('#unbookedb').html('('+confirm+')');
+                        $('#dispatchedb').html('('+dispatch+')');
+                        $('#intransitb').html('('+intransit+')');
+                        $('#deliveredb').html('('+delivered+')');
+                        $('#returnedb').html('('+returned+')');
+                        $('#lostb').html('('+lost+')');
+                        $('#bookb').html('('+book+')');
+                        $('#allb').html('('+all+')');
+                    
+                 }
+      });
+        }
                 
            
             
@@ -584,12 +657,46 @@ function JSDropDown() {
       var page = $(this).data('page_number');
       
       //condition
-    
+      //all
+      $(document).on('click', '#all_ord', function(){
+          cond='all';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
       //confirm
       $(document).on('click', '#conf_ord', function(){
           cond='Confirmed';
           load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
           
+      });
+      //dispatch
+      $(document).on('click', '#dis_ord', function(){
+          cond='Dispatched';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
+      //intransit
+      $(document).on('click', '#ins_ord', function(){
+          cond='Intransit';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
+      //Delivered
+      $(document).on('click', '#del_ord', function(){
+          cond='Delivered';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
+      //Returned
+      $(document).on('click', '#ret_ord', function(){
+          cond='Returned';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
+       //Loss
+      $(document).on('click', '#loss_ord', function(){
+          cond='Loss';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
+      });
+      //book
+      $(document).on('click', '#book_ord', function(){
+          cond='Booked';
+          load_data(page,ordernum,limit,sort,from,to,customer,city,items,amount,cond,courier);
       });
       //for default page load 
       
