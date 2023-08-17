@@ -732,8 +732,8 @@ $('#shoetypediv').hide();
    form.append("image4", image4);
    form.append("image5", image5);
    form.append("image6", image6);
-   form.append("desc",desc)
-   
+   form.append("desc",desc);
+   form.append("subcat_id",cas);
    var settings = {
      "url": "shopify.php",
      "method": "POST",

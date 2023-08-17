@@ -27,18 +27,18 @@ while ($row = $result->fetch_assoc())
     $capacity=$cap1."/".$cap;
     
     //name fetch
-    $ip=explode(",",$ven);
-    $venames;
-    foreach ($ip as $venid) 
-    {
-        $sql4="Select Name from Vendor Where Vendor_ID='$venid'";
-        $result2 = mysqli_query($mysql, $sql4);
-        $row2 = $result2->fetch_assoc();
-        $cat=$row2['Name'];
-        $venames.=$cat.',';
+    // $ip=explode(",",$ven);
+    // $venames;
+    // foreach ($ip as $venid) 
+    // {
+    //     $sql4="Select Name from Vendor Where Vendor_ID='$venid'";
+    //     $result2 = mysqli_query($mysql, $sql4);
+    //     $row2 = $result2->fetch_assoc();
+    //     $cat=$row2['Name'];
+    //     $venames.=$cat.',';
       	
 					    
-    }
+    // }
     
     // $concat=implode(" ",$arr);
       $to_encode[] = array("Warehouse_ID"=>$wid,"Location"=>$row['Location'],"Racks"=>$racks,"Capacity"=>$capacity,"Filled"=>$row['Filled'],"Address"=>$row['Address'],"SK_Format"=>$row['SK_Format'],"DateTime"=>$row['DateTime'],"Allocation"=>$row['Allocation'],"Status"=>$row['Status'],"Vendor"=>$venames);
