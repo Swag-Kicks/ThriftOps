@@ -132,6 +132,7 @@ else
                             "barcode" => $sku,
                             "weight" => $weight,
                             "option1"=>$size,
+                            "option2"=>$condi,
                             "inventory_quantity" => $qty,
                             "fulfillment_service" => "manual",
                             "inventory_management" => "shopify"
