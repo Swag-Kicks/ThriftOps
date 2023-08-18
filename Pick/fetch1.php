@@ -103,7 +103,7 @@ if(isset($_SESSION['id']) && $_SESSION['id'] == true)
                 
             // }
             //  $rt.=" AND SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%'";
-            $rt.="SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%' AND SKU NOT LIKE '%SF-%'";
+            $rt.="SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%' AND SKU NOT LIKE '%SF-%' AND SKU NOT LIKE '%FS-%'";
         }
     }
 }

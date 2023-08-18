@@ -502,7 +502,7 @@ $.fn.dataTable.ext.errMode = 'none';
     function load_data(page)
     {
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/warehouse.php",
+        url:"api/warehouse.php",
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -652,7 +652,7 @@ $('#change').change(function(){
 // const fetchTable = () =>{
    
 // var settings = {
-//   "url": "https://backup.thriftops.com/Warehouse/api/warehouse.php",
+//   "url": "https://sys.thriftops.com/Warehouse/api/warehouse.php",
 //   "method": "GET",
 //   "timeout": 0,
 // };
@@ -729,7 +729,7 @@ form.append("status", status);
 form.append("vendor", vendor);
 form.append("capacity", capacity);
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/addWarehouse.php",
+  "url": "api/addWarehouse.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -775,7 +775,7 @@ form.append("ids", newArray);
 form.append("status", status);
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/updateStatus.php",
+  "url": "api/updateStatus.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -815,7 +815,7 @@ form.append("ids", newArray);
 form.append("status", status);
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/updateAlo.php",
+  "url": "api/updateAlo.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -884,7 +884,7 @@ const  fnExcelReport = () =>
        function Vendors(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/Warehouse/api/vendors.php",
+      "url": "api/vendors.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -913,7 +913,7 @@ const  fnExcelReport = () =>
 const getSingleRacks = (rid) =>{
     var id = rid
     var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/getSingleRack.php?id="+id,
+  "url": "api/getSingleRack.php?id="+id,
   "method": "POST",
   "timeout": 0,
 };
@@ -943,7 +943,7 @@ form.append("id", wid);
 form.append("racks", rid);
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/updateRack.php",
+  "url": "api/updateRack.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1082,7 +1082,7 @@ table.destroy();
     });
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/warehouse.php",
+        url:"api/warehouse.php",
         method:"POST",
         data:{page:page},
         success:function(data)

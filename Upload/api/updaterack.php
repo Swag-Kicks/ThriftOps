@@ -8,7 +8,7 @@ include_once("../../include/mysql_connection.php");
          
 
  
-      $sql = "UPDATE `racks` SET `SKU` = '$sku' WHERE `racks`.`name` = '$rnumber' ";
+      $sql = "UPDATE `racks` SET `SKU` = '$sku',`Status`='Filled' WHERE `racks`.`name` = '$rnumber' ";
        $result = mysqli_query($mysql, $sql);
    
        

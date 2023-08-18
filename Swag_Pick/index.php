@@ -21,7 +21,7 @@
                              </div>
                              <div class="col-md-6">
                         
-                       <a href="../Rack/Manual_Allocation"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                       <a href="../Rack/Manual_Allocation.php"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
                          <input type="button" name="pick" value="⟳ Refresh" id="refresh" class="btn btn-primary f-right ref">
                      </div>
                             </div>

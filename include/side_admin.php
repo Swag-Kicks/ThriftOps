@@ -18,7 +18,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -40,9 +40,9 @@
               <ul class="nav-submenu menu-content">
                   <li><a href="../Vendor2/index">Vendor</a></li>
                 <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
@@ -56,31 +56,31 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds">Refunds</a></li>
               </ul>
             </li>
            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>
@@ -117,9 +117,9 @@
            
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
            
@@ -138,7 +138,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -158,16 +158,16 @@
             <!--</li>-->
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -176,31 +176,31 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
-                <li><a href="../Pick/index">Pick List</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
+                <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds">Refunds</a></li>
               </ul>
             </li>
            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>
@@ -245,7 +245,7 @@
            
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -254,17 +254,17 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
@@ -287,16 +287,16 @@
           
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -305,7 +305,7 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
                 
               </ul>
             </li>
@@ -324,7 +324,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -344,16 +344,16 @@
             <!--</li>-->
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -362,9 +362,9 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
@@ -372,21 +372,21 @@
                   
                 <li><a href="../Warehouse/View">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
-                <li><a href="../Pick/index">Pick List</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
+                <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds">Refunds</a></li>
               </ul>
             </li>
            <!--<li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>-->
@@ -421,7 +421,7 @@
             <br>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/new.php">Product Listing</a></li>
               </ul>
             </li>
@@ -440,7 +440,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -460,16 +460,16 @@
             <!--</li>-->
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -478,31 +478,31 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds">Refunds</a></li>
               </ul>
             </li>
            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>
@@ -535,7 +535,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -555,16 +555,16 @@
             <!--</li>-->
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -573,31 +573,31 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds">Refunds</a></li>
               </ul>
             </li>
            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>
@@ -630,7 +630,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -650,16 +650,16 @@
             <!--</li>-->
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index">Vendor</a></li>
+                  <li><a href="../Vendor2/index.php">Vendor</a></li>
                 <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -668,31 +668,31 @@
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds.php">Refunds</a></li>
               </ul>
             </li>
            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>
@@ -728,24 +728,24 @@
         
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet">Loadsheet</a></li>
+                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
           </ul>
@@ -765,15 +765,15 @@
             <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
               <ul class="nav-submenu menu-content">
                   <li><a href="../Vendor2/index">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View">Batches</a></li>
+                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
+                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
+                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
+                <li><a href="../Batches/Batch_View.php">Batches</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
                 <li><a href="../Upload/addAttribute.php">Add Category</a></li>
                 <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
                 <li><a href="../Upload/new.php">Product Listing</a></li>
@@ -788,9 +788,9 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
                 <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
@@ -812,14 +812,14 @@
            
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View">All Products</a></li>
+                <li><a href="../All_Product/View.php">All Products</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
-                <li><a href="../Induction/New">Induction</a></li>
+                <li><a href="../Warehouse/View.php">Warehouses</a></li>
+                <li><a href="../Induction/New.php">Induction</a></li>
                 <li><a href="../Pick/index.php">Pick List</a></li>
               </ul>
             </li>
@@ -839,16 +839,16 @@
             <br>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View">All Orders</a></li>
-                <li><a href="../Booking/View">Booking</a></li>
-                <li><a href="../Abandoned/View">Abandoned Carts</a></li>
+                <li><a href="../ord/View.php">All Orders</a></li>
+                <li><a href="../Booking/View.php">Booking</a></li>
+                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Return/View.php">All Return</a></li>
                 <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>
+                <li><a href="../Return/refunds.php">Refunds</a></li>
               </ul>
             </li>
           </ul>
@@ -866,9 +866,9 @@
 <script>
     
     var uname = $("#uname").val()
-    
+    var base=document.location.origin;
 var settings = {
-  "url": "https://backup.thriftops.com/include/api/fetchid.php?id="+uname,
+  "url": base+"/include/api/fetchid.php?id="+uname,
   "method": "POST",
   "timeout": 0,
   "processData": false,

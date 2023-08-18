@@ -730,7 +730,7 @@ console.log("remainder",remainder)
                      </div>
                     <div class="modal-footer mxl-3">
                          
-                         <a target="_blank" href="print_pdf?GETID=${ordernumberL}" id="printlab" class="btn btn-outline-primary pull-left">Print Label</a>
+                         <a target="_blank" href="print_pdf.php?GETID=${ordernumberL}" id="printlab" class="btn btn-outline-primary pull-left">Print Label</a>
                          <button href="#"  id="button${ordernumber}" class="btn btn-md btn-primary ref  f-right" style="padding: 6px 24px;" onclick="packOrder('${ordernumber}')"  disabled  title="Ready to Pack" >Pack</button>
                          
                        </div>
