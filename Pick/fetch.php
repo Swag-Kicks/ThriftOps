@@ -21,7 +21,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%Booked%"';
+            $query .= ' WHERE Status LIKE "%Booked%" AND Date > "2023-04-01"';
         }
     }
     if($cond=="Picked")
@@ -35,7 +35,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%Received%"';
+            $query .= ' WHERE Status LIKE "%Received%"';
         }
     }
     if($cond=="Not")
@@ -49,7 +49,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%Not_Found%"';
+            $query .= ' WHERE Status LIKE "%Not_Found%"';
         }
     }
 

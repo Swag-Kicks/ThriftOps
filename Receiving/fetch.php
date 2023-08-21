@@ -38,7 +38,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%Picked%"';
+            $query .= ' WHERE Status LIKE "%Picked%" AND Date > "2023-04-01"';
         }
     }
     if($cond=="Picked")
@@ -69,7 +69,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status="Received"';
+            $query .= ' WHERE Status="Received"';
         }
     }
     if($cond=="Not")
@@ -100,7 +100,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status="Not_Received"';
+            $query .= ' WHERE Status="Not_Received"';
         }
     }
      if($cond=="Pack")
@@ -131,7 +131,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%Packed%"';
+            $query .= ' WHERE Status LIKE "%Packed%"';
         }
     }
 

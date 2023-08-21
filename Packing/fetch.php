@@ -66,7 +66,7 @@ else
         }
     else
     {
-        $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status in ("Booked","Picked","Received")';
+        $query .= ' WHERE Status in ("Booked","Picked","Received") AND Date>"2023-04-01"';
     }
 }
 

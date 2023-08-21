@@ -28,11 +28,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
+            $query .= ' WHERE Status in ("Confirmed","Exchange","Dispatched","InTransit","Delivered","Returned","Loss","Booked","Packed","Received","Picked")';
         }
             
     }
@@ -54,11 +54,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-           $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+           $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Dispatched")
@@ -79,11 +79,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-           $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+           $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Intransit")
@@ -104,11 +104,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Delivered")
@@ -129,11 +129,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Returned")
@@ -154,11 +154,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Loss")
@@ -179,11 +179,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Booked")
@@ -204,11 +204,11 @@ if(isset($_POST['cond']))
         }
         if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
         {
-          $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Courier !="" AND Tracking !=""';
+          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Courier !="" AND Tracking !=""';
         }
         if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
         {
-            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Courier !="" AND Tracking !=""';
+            $query .= ' WHERE Courier !="" AND Tracking !=""';
         }
     }
     
