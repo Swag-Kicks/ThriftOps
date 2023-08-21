@@ -141,11 +141,6 @@ else
                       "metafields" => array(
                         array(
                             "namespace" => "custom",
-                            "key" => "size",
-                            "value" => $size
-                        ),
-                        array(
-                            "namespace" => "custom",
                             "key" => "condition",
                             "value" => $size
                         ),

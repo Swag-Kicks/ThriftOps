@@ -21,7 +21,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status in ("None","Confirmed","Cancel","Hold","Reattempt","WFR")';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status in ("None","Confirmed","Cancel","Hold","Reattempt","WFR")';
         }
             
     }
@@ -36,7 +36,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%None%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%None%"';
         }
     }
     if($cond=="Confirmed")
@@ -50,7 +50,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Cancel")
@@ -64,7 +64,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     if($cond=="Hold")
@@ -78,7 +78,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     
@@ -93,7 +93,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
     
@@ -108,7 +108,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
+            $query .= ' WHERE Date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 WEEK) AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
 }
