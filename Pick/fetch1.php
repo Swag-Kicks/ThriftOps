@@ -103,7 +103,8 @@ if(isset($_SESSION['id']) && $_SESSION['id'] == true)
                 
             // }
             //  $rt.=" AND SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%'";
-            $rt.="SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%' AND SKU NOT LIKE '%SF-%' AND SKU NOT LIKE '%FS-%'";
+            $rt.="NOT SKU REGEXP '^(SK-|WP-|SF-|FS-)'";
+            // $rt.="SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%' AND SKU NOT LIKE '%SF-%'";
         }
     }
 }
@@ -259,7 +260,7 @@ else
 
 
 $filter_query = $query . ' LIMIT '.$start.', '.$limit.'';
-// echo $filter_query;
+echo $filter_query;
 
 
 

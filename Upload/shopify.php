@@ -138,7 +138,7 @@ else
                             "inventory_management" => "shopify"
                         )
                     ),
-                      "metafields" => array(
+                    "metafields" => array(
                         array(
                             "namespace" => "custom",
                             "key" => "condition",
@@ -189,11 +189,6 @@ else
                             "src" => $image5,
                             "width" => "3456",
                             "height" => "3456"
-                        ),
-                        array(
-                            "src" => $image6,
-                            "width" => "3456",
-                            "height" => "3456"
                         )
                     
                     
@@ -206,7 +201,7 @@ else
       ]
       ];
     curl_setopt_array($curl, array(
-      CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2022-10/products.json',
+      CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-04/products.json',
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
