@@ -141,23 +141,21 @@ else
                       "metafields" => array(
                         array(
                             "namespace" => "custom",
-                            "key" => "size",
-                            "value" => $size
-                        ),
-                        array(
-                            "namespace" => "custom",
                             "key" => "condition",
-                            "value" => $size
+                            "value" => $size,
+                            "type" =>"single_line_text_field"
                         ),
                         array(
                             "namespace" => "custom",
                             "key" => "newcondition",
-                            "value" => $condi
+                            "value" => $condi,
+                            "type" =>"single_line_text_field"
                         ),
                         array(
                             "namespace" => "custom",
                             "key" => "brands",
-                            "value" => $brand
+                            "value" => $brand,
+                            "type" =>"single_line_text_field"
                         )
                     
                     ),
