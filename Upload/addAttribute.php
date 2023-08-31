@@ -260,7 +260,7 @@ function Attribute()
 {
         
     var settings = {
-      "url": "../ShopifyPush/api/getattribute.php",
+      "url": "https://backup.thriftops.com/ShopifyPush/api/getattribute.php",
       "method": "POST",
       "timeout": 0,
     };

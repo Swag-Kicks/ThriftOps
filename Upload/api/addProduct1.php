@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once("../../include/mysql_connection.php"); 
 $cr=$_SESSION['id'];
 $C_Date = date('Y-m-d/h:i:a');

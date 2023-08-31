@@ -11,6 +11,11 @@ if(isset($_POST['shopid']) && isset($_POST['order']))
 {
     $orderid=$_POST['order'];
     $C_Date = date('Y-m-d/h:i:a');
+    //shopify token
+    $sql2="Select * from `API_Credentials` Where Platform='Shopify'";
+    $sh = mysqli_query($mysql, $sql2);
+    $row1123 = mysqli_fetch_assoc($sh);
+    $shop_token=$row1123['API_Pass'];
     foreach($_POST["shopid"] as $Shopify)
     {
         //fetch from shopify
@@ -19,7 +24,7 @@ if(isset($_POST['shopid']) && isset($_POST['order']))
         $ch = curl_init("https://$SHOP_URL/admin/api/2023-01/products/$Shopify.json");
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST,'GET');
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-            'X-Shopify-Access-Token: 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',
+            "X-Shopify-Access-Token: $shop_token",
             'Content-Type: application/json'                                                                                                                                      
             ));
         curl_setopt($ch, CURLOPT_POST, 1);

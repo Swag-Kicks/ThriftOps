@@ -200,6 +200,12 @@ else
      
       ]
       ];
+      
+      //shopify token
+        $sql2="Select * from `API_Credentials` Where Platform='Shopify'";
+        $sh = mysqli_query($mysql, $sql2);
+        $row1 = mysqli_fetch_assoc($sh);
+        $shop_token=$row1['API_Pass'];
     curl_setopt_array($curl, array(
       CURLOPT_URL => 'https://www-swag-kicks-com.myshopify.com/admin/api/2023-04/products.json',
       CURLOPT_RETURNTRANSFER => true,
@@ -211,8 +217,8 @@ else
       CURLOPT_CUSTOMREQUEST => 'POST',
       CURLOPT_POSTFIELDS =>json_encode($postData),
       CURLOPT_HTTPHEADER => array(
-        'X-Shopify-Access-Token: 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',
-        'Content-Type: application/json'
+        "X-Shopify-Access-Token: $shop_token",
+        "Content-Type: application/json"
       ),
     ));
     

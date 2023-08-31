@@ -29,6 +29,12 @@ if(isset($_POST["id"]) && isset($_POST["status"]) && isset($_POST["war"]) && iss
         $myresult = mysqli_query($mysql, "SELECT id,name FROM `racks` where Warehouse_ID='$war' AND Category='$sub' and SKU = '' LIMIT 1");
         $row12 = mysqli_fetch_assoc($myresult);
         $index=$row12["id"];
+        //shopify token
+        $sql2="Select * from `API_Credentials` Where Platform='Shopify'";
+        $sh = mysqli_query($mysql, $sql2);
+        $row121 = mysqli_fetch_assoc($sh);
+        $shop_token=$row121['API_Pass'];
+        
         
         if($index!='')
         {
@@ -52,7 +58,7 @@ if(isset($_POST["id"]) && isset($_POST["status"]) && isset($_POST["war"]) && iss
                  }
              }',
               CURLOPT_HTTPHEADER => array(
-                    'X-Shopify-Access-Token: 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',
+                    "X-Shopify-Access-Token: $shop_token",
                     'Content-Type: application/json'                                                                                                                                      
               ),
             ));
@@ -76,7 +82,7 @@ if(isset($_POST["id"]) && isset($_POST["status"]) && isset($_POST["war"]) && iss
                 "available": "1"
                 }',
                 CURLOPT_HTTPHEADER => array(
-                'X-Shopify-Access-Token: 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',
+                "X-Shopify-Access-Token: $shop_token",
                 'Content-Type: application/json'
                 ),
                 ));

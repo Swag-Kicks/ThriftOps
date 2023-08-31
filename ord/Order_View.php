@@ -74,7 +74,7 @@ $result123 = mysqli_query($mysql," Select * from Logs Where Type='Order' AND Typ
                
             </div>
             <div class="col-sm-6">
-                <a href="Order_edit.php?GETID=<?php echo $id ?>" name="pick" id="editicon" class="btn btn-primary-light m-l-15 f-right mb-1 edit">Edit</a>
+                <a href="Order_edit?GETID=<?php echo $id ?>" name="pick" id="editicon" class="btn btn-primary-light m-l-15 f-right mb-1 edit">Edit</a>
                 <!--<a href="#" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">initiate Return</a>-->
                 <a href="#" name="pick" id="rebookopt" class="btn btn-primary-light m-l-15 f-right mb-1">Re-Book</a>
             </div>

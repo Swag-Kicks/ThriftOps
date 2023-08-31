@@ -11,7 +11,6 @@ if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isse
     $size = (int)$_GET['Size'];
     $cond = $_GET['Cond'];
     $sku = $_GET['SKU'];
-    $type = $_GET['Type'];
     
     $query = "SELECT item_received.Unit_Price/item_received.Quantity as cost FROM sku inner join item_received on sku.GRN_ID=item_received.GRN_ID Where sku.SKU='".$sku."'";
     $result = mysqli_query($mysql, $query);
@@ -19,7 +18,7 @@ if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isse
     $temp=$row['cost'];
     //Requester
     $curl = curl_init();
-    $URL ="http://node.thriftops.com/predict?Brand=$brand&Premium=$type&Size=$size&Cond=$cond&DTS=25";
+    $URL ="http://node.thriftops.com/predict?Brand=$brand&Premium=1&Size=$size&Cond=$cond";
     curl_setopt_array($curl, array(
       CURLOPT_URL => $URL,
       CURLOPT_RETURNTRANSFER => true,
