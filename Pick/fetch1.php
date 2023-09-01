@@ -1,4 +1,5 @@
 <?php
+//pipeline
 session_start();
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
