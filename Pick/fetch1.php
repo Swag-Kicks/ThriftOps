@@ -23,24 +23,62 @@ if(isset($_SESSION['id']) && $_SESSION['id'] == true)
         $rowq1 =mysqli_fetch_array($my);
         $war=$rowq1['Warehouse_ID'];
         
+        
         if($war==0)
         {
-           $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM thriftops_30.Vendor inner join User On Vendor.Name=User.Name AND User.User_ID=$cr");
+           $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join User On Vendor.Name=User.Name Where User.User_ID=$cr group by SK_Prefix LIMIT 1");
            $run =mysqli_fetch_array($find);
            $for=$run['SK_Prefix'];
            $rt="SKU LIKE '%$for-%'";
         }
-        else if($war==1 || $war==2)
+         else if($war==1 || $war==2)
         {
-           $find=mysqli_query($mysql,"SELECT * FROM Warehouse Where Warehouse_ID='$war'");
-           $run =mysqli_fetch_array($find);
-           $for=$run['SK_Format'];
-           $rt="SKU LIKE '%$for-%'";
-          
+            $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join `User` On `Vendor`.Name=`User`.Name where `Vendor`.Warehouse_ID='$war' group by SK_Prefix");
+            $rt = "SKU REGEXP '^(";
+            while ($run = mysqli_fetch_assoc($find))
+            {
+                $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+                $rt .="$skPrefix-|";
+                
+            }
+            
+            if (!empty($rt)) {
+                $rt = rtrim($rt, " | ");
+             }
+             $rt.=")'";
+    
+            
         }
+        // else if($war==1)
+        // {
+        //   $find=mysqli_query($mysql,"SELECT * FROM Warehouse Where Warehouse_ID='$war'");
+        //   $run =mysqli_fetch_array($find);
+        //   $for=$run['SK_Format'];
+        //   $rt="SKU LIKE '%SK-%' OR SKU LIKE '%FS-%'";
+        //   //$rt="SKU LIKE '%$for-%'";
+          
+        // }
+        // else if($war==2)
+        // {
+        //     $rt="SKU LIKE '%WP-%'";
+        // }
         else
         {
-        
+            // $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join User On Vendor.Name=User.Name Where User.User_ID=$cr 
+            // AND `Vendor`.Warehouse_ID='$war'group by SK_Prefix");
+            
+            // $rt = "SKU REGEXP '^(";
+            // while ($run = mysqli_fetch_assoc($find))
+            // {
+            //     $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+            //     $rt .="$skPrefix-|";
+                
+            // }
+            
+            // if (!empty($rt)) {
+            //     $rt = rtrim($rt, " | ");
+            //  }
+            //  $rt.=")'";
         //   $find=mysqli_query($mysql,"SELECT Vendor FROM Warehouse Where Warehouse_ID='$war'");
         //   $run =mysqli_fetch_array($find);
         //   $for=$run['Vendor'];
@@ -209,7 +247,7 @@ else
 }
 
 
-// echo $query;
+echo $query;
 $total_data=mysqli_num_rows(mysqli_query($mysql, $query));
 //print_r($total_data);
 
@@ -260,7 +298,7 @@ else
 
 
 $filter_query = $query . ' LIMIT '.$start.', '.$limit.'';
-echo $filter_query;
+// echo $filter_query;
 
 
 
