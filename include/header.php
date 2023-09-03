@@ -107,7 +107,7 @@
               
             
               <li class="onhover-c p-0">
-               <a href="../Logout"><button id="logoutbtn" class="btn btn-primary-light" type="button" style="padding: 22px 22px;border-radius:2em;"><i class="fa fa-power-off fa-lg"></i></button></a>
+               <a href="../Logout.php"><button id="logoutbtn" class="btn btn-primary-light" type="button" style="padding: 22px 22px;border-radius:2em;"><i class="fa fa-power-off fa-lg"></i></button></a>
               </li>
             </ul>
           </div>
