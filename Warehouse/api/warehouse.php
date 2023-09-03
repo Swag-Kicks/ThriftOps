@@ -6,6 +6,7 @@ include_once("../../include/mysql_connection.php");
               $result = mysqli_query($mysql, $sql);
    
 $to_encode = array();
+$venames;
 while ($row = $result->fetch_assoc())
 {
     
@@ -23,7 +24,7 @@ while ($row = $result->fetch_assoc())
     
     //name fetch
     $ip=explode(",",$ven);
-    $venames;
+    
     foreach ($ip as $venid) 
     {
         $sql4="Select Name from Vendor Where Vendor_ID='$venid'";
