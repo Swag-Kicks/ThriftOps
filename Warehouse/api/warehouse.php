@@ -47,5 +47,3 @@ while ($row = $result->fetch_assoc())
 
 echo json_encode($to_encode);
 ?>
-
-
