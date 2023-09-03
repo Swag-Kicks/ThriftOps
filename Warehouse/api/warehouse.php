@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(1200);
 include_once("../../include/mysql_connection.php"); 
 
 
