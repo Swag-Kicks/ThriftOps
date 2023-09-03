@@ -507,6 +507,7 @@ $.fn.dataTable.ext.errMode = 'none';
         data:{page:page},
         success:function(data)
         {
+          console.log(data);
             var response=JSON.parse(data); 
             var fill=''; 
             for(var i=0; i<response.length; i++)
