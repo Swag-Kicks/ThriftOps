@@ -9,21 +9,22 @@ $to_encode = array();
 $venames;
 while ($row = $result->fetch_assoc())
 {
+    $to_encode.=$row;
     
-    $ven=$row['Vendor'];
-    $wid=$row['Warehouse_ID'];
-    $confirm = "SELECT * FROM `racks` where Warehouse_ID='$wid' group by number";
-    $racks=mysqli_num_rows(mysqli_query($mysql, $confirm));
+    // $ven=$row['Vendor'];
+    // $wid=$row['Warehouse_ID'];
+    // $confirm = "SELECT * FROM `racks` where Warehouse_ID='$wid' group by number";
+    // $racks=mysqli_num_rows(mysqli_query($mysql, $confirm));
     
-    $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='$wid'";
-    $cap=mysqli_num_rows(mysqli_query($mysql, $confirm1));
+    // $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='$wid'";
+    // $cap=mysqli_num_rows(mysqli_query($mysql, $confirm1));
     
-    $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='$wid' AND Status='Empty'";
-    $cap1=mysqli_num_rows(mysqli_query($mysql, $confirm2));
-    $capacity=$cap1."/".$cap;
+    // $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='$wid' AND Status='Empty'";
+    // $cap1=mysqli_num_rows(mysqli_query($mysql, $confirm2));
+    // $capacity=$cap1."/".$cap;
     
-    //name fetch
-    $ip=explode(",",$ven);
+    // //name fetch
+    // $ip=explode(",",$ven);
     
     // foreach ($ip as $venid) 
     // {
@@ -36,8 +37,8 @@ while ($row = $result->fetch_assoc())
     // }
     
     // $concat=implode(" ",$arr);
-      $to_encode[] = array("Warehouse_ID"=>$wid,"Location"=>$row['Location'],"Racks"=>$racks,"Capacity"=>$capacity,"Filled"=>$row['Filled'],"Address"=>$row['Address'],"SK_Format"=>$row['SK_Format'],"DateTime"=>$row['DateTime'],"Allocation"=>$row['Allocation'],"Status"=>$row['Status'],"Vendor"=>$venames);
-      $venames='';
+    //   $to_encode[] = array("Warehouse_ID"=>$wid,"Location"=>$row['Location'],"Racks"=>$racks,"Capacity"=>$capacity,"Filled"=>$row['Filled'],"Address"=>$row['Address'],"SK_Format"=>$row['SK_Format'],"DateTime"=>$row['DateTime'],"Allocation"=>$row['Allocation'],"Status"=>$row['Status'],"Vendor"=>$venames);
+    //   $venames='';
 }
 
 echo json_encode($to_encode);
