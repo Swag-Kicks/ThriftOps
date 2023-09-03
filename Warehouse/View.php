@@ -502,7 +502,7 @@ $.fn.dataTable.ext.errMode = 'none';
     function load_data(page)
     {
       $.ajax({
-        url:"/api/warehouse.php",
+        url:"api/warehouse.php",
         method:"POST",
         data:{page:page},
         success:function(data)
