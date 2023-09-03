@@ -1,44 +1,79 @@
 <?php
-include_once("../../include/mysql_connection.php"); 
+// include_once("../../include/mysql_connection.php"); 
 
 
-     $sql = "SELECT * FROM Warehouse";
-              $result = mysqli_query($mysql, $sql);
+//      $sql = "SELECT * FROM Warehouse";
+//               $result = mysqli_query($mysql, $sql);
    
-$to_encode = array();
-$venames;
-while ($row = $result->fetch_assoc())
-{
-    $to_encode.=$row;
+// $to_encode = array();
+// $venames;
+// while ($row = $result->fetch_assoc())
+// {
     
-    // $ven=$row['Vendor'];
-    // $wid=$row['Warehouse_ID'];
-    // $confirm = "SELECT * FROM `racks` where Warehouse_ID='$wid' group by number";
-    // $racks=mysqli_num_rows(mysqli_query($mysql, $confirm));
+//     $ven=$row['Vendor'];
+//     $wid=$row['Warehouse_ID'];
+//     $confirm = "SELECT * FROM `racks` where Warehouse_ID='$wid' group by number";
+//     $racks=mysqli_num_rows(mysqli_query($mysql, $confirm));
     
-    // $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='$wid'";
-    // $cap=mysqli_num_rows(mysqli_query($mysql, $confirm1));
+//     $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='$wid'";
+//     $cap=mysqli_num_rows(mysqli_query($mysql, $confirm1));
     
-    // $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='$wid' AND Status='Empty'";
-    // $cap1=mysqli_num_rows(mysqli_query($mysql, $confirm2));
-    // $capacity=$cap1."/".$cap;
+//     $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='$wid' AND Status='Empty'";
+//     $cap1=mysqli_num_rows(mysqli_query($mysql, $confirm2));
+//     $capacity=$cap1."/".$cap;
     
-    // //name fetch
-    // $ip=explode(",",$ven);
+//     //name fetch
+//     $ip=explode(",",$ven);
     
-    // foreach ($ip as $venid) 
-    // {
-    //     $sql4="Select Name from Vendor Where Vendor_ID='$venid'";
-    //     $result2 = mysqli_query($mysql, $sql4);
-    //     $row2 = $result2->fetch_assoc();
-    //     $cat=$row2['Name'];
-    //     $venames.=$cat.',';
+//     foreach ($ip as $venid) 
+//     {
+//         $sql4="Select Name from Vendor Where Vendor_ID='$venid'";
+//         $result2 = mysqli_query($mysql, $sql4);
+//         $row2 = $result2->fetch_assoc();
+//         $cat=$row2['Name'];
+//         $venames.=$cat.',';
       				    
-    // }
+//     }
     
-    // $concat=implode(" ",$arr);
-    //   $to_encode[] = array("Warehouse_ID"=>$wid,"Location"=>$row['Location'],"Racks"=>$racks,"Capacity"=>$capacity,"Filled"=>$row['Filled'],"Address"=>$row['Address'],"SK_Format"=>$row['SK_Format'],"DateTime"=>$row['DateTime'],"Allocation"=>$row['Allocation'],"Status"=>$row['Status'],"Vendor"=>$venames);
-    //   $venames='';
+//     // $concat=implode(" ",$arr);
+//       $to_encode[] = array("Warehouse_ID"=>$wid,"Location"=>$row['Location'],"Racks"=>$racks,"Capacity"=>$capacity,"Filled"=>$row['Filled'],"Address"=>$row['Address'],"SK_Format"=>$row['SK_Format'],"DateTime"=>$row['DateTime'],"Allocation"=>$row['Allocation'],"Status"=>$row['Status'],"Vendor"=>$venames);
+//       $venames='';
+// }
+
+// echo json_encode($to_encode);
+?>
+
+<?php
+include_once("../../include/mysql_connection.php");
+
+$sql = "SELECT w.*, GROUP_CONCAT(v.Name) AS VendorNames
+        FROM Warehouse w
+        LEFT JOIN racks r ON w.Warehouse_ID = r.Warehouse_ID
+        LEFT JOIN Vendor v ON FIND_IN_SET(v.Vendor_ID, w.Vendor)
+        GROUP BY w.Warehouse_ID";
+
+$result = mysqli_query($mysql, $sql);
+
+$to_encode = array();
+
+while ($row = $result->fetch_assoc()) {
+    $racks = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID='{$row['Warehouse_ID']}'"));
+    $emptyRacks = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID='{$row['Warehouse_ID']}' AND Status='Empty'"));
+    $capacity = $emptyRacks . "/" . $racks;
+
+    $to_encode[] = array(
+        "Warehouse_ID" => $row['Warehouse_ID'],
+        "Location" => $row['Location'],
+        "Racks" => $racks,
+        "Capacity" => $capacity,
+        "Filled" => $row['Filled'],
+        "Address" => $row['Address'],
+        "SK_Format" => $row['SK_Format'],
+        "DateTime" => $row['DateTime'],
+        "Allocation" => $row['Allocation'],
+        "Status" => $row['Status'],
+        "Vendor" => $row['VendorNames']
+    );
 }
 
 echo json_encode($to_encode);
