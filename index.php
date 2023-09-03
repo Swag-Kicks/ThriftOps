@@ -31,11 +31,7 @@ if(isset($_POST['submit']))
     $_SESSION['id']=$id;
     $_SESSION['Username']=$name;
 
-<<<<<<< HEAD
     echo '<script>window.location.href="Dashboard/Home";</script>';
-=======
-    echo '<script>window.location.href="Dashboard/Home.php";</script>';
->>>>>>> 1cd0baa2c0e13a1d69335d36e4050b83a6a123bd
   }
 
 
