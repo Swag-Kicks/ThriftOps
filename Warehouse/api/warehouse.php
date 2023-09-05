@@ -46,11 +46,15 @@
 <?php
 include_once("../../include/mysql_connection.php");
 
-$sql = "SELECT w.*, GROUP_CONCAT(v.Name) AS VendorNames
-        FROM Warehouse w
-        LEFT JOIN racks r ON w.Warehouse_ID = r.Warehouse_ID
-        LEFT JOIN Vendor v ON FIND_IN_SET(v.Vendor_ID, w.Vendor)
-        GROUP BY w.Warehouse_ID";
+$sql="SELECT w.*, GROUP_CONCAT(v.Name) AS VendorNames
+FROM Warehouse w
+LEFT JOIN Vendor v ON FIND_IN_SET(v.Vendor_ID, w.Vendor)
+GROUP BY w.Warehouse_ID";
+// $sql = "SELECT w.*, GROUP_CONCAT(v.Name) AS VendorNames
+//         FROM Warehouse w
+//         LEFT JOIN racks r ON w.Warehouse_ID = r.Warehouse_ID
+//         LEFT JOIN Vendor v ON FIND_IN_SET(v.Vendor_ID, w.Vendor)
+//         GROUP BY w.Warehouse_ID";
 
 $result = mysqli_query($mysql, $sql);
 
