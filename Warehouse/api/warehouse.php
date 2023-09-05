@@ -61,23 +61,26 @@ $result = mysqli_query($mysql, $sql);
 $to_encode = array();
 
 while ($row = $result->fetch_assoc()) {
-    $racks = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']} GROUP BY number"));
-    $capacity = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']}")) . "/";
-    $capacity .= mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']} AND Status = 'Empty'"));
+    // $racks = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']} GROUP BY number"));
+    // $capacity = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']}")) . "/";
+    // $capacity .= mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM racks WHERE Warehouse_ID = {$row['Warehouse_ID']} AND Status = 'Empty'"));
 
-    $to_encode[] = array(
-        "Warehouse_ID" => $row['Warehouse_ID'],
-        "Location" => $row['Location'],
-        "Racks" => $racks,
-        "Capacity" => $capacity,
-        "Filled" => $row['Filled'],
-        "Address" => $row['Address'],
-        "SK_Format" => $row['SK_Format'],
-        "DateTime" => $row['DateTime'],
-        "Allocation" => $row['Allocation'],
-        "Status" => $row['Status'],
-        "Vendor" => $row['VendorNames']
-    );
+    // $to_encode[] = array(
+    //     "Warehouse_ID" => $row['Warehouse_ID'],
+    //     "Location" => $row['Location'],
+    //     "Racks" => $racks,
+    //     "Capacity" => $capacity,
+    //     "Filled" => $row['Filled'],
+    //     "Address" => $row['Address'],
+    //     "SK_Format" => $row['SK_Format'],
+    //     "DateTime" => $row['DateTime'],
+    //     "Allocation" => $row['Allocation'],
+    //     "Status" => $row['Status'],
+    //     "Vendor" => $row['VendorNames']
+    // );
+
+
+    $to_encode[]=$row;
 }
 
 echo json_encode($to_encode);
