@@ -512,7 +512,7 @@ $.fn.dataTable.ext.errMode = 'none';
             var fill=''; 
             for(var i=0; i<response.length; i++)
             {
-                t.row.add([ "<input class='checkbox1' type='checkbox' id='cBox' value='"+response[i].Warehouse_ID+"' >" ,[i+1], "<a href='Open_warehouse.php?id="+response[i].Warehouse_ID+"'><b>"+response[i].Location.toUpperCase()+"</b></a>" ,response[i].Racks , response[i].Capacity , response[i].Allocation , response[i].Status, "<details><summary>See all vendors</summary><p>"+ response[i].Vendor+"</p></details>", response[i].DateTime ]).draw(false);
+                t.row.add([ "<input class='checkbox1' type='checkbox' id='cBox' value='"+response[i].Warehouse_ID+"' >" ,[i+1], "<a href='Open_warehouse.php?id="+response[i].Warehouse_ID+"'><b>"+response[i].Location.toUpperCase()+"</b></a>" ,response[i].Racks , response[i].Capacity , response[i].Allocation , response[i].Status, "<details><summary>See all vendors</summary><p>"+ response[i].VendorNames+"</p></details>", response[i].DateTime ]).draw(false);
                 // fill +="<tr><td>"+response[i].Name+"</td><td>"+response[i].Type+"</td><td>"+response[i].Address+"</td><td>"+response[i].Contact+"</td><td>"+response[i].Percentage+"</td></tr>";
                 // fill +="<tr><td>${response[i].Name}</td><td>${response[i].Type}</td><td>${response[i].Address}</td><td>${response[i].Contact}</td><td>${response[i].Percentage}</td></tr>";
                      
