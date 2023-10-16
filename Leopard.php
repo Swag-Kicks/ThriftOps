@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 $server="thriftops.cqmcfnfzz2yd.ap-south-1.rds.amazonaws.com";
 $user="root";
 $pass="Swagkicks";
@@ -106,4 +106,4 @@ for ($i=0; $i < 10; $i++)
 
 
 
-?> -->
+?>

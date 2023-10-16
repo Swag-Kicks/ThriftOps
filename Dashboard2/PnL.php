@@ -11,42 +11,6 @@ session_Start();
 <!--<div class="page-body-wrapper horizontal-menu">-->
 <!-- Page Sidebar Ends-->
 <div class="page-body">
-   <div class="container-fluid">
-      <div class="page-header">
-         <div class="row">
-          <div class="col-md-4">
-              <h3 class=" modal-title"> P N L</h3>
-               
-            </div>
-         <div class="col-md-4 mt-3">
-        
-         </div>
-         <div class="col-md-2">
-            <div class="form-group ">
-                          <label class="col-sm-3 col-form-label">From</label>
-                          <div class="">
-                            <div class="input-group">
-                              <input class=" form-control digits" id="fromdate" type="date" data-language="en" data-bs-original-title="" title=""  style;"border-radius: 6px;">
-                            </div>
-                          </div>
-                        </div>
-            
-         </div>
-         <div class="col-md-2">
-            <div class="form-group ">
-                          <label class="col-sm-3 col-form-label">To</label>
-                          <div class="">
-                            <div class="input-group">
-                              <input class=" form-control digits" type="date" id="todate" data-language="en" data-bs-original-title="" title="" style;"border-radius: 6px;">
-
-                            </div>
-                          </div>
-                        </div>
-         </div>
-         
-        </div>
-      </div>
-   </div>
    <!-- Container-fluid starts-->
    <div class="container-fluid">
       <div class="row project-cards">
@@ -56,67 +20,11 @@ session_Start();
          <div class="col-sm-12">
             <div class="card">
                <div class="table-responsive">
-                  
-                <div class="">
-<div class="row" style="background-color:#F9FCFF;margin:0.8px;height:100px;">
-                <div class="col-md-6 " style="margin-top:34px;" id="currentbutton">
-               
-                </div>
-                <div class="col-md-6 p-r-20" style="margin-top:30px;">
-                    
-             
-                  <div class="bookmark">
-                    <ul>
-                            
-                        
-                            <li><button class="dropbtn"><i class="icon-reload" id="ref"></i></button></li>
-
-                              <li><div class="dropdown">
-                            <button class="dropbtn" onmouseover="JSDropDown()"><i class="fa fa-sliders"></i></button>
-                            <div class="dropdown-content">
-                            <a style=" background-color: #e0e3ec; "><b>Show Rows</b></a>
-                            
-                             <select id="limit" class="form-control">
-                                  <option value="10">10</option>
-                                  <option value="20">20</option>
-                                  <option value="50">50</option>
-                                  <option value="100">100</option>
-                                  <option value="100">All</option>
-
-                            </select>
-                            <a style=" background-color: #e0e3ec; "><b>Sort By Order Date</b></a>
-                             <select id="sort" class="form-control">
-                                  <option>DESC</option>
-                                  <option>ASC</option>
-                           </select>
-                          </div>
-                        </div>
-                        </li>
-                            <li><button class="dropbtn"><i class="icon-import" id="excel" onclick="fnExcelReport();"></i></button></li>
-                          
-                            
-                            
-                    
-                    </ul>
-                   
-                  </div>
-                  
-                </div>
-              </div>
-        <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1787.12px; padding-right: 0px;">
+                   <iframe width="1600" height="1200" src="https://lookerstudio.google.com/embed/reporting/475e05c9-dccf-4cbb-82f7-a8865a5ad61f/page/9I9YD" frameborder="0" style="border:0" allowfullscreen></iframe>
+               </div>
             </div>
-                </div>
-                
-                <div class="table-responsive" id="dynamic_content"></div>
-             
-                
-        
-            
       </div>
    </div>
-   
-   <!-- Container-fluid Ends-->
-   
 </div>
 
 

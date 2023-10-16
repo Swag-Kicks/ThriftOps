@@ -21,8 +21,8 @@
                   </div>
                   <div class="col-md-8">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" style="float:right;">Add Rack</button>
-                       <a href="Rack_Insert.php"> <input type="button" value="Create Rack" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
-                        <a href="Manual_Allocation.php"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                       <a href="Rack_Insert"> <input type="button" value="Create Rack" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                        <a href="Manual_Allocation"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
                      
                      </div>
                      

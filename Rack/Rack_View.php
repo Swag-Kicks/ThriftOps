@@ -22,8 +22,8 @@
                   <div class="col-md-8">
                         <!--<input type="button" name="pick" value="🗘Refresh List" id="refresh" class="btn btn-primary"/>	
                         -->
-                       <a href="Rack_Insert.php"> <input type="button" value="Create Rack" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
-                        <a href="Manual_Allocation.php"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                       <a href="Rack_Insert"> <input type="button" value="Create Rack" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                        <a href="Manual_Allocation"> <input type="button" value="Allocate Article" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
                          <input type="button" name="pick" value="⟳ Refresh" id="refresh" class="btn btn-primary f-right ref">
                      </div>
                      

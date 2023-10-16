@@ -107,13 +107,34 @@
               
             
               <li class="onhover-c p-0">
-               <a href="../Logout.php"><button id="logoutbtn" class="btn btn-primary-light" type="button" style="padding: 22px 22px;border-radius:2em;"><i class="fa fa-power-off fa-lg"></i></button></a>
+               <a href="../Logout"><button id="logoutbtn" class="btn btn-primary-light" type="button" style="padding: 22px 22px;border-radius:2em;"><i class="fa fa-power-off fa-lg"></i></button></a>
               </li>
             </ul>
           </div>
           <div class="d-lg-none mobile-toggle pull-right w-auto"><i data-feather="more-horizontal"></i></div>
         </div>
       </div>
+      
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '262619996620703');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=262619996620703&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+      
+      
+      
   <script>
     document.addEventListener('DOMContentLoaded', function() {
   // Check the session on page load
@@ -135,16 +156,16 @@
   }, 5000); // 5000 milliseconds = 5 seconds
 });
 
- //CUSTOM SCRIPT 
-        $.ajax({
-          url: "https://backup.thriftops.com/ShopifyPush/api/gip.php",
-          type: "POST",
-          data: {url: window.location.href},
-          success: function(response) {
-            // console.log(response);
-            // console.log("WORKING")
-          }
-        });
+//  //CUSTOM SCRIPT 
+//         $.ajax({
+//           url: "https://backup.thriftops.com/ShopifyPush/api/gip.php",
+//           type: "POST",
+//           data: {url: window.location.href},
+//           success: function(response) {
+//             // console.log(response);
+//             // console.log("WORKING")
+//           }
+//         });
       
     
 </script>
@@ -168,14 +189,15 @@ $(document).ready(function()
     {
         var val=document.getElementById("textdata").value;
         let result = val.includes("-");
+        var link=window.location.origin;
         if(result==true)
         {	
-        	href='https://backup.thriftops.com/include/viewProduct.php?id='+val;
+        	href=link+'/include/viewProduct.php?id='+val;
             window.open(href);
         }
         else
         {
-            href='https://backup.thriftops.com/include/Order_View.php?GETID='+val;
+            href=link+'/include/Order_View.php?GETID='+val;
             window.open(href);
         }
         

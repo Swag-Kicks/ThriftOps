@@ -41,9 +41,9 @@ $cr=$_SESSION['Username'];
                
             </div>
             <div class="col-sm-6">
-                <!-- <a href="" name="pick" id="editicon" class="btn btn-primary m-l-15 f-right mb-1 edit">Edit Order</a> -->
-                <!-- <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">initiate Return</a> -->
-                <!-- <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">Book Order</a> -->
+                <a href="Create" name="pick" id="editicon" class="btn btn-primary m-l-15 f-right mb-1 edit">Edit Order</a>
+                <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">initiate Return</a>
+                <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">Book Order</a>
             </div>
             
          </div>

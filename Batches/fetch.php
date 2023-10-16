@@ -103,7 +103,14 @@ while($row = mysqli_fetch_array($result))
     //   $type=$data1[1];
       
       $units = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM `SKU` WHERE Batch_ID='".$row["Batch_ID"]."'"));
-      
+     
+      if($row['status'] !='Discard')
+      {
+          $print='<td><a href="#" name="pick" id="btnmodal" batch="'.$row["Batch_ID"].'" class=""><i data-feather="printer" style="color:black;"></i></a></td>';
+      }
+      else{
+          $print='<td></td>';
+      }
             $output .= '
             <tbody>
             <tr>
@@ -113,7 +120,8 @@ while($row = mysqli_fetch_array($result))
               <td>'.$row["DateTime"].'</td>
               <td>'.$row["Name"].'</td>
               <td>'.$row["Fments"].'</td>
-              <td><a href="#" name="pick" id="btnmodal" batch="'.$row["Batch_ID"].'" class=""><i data-feather="printer" style="color:black;"></i></a></td>
+              
+              '.$print.'
             </tr>
             </tbody>'
             ;

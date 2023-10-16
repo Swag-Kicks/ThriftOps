@@ -701,6 +701,7 @@ $('#shoetypediv').hide();
           var made = $("input[name=made]").val();
          var weight = $("input[name=weight]").val();
            var price = $("input[name=price]").val();
+           
        var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
@@ -734,46 +735,81 @@ $('#shoetypediv').hide();
    form.append("image6", image6);
    form.append("desc",desc);
    form.append("subcat_id",cas);
-   var settings = {
-     "url": "shopify.php",
-     "method": "POST",
-     "timeout": 0,
-     "processData": false,
-     "mimeType": "multipart/form-data",
-     "contentType": false,
-     "data": form
-   };
    
-   $.ajax(settings).done(function (response) {
-    
-    if(response==1)
-    {
-         toastr.error('SKU not present in the table');
-    }
-    if(response==2)
-    {
-         toastr.error('Vendor and Batch not in the table');
-    }
-    if(response!=1 && response!=2)
-    {
-         updateRacks()
-    
-        var jres = JSON.parse(response);
-    
-        console.log(jres);
-        var sid = jres.product.id
-     
-        var vitid = jres.product.variants[0].inventory_item_id
-        var vid = jres.product.variants[0].id
-        addProductDB(sid,vid,vitid)
-    }
+   if(price==0 || price=='')
+   {
+       toastr.error('Price must not be zero');
+   }
+   else if (image1=='' && image2 =='')
+   {
+       toastr.error('Image 1 & Image 2 cannot be empty');
+   }
+   
+   else if(sku!='')
+   {
+       $.ajax({
+                url:"api/skucheck.php",
+                method:"POST",
+                data:{ sku:sku},
+                success:function(data)
+                {
+                  if(data==1)
+                  {
+                      toastr.error('SKU already uploaded to shopify');
+                  }
+                  if(data==0)
+                  {
+                    var settings = {
+                     "url": "shopify.php",
+                     "method": "POST",
+                     "timeout": 0,
+                     "processData": false,
+                     "mimeType": "multipart/form-data",
+                     "contentType": false,
+                     "data": form
+                   };
+   
+                        $.ajax(settings).done(function (response) {
+                    
+                        if(response==1)
+                        {
+                             toastr.error('SKU not present in the table');
+                        }
+                        if(response==2)
+                        {
+                             toastr.error('Vendor and Batch not in the table');
+                        }
+                        if(response!=1 && response!=2)
+                        {
+                             updateRacks()
+                        
+                            var jres = JSON.parse(response);
+                        
+                            console.log(jres);
+                            var sid = jres.product.id
+                         
+                            var vitid = jres.product.variants[0].inventory_item_id
+                            var vid = jres.product.variants[0].id
+                            addProductDB(sid,vid,vitid)
+                        }
+                   
+                       
+                      // window.setTimeout(function(){window.location.reload();},2000)
+                     
+                        }); 
+                  }
+                  
+                  
+                }
+            });
+   }
+   
+   
    
        
-      // window.setTimeout(function(){window.location.reload();},2000)
-     
-   });
    
-   }
+   
+ }
    
    
    

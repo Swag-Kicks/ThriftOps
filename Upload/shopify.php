@@ -141,7 +141,7 @@ else
                     "metafields" => array(
                         array(
                             "namespace" => "custom",
-                            "key" => "condition",
+                            "key" => "newsize",
                             "value" => $size,
                             "type" =>"single_line_text_field"
                         ),

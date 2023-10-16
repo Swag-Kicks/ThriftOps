@@ -74,8 +74,8 @@ $result1 = mysqli_query($mysql, $sql1);
                
             </div>
             <div class="col-sm-6">
-                <a href="Create.php" name="pick" id="editicon" class="btn btn-primary-light m-l-15 f-right mb-1 edit">Edit</a>
-                <a href="Create.php" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">initiate Return</a>
+                <a href="Create" name="pick" id="editicon" class="btn btn-primary-light m-l-15 f-right mb-1 edit">Edit</a>
+                <a href="Create" name="pick" id="addorder" class="btn btn-primary-light m-l-15 f-right mb-1">initiate Return</a>
                 <a href="#" name="pick" id="rebookopt" class="btn btn-primary-light m-l-15 f-right mb-1">Re-Book</a>
             </div>
             

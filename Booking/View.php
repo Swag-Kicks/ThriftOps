@@ -63,11 +63,7 @@ session_Start();
               <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
                       <li class="nav-item"><a class="nav-link active" id="all_ord" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="true">All<span id="allb"></span></a></li>
                       <li class="nav-item"><a class="nav-link" id="conf_ord" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false">Unbooked<span id="unbookedb"></span></a></li>
-                      <li class="nav-item"><a class="nav-link" id="dis_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Dispatched <span id="dispatchedb"></span> </a></li>
-                      <li class="nav-item"><a class="nav-link" id="ins_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">InTransit<span id="intransitb"></span> </a></li>
-                      <li class="nav-item"><a class="nav-link" id="del_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Delivered<span id="deliveredb"></span> </a></li>
-                      <li class="nav-item"><a class="nav-link" id="ret_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Returned<span id="returnedb"></span></a></li>
-                      <li class="nav-item"><a class="nav-link" id="loss_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Conflict/Lost<span id="lostb"></span></a></li>
+                
                       <li class="nav-item"><a class="nav-link" id="book_ord" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false">Booked<span id="bookb"></span></a></li>
 
                   

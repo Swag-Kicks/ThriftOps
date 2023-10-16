@@ -1,4 +1,4 @@
-<!-- <?php include("include/header.php");?>
+<?php include("include/header.php");?>
 <?php include("include/sidebar.php");?>
 <link rel="stylesheet" type="text/css" href="assets/css/dropzone.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -527,4 +527,4 @@ $(document).ready(function($)
     
 </script>  
 <!-- footer start-->
-<?php include("include/footer.php");?> -->
+<?php include("include/footer.php");?>

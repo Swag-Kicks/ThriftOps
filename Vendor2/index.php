@@ -334,7 +334,7 @@
        //alert("hello")
        
        var settings = {
-     "url": "api/all.php",
+     "url": "https://backup.thriftops.com/Vendor2/api/all.php",
      "method": "GET",
      "timeout": 0,
    };
@@ -353,8 +353,8 @@
                                 <td style="text-align: center;">${values.Warehouse_ID}</td>
                                  <td style="text-align: center;">${values.Fments}</td>
                                    <td style="text-align: center;">${values.batches}</td>
-                                   <td style="text-align: center;"><a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="../assets/images/icons/eye.png"></a>
-                                   <a href="#" data-role="infrm" ><img class=""  src="../assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                   <td style="text-align: center;"><a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
+                                   <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                    
                            </tr > `;
    
@@ -371,7 +371,7 @@
        //alert("hello")
        
        var settings = {
-     "url": "api/vendorType.php?type=Seller",
+     "url": "https://backup.thriftops.com/Vendor2/api/vendorType.php?type=Seller",
      "method": "GET",
      "timeout": 0,
    };
@@ -390,8 +390,8 @@
                                 <td>${values.Warehouse_ID}</td>
                                  <td>${values.Fments}</td>
                                    <td>${values.batches}</td>
-                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="../assets/images/icons/eye.png"></a>
-                                   <a href="#" data-role="infrm" ><img class=""  src="../assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
+                                   <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                    
                            </tr > `;
    
@@ -411,7 +411,7 @@
        //alert("hello")
        
        var settings = {
-     "url": "api/vendorType.php?type=Peer",
+     "url": "https://backup.thriftops.com/Vendor2/api/vendorType.php?type=Peer",
      "method": "GET",
      "timeout": 0,
    };
@@ -430,8 +430,8 @@
                                 <td>${values.Warehouse_ID}</td>
                                  <td>${values.Fments}</td>
                                    <td>${values.batches}</td>
-                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="../assets/images/icons/eye.png"></a>
-                                   <a href="#" data-role="infrm" ><img class=""  src="../assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
+                                   <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                    
                            </tr > `;
    
@@ -449,7 +449,7 @@
        //alert("hello")
        
        var settings = {
-     "url": "api/vendorType.php?type=Supplier",
+     "url": "https://backup.thriftops.com/Vendor2/api/vendorType.php?type=Supplier",
      "method": "GET",
      "timeout": 0,
    };
@@ -468,8 +468,8 @@
                                 <td>${values.Warehouse_ID}</td>
                                  <td>${values.Fments}</td>
                                    <td>${values.batches}</td>
-                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="../assets/images/icons/eye.png"></a>
-                                   <a href="#" data-role="infrm" ><img class=""  src="../assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                   <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
+                                   <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                    
                            </tr > `;
    
@@ -616,7 +616,7 @@
        
    
       // DataTable
-      
+      v
    
       // Apply the search
       table.columns().every( function () {
@@ -671,7 +671,7 @@
    
    
    var settings = {
-   "url": "api/lastVid.php",
+   "url": "https://backup.thriftops.com/Vendor2/api/lastVid.php",
    "method": "POST",
    "timeout": 0,
    };
@@ -694,7 +694,7 @@
    form.append("user_type", "Vendor");
    
    var settings = {
-   "url": "api/banksAdd.php",
+   "url": "https://backup.thriftops.com/Vendor2/api/banksAdd.php",
    "method": "POST",
    "timeout": 0,
    "processData": false,
@@ -752,7 +752,7 @@
    
    
    var settings = {
-   "url": "api/vendorAdd.php",
+   "url": "https://backup.thriftops.com/Vendor2/api/vendorAdd.php",
    "method": "POST",
    "timeout": 0,
    "processData": false,
@@ -794,7 +794,7 @@
    form.append("address", address);
    
    var settings = {
-   "url": "api/addUser.php",
+   "url": "https://backup.thriftops.com/Vendor2/api/addUser.php",
    "method": "POST",
    "timeout": 0,
    "processData": false,
@@ -820,7 +820,7 @@
    var name = $("input[name=name]").val();
    
        var settings = {
-   "url": "api/nCheck.php?colmn=Name&name="+name,
+   "url": "https://backup.thriftops.com/Vendor2/api/nCheck.php?colmn=Name&name="+name,
    "method": "POST",
    "timeout": 0,
    };
@@ -877,7 +877,7 @@
        var SKU = $("input[name=SKUP]").val();
    
        var settings = {
-   "url": "api/nCheck.php?colmn=SK_Prefix&name="+SKU,
+   "url": "https://backup.thriftops.com/Vendor2/api/nCheck.php?colmn=SK_Prefix&name="+SKU,
    "method": "POST",
    "timeout": 0,
    };
@@ -909,7 +909,7 @@
     $("#addNew").click();
     $("#target :input").prop("disabled", true);
    var settings = {
-   "url": "api/viewVendor.php?id="+value,
+   "url": "https://backup.thriftops.com/Vendor2/api/viewVendor.php?id="+value,
    "method": "POST",
    "timeout": 0,
    };
@@ -946,7 +946,7 @@
     $("#addNew").click();
     $("#target :input").prop("disabled", false);
    var settings = {
-   "url": "api/viewVendor.php?id="+value,
+   "url": "https://backup.thriftops.com/Vendor2/api/viewVendor.php?id="+value,
    "method": "POST",
    "timeout": 0,
    };
@@ -1015,7 +1015,7 @@
    
    
    var settings = {
-   "url": "api/editVendor.php?id="+vid,
+   "url": "https://backup.thriftops.com/Vendor2/api/editVendor.php?id="+vid,
    "method": "POST",
    "timeout": 0,
    "processData": false,
@@ -1041,7 +1041,7 @@
    
    
    var settings = {
-   "url": "api/countTypes.php?type=Peer",
+   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Peer",
    "method": "POST",
    "timeout": 0,
    };
@@ -1056,7 +1056,7 @@
    
    
    var settings = {
-   "url": "api/countTypes.php?type=Seller",
+   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Seller",
    "method": "POST",
    "timeout": 0,
    };
@@ -1071,7 +1071,7 @@
    
    
    var settings = {
-   "url": "api/countTypes.php?type=Supplier",
+   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
    "method": "POST",
    "timeout": 0,
    };

@@ -17,6 +17,7 @@ if(isset($_POST["orderid"]))
     $self=[];
     $rider=[];
     $callcourier=[];
+    $tcs=[];
     $dir="upload/";
     
     
@@ -109,6 +110,21 @@ if(isset($_POST["orderid"]))
             $update = mysqli_query($mysql, "UPDATE `Order` SET Status = 'Dispatched' WHERE Order_ID='$id'"); 
     
         }
+        // tcs added
+        if($courier=='Tcs')
+        {
+            $tcs[]=array($row['Order_Number'],$row['Tracking'],$row['Items'],$row['Total'],$row['Date']);
+                $app6.="<tr>";
+                 $app6.="<td>".$row['Order_Number']."</td>";
+                  $app6.="<td>".$row['Tracking']."</td>";
+                   $app6.="<td>".$row['Items']."</td>";
+                    $app6.="<td>".$row['Total']."</td>";
+                    $app6.="<td>".$row['Date']."</td>";
+                 $app6.="</tr>";
+                 $logs= mysqli_query($mysql, "INSERT INTO Logs (User_ID,Type,Type_ID,Status,DateTime) VALUES ('$cr','Order','$id', 'Dispatched', '$C_Date')");
+            $update = mysqli_query($mysql, "UPDATE `Order` SET Status = 'Dispatched' WHERE Order_ID='$id'"); 
+    
+        }
         
     }
     
@@ -197,6 +213,21 @@ if(isset($_POST["orderid"]))
       ';  
       $content5 .= $app5;  
       $content5 .= '</table>';  
+      
+    //tcs
+     $content6 .= '  
+      <h3 align="center">Loadsheet (TCS)</h3><br /><br />  
+      <table border="1" cellspacing="0" cellpadding="5" style="width:100%">  
+          <tr>  
+                <th width="5%">Order Ref</th>  
+                <th width="30%">Tracking</th>  
+                <th width="10%">Items</th>  
+                <th width="45%">Total</th>  
+                <th width="10%">Date</th>  
+          </tr>  
+      ';  
+      $content6 .= $app6;  
+      $content6 .= '</table>';  
         
     
     
@@ -331,6 +362,26 @@ if(isset($_POST["orderid"]))
         $pdfn=$dir."CallCourier_".date('Y-m-d h:i:a').".pdf";
         $mpdf5->Output($pdfn, \Mpdf\Output\Destination::FILE);
         $pdfinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('PDF','CallCourier','$pdfn','$C_Date')");
+    }
+    
+     //callcourier
+    if(!empty($callcourier))
+    {
+        $tfilename = $dir."TCS_".date('Y-m-d h:i:a').".csv";
+        $tfile = fopen($tfilename, 'w');
+        fputcsv($tfile, $header);
+        foreach ($tcs as $row) 
+        {
+          fputcsv($tfile, $row);
+        }
+        fclose($tfile);
+        $csvinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('CSV','Tcs','$tfilename','$C_Date')");
+        //pdf
+        $mpdf6 = new \Mpdf\Mpdf();
+        $mpdf6->WriteHTML($content6);
+        $pdfn=$dir."TCS_".date('Y-m-d h:i:a').".pdf";
+        $mpdf5->Output($pdfn, \Mpdf\Output\Destination::FILE);
+        $pdfinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('PDF','Tcs','$pdfn','$C_Date')");
     }
     
     

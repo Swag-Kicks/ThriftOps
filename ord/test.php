@@ -208,7 +208,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer">Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                    if($adjust=='Exchange')
+                                    else if($adjust=='Exchange')
                                     {
                                         echo '<option value="">Select</option>
                                             <option value="Adjustment">Adjustment</option>
@@ -219,7 +219,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer">Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                     if($adjust=='cusdel')
+                                    else if($adjust=='cusdel')
                                     {
                                         echo '<option value="">Select</option>
                                             <option value="Adjustment">Adjustment</option>
@@ -230,7 +230,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer">Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                     if($adjust=='Employee')
+                                    else if($adjust=='Employee')
                                     {
                                         echo '<option value="">Select</option>
                                             <option value="Adjustment" >Adjustment</option>
@@ -241,7 +241,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer">Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                     if($adjust=='Giveaway')
+                                    else if($adjust=='Giveaway')
                                     {
                                         echo '<option value="">Select</option>
                                             <option value="Adjustment" >Adjustment</option>
@@ -252,7 +252,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer">Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                     if($adjust=='Influencer')
+                                    else if($adjust=='Influencer')
                                     {
                                         echo '<option value="">Select</option>
                                             <option value="Adjustment" >Adjustment</option>
@@ -263,19 +263,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Influencer" selected>Influencer</option>
                                             <option value="Shopify">Shopify</option>';
                                     }
-                                    if($adjust=='')
-                                    {
-                                      echo '<option value="">Select</option>
-                                            <option value="Adjustment">Adjustment</option>
-                                            <option value="Exchange">Exchange</option>
-                                            <option value="cusdel">Custom</option>
-                                            <option value="Employee">Employee</option>
-                                            <option value="Giveaway">Giveaway</option>
-                                            <option value="Influencer">Influencer</option>
-                                            <option value="Shopify">Shopify</option>';
-                                       
-                                    }
-                                    if($adjust=='' && $Discount!=0)
+                                    else if($adjust=='' && $Discount!=0)
                                     {
                                       echo '<option value="">Select</option>
                                             <option value="Adjustment">Adjustment</option>
@@ -287,6 +275,19 @@ $result1 = mysqli_query($mysql, $sql1);
                                             <option value="Shopify" selected>Shopify</option>';
                                        
                                     }
+                                    else if($adjust=='')
+                                    {
+                                      echo '<option value="">Select</option>
+                                            <option value="Adjustment">Adjustment</option>
+                                            <option value="Exchange">Exchange</option>
+                                            <option value="cusdel">Custom</option>
+                                            <option value="Employee">Employee</option>
+                                            <option value="Giveaway">Giveaway</option>
+                                            <option value="Influencer">Influencer</option>
+                                            <option value="Shopify">Shopify</option>';
+                                       
+                                    }
+                                    
                                     ?>
                                    
                                 </select>

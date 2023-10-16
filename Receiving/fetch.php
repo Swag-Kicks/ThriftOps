@@ -131,7 +131,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%Packed%"';
+            $query .= ' WHERE Status LIKE "%QC_Rejected%"';
         }
     }
 
