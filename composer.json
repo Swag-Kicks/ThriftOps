@@ -1,0 +1,11 @@
+{
+    "require": {
+        "tecnickcom/tcpdf": "^6.6",
+        "spipu/html2pdf": "^5.2",
+        "mpdf/mpdf": "^8.1",
+        "guzzlehttp/guzzle": "^7.5",
+        "shopify/shopify-api": "^4.3",
+        "rdx/graphql-query": "^1.1",
+        "aws/aws-sdk-php": "^3.281"
+    }
+}
