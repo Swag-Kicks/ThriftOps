@@ -555,6 +555,7 @@ if(isset($_POST["orderid"]))
         // $pdfinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('PDF','CallCourier','$pdfn','$C_Date')");
     }
     
+
      //TCS
     if(!empty($tcs))
     {
@@ -583,11 +584,26 @@ if(isset($_POST["orderid"]))
         }
         
         // $csvinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('CSV','Tcs','$tfilename','$C_Date')");
+
+     //callcourier
+    if(!empty($callcourier))
+    {
+        $tfilename = $dir."TCS_".date('Y-m-d h:i:a').".csv";
+        $tfile = fopen($tfilename, 'w');
+        fputcsv($tfile, $header);
+        foreach ($tcs as $row) 
+        {
+          fputcsv($tfile, $row);
+        }
+        fclose($tfile);
+        $csvinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('CSV','Tcs','$tfilename','$C_Date')");
+
         //pdf
         $mpdf6 = new \Mpdf\Mpdf();
         $mpdf6->WriteHTML($content6);
         $pdfn=$dir."TCS_".date('Y-m-d h:i:a').".pdf";
         $mpdf5->Output($pdfn, \Mpdf\Output\Destination::FILE);
+
         
         //s3 tcs pdf 
         $watch1 = $s3->putObject([
@@ -605,6 +621,10 @@ if(isset($_POST["orderid"]))
         }
         // $pdfinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('PDF','Tcs','$pdfn','$C_Date')");
     }
+
+        $pdfinsert = mysqli_query($mysql, "INSERT INTO `LoadSheet`(`File`, `Courier`, `Path`, `DateTime`) VALUES('PDF','Tcs','$pdfn','$C_Date')");
+    }
+
     
     echo "1";
     
