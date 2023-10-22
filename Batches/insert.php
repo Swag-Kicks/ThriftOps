@@ -13,7 +13,10 @@ if(isset($_POST["grn"]))
     $resa = mysqli_query($mysql, $scheck);
     $rw1 = mysqli_fetch_assoc($resa); 
     $PR_ID = $rw1['GRN_ID'];
-    if($PR_ID=='')
+    $Sta=$rw1['status'];
+    // echo $Sta;
+    if($PR_ID=='' || $Sta=='Discard')
+    // if($PR_ID=='')
     {
     
         if(isset($_POST["ven"]) && isset($_POST["cat"]) && isset($_POST["quantity"]))
@@ -79,12 +82,12 @@ if(isset($_POST["grn"]))
                         {
                             if ($ia<$Quantity) 
                             {   
-                                if (!empty($PR_ID)) 
-                                {
-                                    echo "0";
-                                } 
-                                else 
-                                {
+                                // if (!empty($PR_ID)) 
+                                // {
+                                //     // echo "0";
+                                // } 
+                                // else 
+                                // {
                                     $num12=$num12+1;
                                     $var= $format."-".$sk_format.$num12;
                                     // echo $var."<br>";
@@ -93,7 +96,7 @@ if(isset($_POST["grn"]))
                                     //same with addition
                                     $sql1 = "INSERT INTO addition (Vendor_ID,Batch_ID,SKU,Cost,Category_ID,Sub_Category_ID,DateTime) VALUES ('$war','$bacthid','$var', '$cost','$cat', '$subc','$C_Date')";
                                     $result1 = mysqli_query($mysql, $sql1);
-                                }
+                                // }
                             }
                         }
                     }
@@ -104,12 +107,12 @@ if(isset($_POST["grn"]))
                         {
                             if ($ia<$Quantity) 
                             {   
-                                if (!empty($PR_ID)) 
-                                {
-                                    echo "0";           
-                                } 
-                                else 
-                                {
+                                // if (!empty($PR_ID)) 
+                                // {
+                                //     // echo "0";           
+                                // } 
+                                // else 
+                                // {
                                     $num12=$num12+1;
                                     $var= $format."-".$sk_format.$num12;
                                     // echo $var."<br>";
@@ -119,7 +122,7 @@ if(isset($_POST["grn"]))
                                     $sql1 = "INSERT INTO addition (Vendor_ID,Batch_ID,SKU,Cost,Category_ID,Sub_Category_ID,DateTime) VALUES ('$war','$bacthid','$var', '$cost','$cat', '$subc','$C_Date')";
                                     $result1 = mysqli_query($mysql, $sql1);
                                        
-                                }
+                                // }
                                 
                             }
                         }

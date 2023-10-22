@@ -17,12 +17,12 @@ if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                $query .= ' WHERE Courier in ("CallCourier","PostEx","Rider","Trax","Self","Leopard") AND DateTime Between "'.$_POST['from'].' 00:00:00" AND "'.$_POST['to'].' 23:59:59"';
+                $query .= ' WHERE Courier in ("CallCourier","PostEx","Rider","Tcs","Self","Leopard") AND DateTime Between "'.$_POST['from'].' 00:00:00" AND "'.$_POST['to'].' 23:59:59"';
              }
         }
         else
         {
-            $query .= ' WHERE Courier in ("CallCourier","PostEx","Rider","Trax","Self","Leopard")';
+            $query .= ' WHERE Courier in ("CallCourier","PostEx","Rider","Tcs","Self","Leopard")';
         }
             
     }
@@ -83,7 +83,7 @@ if(isset($_POST['courier']))
         }
     }
     
-    if($courier=="Trax")
+    if($courier=="Tcs")
     {
         if(!empty($_POST['from']))
         {

@@ -68,7 +68,7 @@ session_Start();
                     <a href="../Packing/index.php" class="btn btn-primary-light">Pack </a>
                     <a href="#" id="dis_ord" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Extra items </a>
                     <a href="#" id="conf_ord" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Received </a>
-                    <a href="#" id="pack_ord" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Packed </a>
+                    <a href="#" id="pack_ord" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Rejected </a>
                 </div>
                 <div class="col-md-6 p-r-20" style="margin-top:30px;">
                     

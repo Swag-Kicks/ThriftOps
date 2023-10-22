@@ -52,7 +52,7 @@ $cr=$_SESSION['Username'];
                                 <input type="text" name="search_box" id="search_box" class="form-control" placeholder="Type your search query here">
                              </div>
                              <div class="col-md-6 mb-15">
-                                 <a href="SKU.php"> <input type="button" value="Create SKU" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
+                                 <a href="SKU"> <input type="button" value="Create SKU" class="btn btn-primary-light m-l-15 f-right" style="padding: 8px 30px;"></a>
                          <input type="button" name="pick" value="⟳ Refresh" id="refresh" class="btn btn-primary f-right ref">
                      </div>
                             </div>

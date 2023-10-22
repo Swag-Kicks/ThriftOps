@@ -166,7 +166,7 @@ else
 
 
 $filter_query = $query . ' LIMIT '.$start.', '.$limit.'';
-// echo $filter_query;
+echo $filter_query;
 
 
 

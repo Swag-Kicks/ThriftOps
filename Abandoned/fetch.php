@@ -37,7 +37,7 @@ if(isset($_POST['cond']))
         
         else
         {
-            $query .= ' WHERE Status in ("Order Placed","Pending","Already Placed","Not Answering","Unreachable","Payment Issue","DC Issue","Size Issue","Will Order Soon","Ordered on Chat","Not Interested")';
+            $query .= ' WHERE Status in ("Order Placed","Pending","Already Placed","Not Answering","Unreachable","Payment Issue","DC Issue","Size Issue","Will Order Soon","Ordered on Chat","Not Interested") AND DateTime > "2023-10-01 00:00:00"';
         }
             
     }
@@ -353,7 +353,7 @@ else
 
 
 $filter_query = $query . ' LIMIT '.$start.', '.$limit.'';
-//echo $filter_query;
+// echo $filter_query;
 
 
 

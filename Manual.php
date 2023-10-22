@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 //session_start();
 include_once("include/mysql_connection.php"); 
 error_reporting(0);
@@ -83,4 +83,4 @@ $value=$result['order'];
 			
 			
 	
-	?> -->
+	?>

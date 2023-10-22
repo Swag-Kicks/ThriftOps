@@ -61,131 +61,7 @@ if(isset($_POST['cond']))
            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
         }
     }
-    if($cond=="Dispatched")
-    {
-        if(!empty($_POST['from']))
-        {
-             if(!empty($_POST['to']))
-             {
-                 if($_POST['courier'] != '')
-                 {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-                 if($_POST['courier'] == '')
-                 {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-             }
-        }
-        if($_POST['courier'] != '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-        if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-           $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-    }
-    if($cond=="Intransit")
-    {
-        if(!empty($_POST['from']))
-        {
-             if(!empty($_POST['to']))
-             {
-                 if($_POST['courier'] != '')
-                 {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-                 if($_POST['courier'] == '')
-                 {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-             }
-        }
-        if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-        if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-    }
-    if($cond=="Delivered")
-    {
-        if(!empty($_POST['from']))
-        {
-             if(!empty($_POST['to']))
-             {
-                 if($_POST['courier'] != '')
-                 {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-                 if($_POST['courier'] == '')
-                 {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-             }
-        }
-        if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-        if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-    }
-    if($cond=="Returned")
-    {
-        if(!empty($_POST['from']))
-        {
-             if(!empty($_POST['to']))
-             {
-                 if($_POST['courier'] != '')
-                 {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-                 if($_POST['courier'] == '')
-                 {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-             }
-        }
-        if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-        if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-    }
-    if($cond=="Loss")
-    {
-        if(!empty($_POST['from']))
-        {
-             if(!empty($_POST['to']))
-             {
-                 if($_POST['courier'] != '')
-                 {
-                     $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-                 if($_POST['courier'] == '')
-                 {
-                    $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
-                 }
-             }
-        }
-        if($_POST['courier'] != ''  && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-          $query .= ' WHERE Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-        if($_POST['courier'] == '' && $_POST['from'] == '' && $_POST['to'] == '')
-        {
-            $query .= ' WHERE Status LIKE "%'.str_replace(' ', '%', $_POST['cond']).'%"';
-        }
-    }
+
     if($cond=="Booked")
     {
         if(!empty($_POST['from']))
@@ -289,7 +165,7 @@ else
 }
 
 
-//echo $query;
+echo $query;
 $total_data=mysqli_num_rows(mysqli_query($mysql, $query));
 //print_r($total_data);
 

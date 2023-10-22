@@ -96,7 +96,7 @@ else if(isset($_POST['courier']))
         }
     }
     
-    if($courier=="Trax")
+    if($courier=="Tcs")
     {
         if(!empty($_POST['from']))
         {

@@ -2,11 +2,12 @@
 //session_start();
 include_once("include/mysql_connection.php"); 
 error_reporting(0);
+date_default_timezone_set("Asia/Karachi");
 
 $p=1;
 $status="None";
 $shop = 'www-swag-kicks-com';
-$api = 'api/2023-07/';
+$api = 'api/2023-01/';
 $auth = 'https://' . $shop . '.myshopify.com/admin/' . $api;
 
 
@@ -23,8 +24,8 @@ function shopify_curl_get($request, $endpoints = '', $limit = 50, $no_pagination
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl,CURLOPT_HTTPHEADER , array(
-			'X-Shopify-Access-Token: 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',
-            'Authorization: Bearer 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'
+			'X-Shopify-Access-Token: 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',
+            'Authorization: Bearer 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'
 		));
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_HEADERFUNCTION, function($curl, $header) use (&$headers) {

@@ -1363,7 +1363,7 @@ $.ajax(settings).done(function (response) {
 
  $(document).ready(function() {
       $.ajax({
-        url: "../ShopifyPush/api/gip.php",
+        url: "https://backup.thriftops.com/ShopifyPush/api/gip.php",
         method: "GET",
         success: function(data) {
           //$("#ip").html(data);

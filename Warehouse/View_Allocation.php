@@ -313,7 +313,7 @@ form.append("id", id);
 form.append("sku", sku);
 
 var settings = {
-  "url": "api/autoalocate.php",
+  "url": "https://backup.thriftops.com/Warehouse/api/autoalocate.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -358,7 +358,7 @@ form.append("reason", reason);
 form.append("removedby", removedby);
 form.append("sku", itemValue);
 var settings = {
-  "url": "api/dealocation.php",
+  "url": "https://backup.thriftops.com/Warehouse/api/dealocation.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -535,7 +535,7 @@ var rn = params.get('rn');
         
         
       $.ajax({
-        url:"api/singleRackAllocation.php?id="+id+"&rn="+rn,
+        url:"https://backup.thriftops.com/Warehouse/api/singleRackAllocation.php?id="+id+"&rn="+rn,
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -615,7 +615,7 @@ var rn = params.get('rn');
         
         
       $.ajax({
-        url:"api/singleRackAllocation.php?id="+id+"&rn="+rn,
+        url:"https://backup.thriftops.com/Warehouse/api/singleRackAllocation.php?id="+id+"&rn="+rn,
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -682,7 +682,7 @@ var rn = params.get('rn');
         
         
       $.ajax({
-        url:"api/allracks.php?id="+id+"&rn="+rn,
+        url:"https://backup.thriftops.com/Warehouse/api/allracks.php?id="+id+"&rn="+rn,
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -694,7 +694,7 @@ var rn = params.get('rn');
             var fill=''; 
              response.sort((a, b) => a.name.localeCompare(b.name));
             for(var i=0; i<response.length; i++) {
-  var imageSrc = response[i].Image_1 || "../ShopifyPush/imageicon.png";
+  var imageSrc = response[i].Image_1 || "https://backup.thriftops.com/ShopifyPush/imageicon.png";
   t.row.add([
     "<input class='checkbox1' type='checkbox' id='cBox' value='"+response[i].Rack_ID+"' >",
     [i+1],
@@ -761,7 +761,7 @@ var rn = params.get('rn');
         
         
       $.ajax({
-        url: "api/dealocateditems.php?id="+id+"&rn="+rn,
+        url: "https://backup.thriftops.com/Warehouse/api/dealocateditems.php?id="+id+"&rn="+rn,
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -816,7 +816,7 @@ form.append("id", id);
 console.log("WID",wid , "sku",sku,"id",id)
 
 var settings = {
-  "url": "api/autoalocate.php",
+  "url": "https://backup.thriftops.com/Warehouse/api/autoalocate.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,

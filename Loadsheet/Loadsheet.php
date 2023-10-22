@@ -118,7 +118,7 @@
                      <a href="#" id="rider" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Rider </a>
                      <a href="#" id="self" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Self Delivery</a>
                      <a href="#" id="call" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Call Courier</a>
-                     <a href="#" id="trax" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">Trax </a>
+                     <a href="#" id="Tcs" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="btn btn-primary-light">TCS </a>
                   </div>
                </div>
             </div>
@@ -416,9 +416,9 @@ function JSDropDown() {
           courier='CallCourier';
           load_data(page,from,to,limit,sort,courier);
       });
-      //trax
-      $(document).on('click', '#trax', function(){
-          courier='Trax';
+      //Tcs
+      $(document).on('click', '#Tcs', function(){
+          courier='Tcs';
           load_data(page,from,to,limit,sort,courier);
       });
       //for default page load 
@@ -468,9 +468,9 @@ function JSDropDown() {
           courier='CallCourier';
           load_data(page,from,to,limit,sort,courier);
       });
-      //trax
-      $(document).on('click', '#trax', function(){
-          courier='Trax';
+      //Tcs
+      $(document).on('click', '#Tcs', function(){
+          courier='Tcs';
           load_data(page,from,to,limit,sort,courier);
       });
       //for default page load 
@@ -519,9 +519,9 @@ function JSDropDown() {
           courier='CallCourier';
           load_data(page,from,to,limit,sort,courier);
       });
-      //trax
-      $(document).on('click', '#trax', function(){
-          courier='Trax';
+      //Tcs
+      $(document).on('click', '#Tcs', function(){
+          courier='Tcs';
           load_data(page,from,to,limit,sort,courier);
       });
       //for default page load 
@@ -592,9 +592,9 @@ function JSDropDown() {
       var sort=document.getElementById("sort").value;
       load_data(page,from,to,limit,sort,courier);
     });
-    //trax
-    $(document).on('click', '#trax', function(){
-      courier='Trax';
+    //Tcs
+    $(document).on('click', '#Tcs', function(){
+      courier='Tcs';
        var page = $(this).data('page_number');
       from=document.getElementById("fromdate").value;
       to=document.getElementById("todate").value;
@@ -646,9 +646,9 @@ function JSDropDown() {
               courier='CallCourier';
               load_data(page,from,to,limit,sort,courier);
           });
-          //trax
-          $(document).on('click', '#trax', function(){
-              courier='Trax';
+          //Tcs
+          $(document).on('click', '#Tcs', function(){
+              courier='Tcs';
               load_data(page,from,to,limit,sort,courier);
           });
           

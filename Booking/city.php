@@ -89,10 +89,21 @@ if(isset($_GET['courier']) && isset($_GET['city']))
     if($courier=='Tcs')
     {
 
-        $ci_name=ucwords($city);
-        $try=array('id'=>$ci_name,'Name'=>$ci_name);
-        $result=array($try);
+        // $ci_name=ucwords($city);
+        // $try=array('id'=>$ci_name,'Name'=>$ci_name);
+        // $result=array($try);
         
+        // $main = array('data'=>$result);
+        // echo json_encode($main);
+        
+        
+        $ci_name=ucwords($city);
+        $sql="Select Name from `TCS` Where Name LIKE '%UPPER($ci_name)%' OR Name LIKE '%$city%'";
+        $sh = mysqli_query($mysql, $sql);
+        $row1 = mysqli_fetch_assoc($sh);
+        $ci_name1=$row1['Name'];
+        $try=array('id'=>$ci_name1,'Name'=>$ci_name1);
+        $result=array($try);
         $main = array('data'=>$result);
         echo json_encode($main);
     }

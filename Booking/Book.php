@@ -958,6 +958,7 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
         $leo = mysqli_query($mysql, $sql1);
         $row = mysqli_fetch_assoc($leo);
         $apipass=$row['API_Pass'];
+        $tcspass=$row['API_Key'];
         
         //new
         $curl = curl_init();
@@ -972,8 +973,8 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
           CURLOPT_CUSTOMREQUEST => 'POST',
           CURLOPT_POSTFIELDS =>'{
             "userName": "swag-tcs",
-            "password": "swag123@",
-            "costCenterCode": "swag",
+            "password": "'.$tcspass.'",
+            "costCenterCode": "SwagKicks",
             "consigneeName": "'.$name.'",
             "consigneeAddress": "'.$address.'",
             "consigneeMobNo": "'.$contact.'",
@@ -1000,6 +1001,8 @@ if(!empty($_POST["id"]) && !empty($_POST["courierstat"]) &&!empty($_POST["order"
         
         curl_close($curl);
         $jso =json_decode($response,true);
+        // print_r($jso);
+    
         $nstr = $jso["bookingReply"]["result"];
         $num=preg_replace("/[^0-9]/", "", $nstr );
         if(!empty($num))

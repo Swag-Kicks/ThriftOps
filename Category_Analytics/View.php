@@ -99,7 +99,7 @@ include ("../include/side_admin.php");
           <div class="card mb-4">
             <div class="card-header pb-0">
               <h6 class="text-xxl font-weight-bolder" style="display: inline-block;">Sales By Categories</h6>
-              <a href="Dashboard2/Sales_Report.php" class="btn btn-primary" style="float: right;">View All</a>
+              <a href="https://backup.thriftops.com/Dashboard2/Sales_Report.php" class="btn btn-primary" style="float: right;">View All</a>
             </div>
             <div class="card-body ">
               <div class="table-responsive p-0">
