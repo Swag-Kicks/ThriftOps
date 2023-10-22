@@ -27,6 +27,8 @@ $row1 = mysqli_fetch_assoc($sh);
 $aws_access_key = $row1['API_Key'];
 $aws_secret_key = $row1['API_Pass'];
 $bucket_name = 'thriftops';
+
+echo $bucket_name;
 // Create an S3 client
 $s3 = new S3Client([
     'version'     => 'latest',
