@@ -37,6 +37,8 @@ $s3 = new S3Client([
     ],
 ]);
 
+print_r($s3);
+
 $to_encode = array();
 
 if(!empty($_FILES))
