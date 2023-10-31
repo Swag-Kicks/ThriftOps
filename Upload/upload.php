@@ -28,7 +28,7 @@ $aws_access_key = $row1['API_Key'];
 $aws_secret_key = $row1['API_Pass'];
 $bucket_name = 'thriftops';
 
-echo $bucket_name;
+
 // Create an S3 client
 $s3 = new S3Client([
     'version'     => 'latest',
@@ -63,11 +63,11 @@ if(!empty($_FILES))
         'ACL' => 'public-read', // Set ACL to make the object publicly accessible
         ]);
 
-        // echo "File uploaded successfully: {$result['ObjectURL']}";
+        echo "File uploaded successfully: {$result['ObjectURL']}";
         
-         $to_encode[] = $result['ObjectURL'];
+        //  $to_encode[] = $result['ObjectURL'];
      
-         echo $to_encode;
+        //  echo $to_encode;
          die();
         } 
         catch (AwsException $e) {
