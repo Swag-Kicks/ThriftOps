@@ -20,9 +20,4 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} 'bash -c "
-          cd /var/www/html/ThriftOps &&
-          git pull origin Dev &&
-          composer install &&
-          sudo systemctl restart httpd
-        "'
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} 'bash -s' < deploy-script.sh
