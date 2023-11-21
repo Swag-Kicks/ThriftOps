@@ -63,11 +63,11 @@ if(!empty($_FILES))
         'ACL' => 'public-read', // Set ACL to make the object publicly accessible
         ]);
 
-        echo "File uploaded successfully: {$result['ObjectURL']}";
+        // echo "File uploaded successfully: {$result['ObjectURL']}";
         
-        //  $to_encode[] = $result['ObjectURL'];
+         $to_encode[] = $result['ObjectURL'];
      
-        //  echo $to_encode;
+         echo json_encode($to_encode);
          die();
         } 
         catch (AwsException $e) {
