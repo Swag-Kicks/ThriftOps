@@ -2243,7 +2243,7 @@ $('#shoetypediv').hide();
        
    }
    
-   
+// for new
    
     
 </script>

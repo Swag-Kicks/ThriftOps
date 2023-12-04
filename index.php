@@ -31,10 +31,10 @@ if(isset($_POST['submit']))
     $_SESSION['id']=$id;
     $_SESSION['Username']=$name;
 
-    echo '<script>window.location.href="Dashboard/Home";</script>';
+    echo '<script>window.location.href="Dashboard/Home.php";</script>';
   }
 
-
+// for
 
 }
 
