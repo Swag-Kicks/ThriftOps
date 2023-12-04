@@ -5,7 +5,6 @@ cd /var/www/html/ThriftOps
 
 # Pull the latest code from the GitHub repository
 git pull origin Prod
-
 # Install/update dependencies (if using Composer)
 composer install
 
