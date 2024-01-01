@@ -11,18 +11,18 @@ if(!empty($_POST['ordernum']))
     $ord=$_POST['ordernum'];
     if(is_numeric($cut))
     {
-        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Dispatched" AND City LIKE "%Kar%"  AND Date > 2023-05-01';
+        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Dispatched" AND City LIKE "%Kar%" AND Courier="Self" AND Date > 2023-12-01';
     }
     else
     {
-       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Dispatched" AND City LIKE "%Kar%"  AND Date > 2023-05-01';
+       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Dispatched" AND City LIKE "%Kar%"  AND Courier="Self" AND Date > 2023-12-01';
     }
     
 }
 
 else
 {
-    $query .= ' Where Status="Dispatched" AND City LIKE "%Kar%"  AND Date > 2023-05-01 ';
+    $query .= ' Where Status="Dispatched" AND City LIKE "%Kar%" AND Courier="Self" AND Date > 2023-12-01';
 }
 
 

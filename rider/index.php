@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
     $_SESSION['id']=$id;
     $_SESSION['Username']=$name;
 
-    echo '<script>window.location.href="https://backup.thriftops.com/rider/rider";</script>';
+    echo '<script>window.location.href="https://sys.thriftops.com/rider";</script>';
   }
 
 
