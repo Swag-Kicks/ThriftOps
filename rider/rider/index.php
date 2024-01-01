@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
   $id=$row['User_ID'];
   if ($counter == 0) 
   {
-    echo '<script>alert("Invalid ID Or Password");window.location.href="https://backup.thriftops.com/rider/index";</script>';
+    echo '<script>alert("Invalid ID Or Password");window.location.href="https://sys.thriftops.com/rider/index.php";</script>';
 
   }
   else
@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
     $_SESSION['id']=$id;
     $_SESSION['Username']=$name;
 
-    echo '<script>window.location.href="https://backup.thriftops.com/rider/rider";</script>';
+    echo '<script>window.location.href="https://sys.thriftops.com/rider/rider.php";</script>';
   }
 
 
