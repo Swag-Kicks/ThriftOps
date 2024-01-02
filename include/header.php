@@ -170,12 +170,12 @@ $(document).ready(function()
         let result = val.includes("-");
         if(result==true)
         {	
-        	href='https://backup.thriftops.com/include/viewProduct.php?id='+val;
+        	href='/include/viewProduct.php?id='+val;
             window.open(href);
         }
         else
         {
-            href='https://backup.thriftops.com/include/Order_View.php?GETID='+val;
+            href='/include/Order_View.php?GETID='+val;
             window.open(href);
         }
         
