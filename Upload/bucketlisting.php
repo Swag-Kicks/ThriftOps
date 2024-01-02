@@ -123,7 +123,6 @@
                                              <option value="Men">Men</option>
                                              <option value="Women">Women</option>
                                              <option value="Unisex">Unisex</option>
-                                              <option value="Kid">Kid</option>
                                           </select>
                                        </div>
                                     </div>
@@ -214,13 +213,8 @@
                                                 <option value="XXXL">XXXL</option>
                                                 <option value="XXXXL">XXXXL</option>
                                                 <option value="XXXXXL">XXXXXL</option>
-                                                <option value="XLStandard">XL Standard</option>
-                                                <option value="Standard">Standard</option>
-                                                <option value="Narrow">Narrow</option>
-                                                <option value="Skinny">Skinny</option>
-                                                <option value="Youth">Youth</option>
-                                                <option value="Toddler">Toddler</option>
                                                 <option value="onesize">One Size</option>
+
                                              </select>
                                         </div>
                                         <div class="col-sm-6">
@@ -2249,7 +2243,7 @@ $('#shoetypediv').hide();
        
    }
    
-   
+// for new
    
     
 </script>
