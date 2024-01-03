@@ -1,34 +1,14 @@
 <?php
-// $folderName = 'upload/';
 
-// $to_encode = array();
-
-// if(!empty($_FILES))
-// {
-//     $file = $_FILES['file']['tmp_name'];
-//     $fileLocation = $folderName . $_FILES['file']['name'];
-//     move_uploaded_file($file,$fileLocation);
-//     //  echo $fileLocation;
-//         $to_encode[] = $fileLocation;
-     
-//      echo json_encode($to_encode);
-//      die();
-// } 
 require '../vendor/autoload.php'; // Load the AWS SDK for PHP
-include_once("../include/mysql_connection.php"); 
+
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
-//shopify token
-$sql2="Select * from `API_Credentials` Where Platform='Aws'";
-$sh = mysqli_query($mysql, $sql2);
-$row1 = mysqli_fetch_assoc($sh);
 // Replace with your AWS credentials
-$aws_access_key = $row1['API_Key'];
-$aws_secret_key = $row1['API_Pass'];
+$aws_access_key = 'AKIA442OQIPQ2IZFHX7H';
+$aws_secret_key = 'GgxxAE+7RcJYsGuk2pztMZYHMcJwlXda7Hw87d6Q';
 $bucket_name = 'thriftops';
-
-
 // Create an S3 client
 $s3 = new S3Client([
     'version'     => 'latest',
@@ -38,8 +18,6 @@ $s3 = new S3Client([
         'secret' => $aws_secret_key,
     ],
 ]);
-
-// print_r($s3);
 
 $to_encode = array();
 
@@ -67,12 +45,15 @@ if(!empty($_FILES))
         
          $to_encode[] = $result['ObjectURL'];
      
-         echo json_encode($result['ObjectURL']);
+         echo $to_encode;
          die();
         } 
         catch (AwsException $e) {
             echo "Error uploading the file: {$e->getMessage()}";
         }
 }
+
+
+
 
 ?>
