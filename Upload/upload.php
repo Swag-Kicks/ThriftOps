@@ -67,7 +67,7 @@ if(!empty($_FILES))
         
          $to_encode[] = $result['ObjectURL'];
      
-         echo json_encode($result['ObjectURL']);
+         echo $result['ObjectURL'];
          die();
         } 
         catch (AwsException $e) {
