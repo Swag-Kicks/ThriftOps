@@ -476,7 +476,7 @@ const initReturn = () =>{
     form.append("name", customer);
     
     var settings = {
-      "url": "https://backup.thriftops.com/Return/Api/init.php",
+      "url": "https://sys.thriftops.com/Return/Api/init.php",
       "method": "POST",
       "timeout": 0,
       "processData": false,
