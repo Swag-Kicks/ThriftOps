@@ -1850,11 +1850,11 @@ $('#shoetypediv').hide();
        
       
    
-      $("#img1").attr("src",URL+img1);
-        $("#img2").attr("src",URL+img2);
-          $("#img3").attr("src",URL+img3);
-            $("#img4").attr("src",URL+img4);
-              $("#img5").attr("src",URL+img5);
+      $("#img1").attr(URL+img1);
+        $("#img2").attr(URL+img2);
+          $("#img3").attr(URL+img3);
+            $("#img4").attr(URL+img4);
+              $("#img5").attr(URL+img5);
               
               
     
