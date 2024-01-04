@@ -381,7 +381,7 @@ const typeAll = (l,fd,td,status) => {
     var limit = l
     
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/recieve.php?limit="+limit+"&fd="+fd+"+&td="+td+"&status="+status,
+  "url": "https://sys.thriftops.com/Return/Api/recieve.php?limit="+limit+"&fd="+fd+"+&td="+td+"&status="+status,
   "method": "GET",
   "timeout": 0,
 };
@@ -433,7 +433,7 @@ const ShowAll = (l,fd,td) => {
     var limit = l
     
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/recieveAll.php?limit="+limit+"&fd="+fd+"+&td="+td,
+  "url": "https://sys.thriftops.com/Return/Api/recieveAll.php?limit="+limit+"&fd="+fd+"+&td="+td,
   "method": "GET",
   "timeout": 0,
 };
@@ -570,7 +570,7 @@ function fnExcelReport()
 
 
 // var settings = {
-//   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Peer",
+//   "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Peer",
 //   "method": "POST",
 //   "timeout": 0,
 // };
@@ -585,7 +585,7 @@ function fnExcelReport()
 
 
 // var settings = {
-//   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Seller",
+//   "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Seller",
 //   "method": "POST",
 //   "timeout": 0,
 // };
@@ -600,7 +600,7 @@ function fnExcelReport()
 
 
 // var settings = {
-//   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
+//   "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
 //   "method": "POST",
 //   "timeout": 0,
 // };
@@ -625,7 +625,7 @@ const markReceived = (value) => {
     form.append("oid", value);
     
     var settings = {
-      "url": "https://backup.thriftops.com/Return/Api/markReceived.php",
+      "url": "https://sys.thriftops.com/Return/Api/markReceived.php",
       "method": "POST",
       "timeout": 0,
       "processData": false,
@@ -654,7 +654,7 @@ const wrongItem = (value) => {
     form.append("oid", value);
     
     var settings = {
-      "url": "https://backup.thriftops.com/Return/Api/wrongItem.php",
+      "url": "https://sys.thriftops.com/Return/Api/wrongItem.php",
       "method": "POST",
       "timeout": 0,
       "processData": false,
@@ -737,7 +737,7 @@ const SingleOrder = (ordernum) =>{
 form.append("oid", ordernum);
 
 var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/singleorder.php",
+  "url": "https://sys.thriftops.com/Return/Api/singleorder.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,

@@ -590,7 +590,7 @@ const exchangeList = (FD,TD,l) => {
     //alert("hello")
       document.getElementById("table_body2").innerHTML = ''
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/exchange.php?fd="+FD+"&td="+TD+"&limit="+l,
+  "url": "https://sys.thriftops.com/Return/Api/exchange.php?fd="+FD+"&td="+TD+"&limit="+l,
   "method": "GET",
   "timeout": 0,
 };
@@ -723,7 +723,7 @@ const typeAll = (FD,TD,l) => {
     //alert("hello")
       document.getElementById("table_body").innerHTML = ''
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/returns.php?fd="+FD+"&td="+TD+"&limit="+l,
+  "url": "https://sys.thriftops.com/Return/Api/returns.php?fd="+FD+"&td="+TD+"&limit="+l,
   "method": "GET",
   "timeout": 0,
 };
@@ -845,7 +845,7 @@ const conflictlist = (l,fd,td,status) => {
     var limit = l
     
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/recieve.php?limit="+limit+"&fd="+fd+"+&td="+td+"&status="+status,
+  "url": "https://sys.thriftops.com/Return/Api/recieve.php?limit="+limit+"&fd="+fd+"+&td="+td+"&status="+status,
   "method": "GET",
   "timeout": 0,
 };
@@ -961,7 +961,7 @@ form.append("exchange", exchange);
 
 
 var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/init.php",
+  "url": "https://sys.thriftops.com/Return/Api/init.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1097,7 +1097,7 @@ const fetchOrder = () =>{
 
     
     var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/fetchorder.php?order=%23"+ordernumber,
+  "url": "https://sys.thriftops.com/Return/Api/fetchorder.php?order=%23"+ordernumber,
   "method": "POST",
   "timeout": 0,
 };
@@ -1211,7 +1211,7 @@ const SingleOrder = (ordernum) =>{
 form.append("oid", ordernum);
 
 var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/singleorder.php",
+  "url": "https://sys.thriftops.com/Return/Api/singleorder.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1329,7 +1329,7 @@ form.append("refundStatus", "Due");
 
 
 var settings = {
-  "url": "https://backup.thriftops.com/Return/Api/addrefund.php",
+  "url": "https://sys.thriftops.com/Return/Api/addrefund.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1363,7 +1363,7 @@ $.ajax(settings).done(function (response) {
 
  $(document).ready(function() {
       $.ajax({
-        url: "https://backup.thriftops.com/ShopifyPush/api/gip.php",
+        url: "https://sys.thriftops.com/ShopifyPush/api/gip.php",
         method: "GET",
         success: function(data) {
           //$("#ip").html(data);

@@ -325,7 +325,7 @@ session_Start();
       
        
        var settings = {
-     "url": "https://backup.thriftops.com/Return/Api/refunds.php",
+     "url": "https://sys.thriftops.com/Return/Api/refunds.php",
      "method": "GET",
      "timeout": 0,
    };
@@ -392,7 +392,7 @@ session_Start();
       var status = stat;
        
        var settings = {
-     "url": "https://backup.thriftops.com/Return/Api/refundstatus.php?status="+status,
+     "url": "https://sys.thriftops.com/Return/Api/refundstatus.php?status="+status,
      "method": "GET",
      "timeout": 0,
    };
@@ -539,7 +539,7 @@ session_Start();
    // Chala ja BH***KE
    
    var settings = {
-    "url": "https://backup.thriftops.com/Vendor2/api/ViewAll.php",
+    "url": "https://sys.thriftops.com/Vendor2/api/ViewAll.php",
     "method": "GET",
     "timeout": 0,
    };
@@ -558,8 +558,8 @@ session_Start();
                                <td>${values.Warehouse_ID}</td>
                                  <td>${values.Fments}</td>
                                   <td>${values.batches}</td>
-                                  <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://backup.thriftops.com/assets/images/icons/eye.png"></a>
-                                  <a href="#" data-role="infrm" ><img class=""  src="https://backup.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
+                                  <td>   <a href="#" data-role="view" ><img class="icons" onclick="viewVendor(${values.Vendor_ID})"  src="https://sys.thriftops.com/assets/images/icons/eye.png"></a>
+                                  <a href="#" data-role="infrm" ><img class=""  src="https://sys.thriftops.com/assets/images/icons/edit.png" onclick="editVendor(${values.Vendor_ID})"></a></td>
                                   
                           </tr > `;
    
@@ -592,7 +592,7 @@ session_Start();
    
    
    var settings = {
-     "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Peer",
+     "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Peer",
      "method": "POST",
      "timeout": 0,
    };
@@ -607,7 +607,7 @@ session_Start();
    
    
    var settings = {
-     "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Seller",
+     "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Seller",
      "method": "POST",
      "timeout": 0,
    };
@@ -622,7 +622,7 @@ session_Start();
    
    
    var settings = {
-     "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
+     "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
      "method": "POST",
      "timeout": 0,
    };
@@ -646,7 +646,7 @@ session_Start();
    form.append("oid", checkedValue);
    
    var settings = {
-     "url": "https://backup.thriftops.com/Return/Api/markReceived.php",
+     "url": "https://sys.thriftops.com/Return/Api/markReceived.php",
      "method": "POST",
      "timeout": 0,
      "processData": false,
