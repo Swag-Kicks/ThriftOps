@@ -1816,7 +1816,7 @@ $('#shoetypediv').hide();
        
            file.previewElement.parentNode.removeChild(file.previewElement);
          // console.log(imgSrc)
-         console.log(imgSrc[0]);
+         console.log("file c:"+file[0]);
         
        //  console.log(imgSrc.length)
         
@@ -1828,7 +1828,7 @@ $('#shoetypediv').hide();
         }
      
             //  imgSrc.push(file.name) 
-            imgSrc.push(file) 
+            imgSrc.push(file.name) 
              
              swapImage(imgSrc[0],imgSrc[1],imgSrc[2],imgSrc[3],imgSrc[4])
              
