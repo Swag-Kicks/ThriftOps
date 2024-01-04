@@ -675,7 +675,9 @@ $('#shoetypediv').hide();
    
     
        var image1 =myimg[0].currentSrc;
+       console.log(image1);
            var image2 = myimg[1].currentSrc;
+           console.log(image2);
                var image3 = myimg[2].currentSrc;
                    var image4 = myimg[3].currentSrc;
                        var image5 = myimg[4].currentSrc;
