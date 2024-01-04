@@ -66,8 +66,9 @@ if(!empty($_FILES))
         // echo "File uploaded successfully: {$result['ObjectURL']}";
         
          $to_encode[] = $result['ObjectURL'];
-     
-         echo $to_encode;
+        
+         echo json_encode($to_encode);
+        //  echo $result['ObjectURL'];
          die();
         } 
         catch (AwsException $e) {
