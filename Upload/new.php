@@ -1811,7 +1811,7 @@ $('#shoetypediv').hide();
        },
        success: function( file, response ){
             obj = JSON.parse(response);
-            console.log(obj);
+            // console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
            file.previewElement.parentNode.removeChild(file.previewElement);
@@ -1828,7 +1828,7 @@ $('#shoetypediv').hide();
         }
      
             //  imgSrc.push(file.name) 
-            imgSrc.push(file.name) 
+            imgSrc.push(obj) 
              
              swapImage(imgSrc[0],imgSrc[1],imgSrc[2],imgSrc[3],imgSrc[4])
              
