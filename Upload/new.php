@@ -672,7 +672,7 @@ $('#shoetypediv').hide();
        var someimage = document.getElementById('sortUl');
    
     var myimg = someimage.getElementsByTagName('img')
-   
+    console.log(myimg);
     
        var image1 =myimg[0].currentSrc;
        console.log(image1);
