@@ -1815,8 +1815,8 @@ $('#shoetypediv').hide();
            //  alert(file.name); // <---- here is your filename
        
            file.previewElement.parentNode.removeChild(file.previewElement);
-         console.log(imgSrc)
-        
+         // console.log(imgSrc)
+         console.log(imgSrc[0]);
         
        //  console.log(imgSrc.length)
         
@@ -1870,17 +1870,17 @@ $('#shoetypediv').hide();
                
              // console.log("imgsrc1",typeof(imgsrc2))
               
-            //  var img1thumb = imgsrc1.split("/").pop();
-            //  var img2thumb = imgsrc2.split("/").pop();
-            //    var img3thumb = imgsrc3.split("/").pop();
-            //     var img4thumb = imgsrc4.split("/").pop();
-            //      var img5thumb = imgsrc5.split("/").pop();
+             var img1thumb = imgsrc1.split("/").pop();
+             var img2thumb = imgsrc2.split("/").pop();
+               var img3thumb = imgsrc3.split("/").pop();
+                var img4thumb = imgsrc4.split("/").pop();
+                 var img5thumb = imgsrc5.split("/").pop();
 
-            var img1thumb = imgsrc1;
-             var img2thumb = imgsrc2;
-               var img3thumb = imgsrc3;
-                var img4thumb = imgsrc4;
-                 var img5thumb = imgsrc5;
+            // var img1thumb = imgsrc1;
+            //  var img2thumb = imgsrc2;
+            //    var img3thumb = imgsrc3;
+            //     var img4thumb = imgsrc4;
+            //      var img5thumb = imgsrc5;
               
               
              if(img1thumb == "undefined"){
