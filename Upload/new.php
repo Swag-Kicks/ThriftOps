@@ -1828,7 +1828,7 @@ $('#shoetypediv').hide();
         }
      
             //  imgSrc.push(file.name) 
-            imgSrc.push(obj) 
+            imgSrc.push(obj[0]) 
              
              swapImage(imgSrc[0],imgSrc[1],imgSrc[2],imgSrc[3],imgSrc[4])
              
@@ -1863,6 +1863,7 @@ $('#shoetypediv').hide();
     
               
              var imgsrc1 = document.getElementById("img1").src;
+             console.log("src1:"+imgsrc1);
                var imgsrc2 = document.getElementById("img2").src;
                var imgsrc3 = document.getElementById("img3").src;
                var imgsrc4 = document.getElementById("img4").src;
