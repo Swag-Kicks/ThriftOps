@@ -187,12 +187,6 @@ else
                         ),
                         array(
                             "namespace" => "custom",
-                            "key" => "description",
-                            "value" => $desc,
-                            "type" =>"single_line_text_field"
-                        ),
-                        array(
-                            "namespace" => "custom",
                             "key" => "productcode",
                             "value" => $code,
                             "type" =>"single_line_text_field"
