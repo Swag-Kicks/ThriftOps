@@ -67,7 +67,7 @@ if(!empty($_FILES))
         
          $to_encode[] = $result['ObjectURL'];
      
-         echo $result['ObjectURL'];
+         echo $to_encode;
          die();
         } 
         catch (AwsException $e) {
