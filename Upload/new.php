@@ -1792,7 +1792,7 @@ $('#shoetypediv').hide();
        Dropzone.options.imageUpload = {
        maxFilesize: 0.5, // MB
        maxFiles: 8,
-       addRemoveLinks: true,
+       addRemoveLinks: false,
        init: function() {
            this.on("addedfile", function(file) { fileupload_flag = 1; });
            this.on("complete", function(file) { fileupload_flag = 0; });
@@ -1811,7 +1811,7 @@ $('#shoetypediv').hide();
        },
        success: function( file, response ){
             obj = JSON.parse(response);
-            console.log(obj);
+            // console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
            file.previewElement.parentNode.removeChild(file.previewElement);
