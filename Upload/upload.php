@@ -67,7 +67,8 @@ if(!empty($_FILES))
         
          $to_encode[] = $result['ObjectURL'];
         
-         echo json_encode($to_encode);
+        echo $to_encode;
+        //  echo json_encode($to_encode);
         //  echo $result['ObjectURL'];
          die();
         } 
