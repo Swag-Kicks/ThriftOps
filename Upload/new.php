@@ -1816,7 +1816,7 @@ $('#shoetypediv').hide();
        
            file.previewElement.parentNode.removeChild(file.previewElement);
          // console.log(imgSrc)
-         console.log("file c:"+file[0]);
+         console.log("file c:"+file);
         
        //  console.log(imgSrc.length)
         
