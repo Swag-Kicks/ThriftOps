@@ -1811,12 +1811,12 @@ $('#shoetypediv').hide();
        },
        success: function( file, response ){
             obj = JSON.parse(response);
-            // console.log(obj);
+            console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
            file.previewElement.parentNode.removeChild(file.previewElement);
          // console.log(imgSrc)
-         console.log("file c:"+file);
+         console.log("file c:"+response[0]);
         
        //  console.log(imgSrc.length)
         
