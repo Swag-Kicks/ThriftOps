@@ -1814,7 +1814,7 @@ $('#shoetypediv').hide();
             // console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
-           file.previewElement.parentNode.removeChild(file.previewElement);
+         //   file.previewElement.parentNode.removeChild(file.previewElement);
          // console.log(imgSrc)
          // console.log("file c:"+response[0]);
         
@@ -1863,7 +1863,6 @@ $('#shoetypediv').hide();
     
               
              var imgsrc1 = document.getElementById("img1").src;
-             console.log("src1:"+imgsrc1);
                var imgsrc2 = document.getElementById("img2").src;
                var imgsrc3 = document.getElementById("img3").src;
                var imgsrc4 = document.getElementById("img4").src;
