@@ -486,7 +486,7 @@ $('#shoetypediv').hide();
                 };
     
                 $.ajax(settings).done(function (response) {
-                console.log(response);
+               //  console.log(response);
                 document.getElementById('predi').value=response;
             document.getElementById('predict').innerHTML = `<p style="margin-left:38%;position: relative;top: -55px;float: right;font-size: 12px;">Suggested price is: <b style="color:red">${response}</b></p>`
     
@@ -675,9 +675,9 @@ $('#shoetypediv').hide();
     console.log(myimg);
     
        var image1 =myimg[0].currentSrc;
-       console.log(image1);
+      //  console.log(image1);
            var image2 = myimg[1].currentSrc;
-           console.log(image2);
+         //   console.log(image2);
                var image3 = myimg[2].currentSrc;
                    var image4 = myimg[3].currentSrc;
                        var image5 = myimg[4].currentSrc;
@@ -1787,7 +1787,7 @@ $('#shoetypediv').hide();
    //     }
    // });
    
-    var URL =  "upload/"
+   //  var URL =  "upload/"
          var imgSrc = []
        Dropzone.options.imageUpload = {
        maxFilesize: 0.5, // MB
@@ -1811,6 +1811,7 @@ $('#shoetypediv').hide();
        },
        success: function( file, response ){
             obj = JSON.parse(response);
+            console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
            file.previewElement.parentNode.removeChild(file.previewElement);
@@ -1826,8 +1827,8 @@ $('#shoetypediv').hide();
    
         }
      
-             imgSrc.push(file.name) 
-       
+            //  imgSrc.push(file.name) 
+            imgSrc.push(file) 
              
              swapImage(imgSrc[0],imgSrc[1],imgSrc[2],imgSrc[3],imgSrc[4])
              
@@ -1869,11 +1870,17 @@ $('#shoetypediv').hide();
                
              // console.log("imgsrc1",typeof(imgsrc2))
               
-             var img1thumb = imgsrc1.split("/").pop();
-             var img2thumb = imgsrc2.split("/").pop();
-               var img3thumb = imgsrc3.split("/").pop();
-                var img4thumb = imgsrc4.split("/").pop();
-                 var img5thumb = imgsrc5.split("/").pop();
+            //  var img1thumb = imgsrc1.split("/").pop();
+            //  var img2thumb = imgsrc2.split("/").pop();
+            //    var img3thumb = imgsrc3.split("/").pop();
+            //     var img4thumb = imgsrc4.split("/").pop();
+            //      var img5thumb = imgsrc5.split("/").pop();
+
+            var img1thumb = imgsrc1;
+             var img2thumb = imgsrc2;
+               var img3thumb = imgsrc3;
+                var img4thumb = imgsrc4;
+                 var img5thumb = imgsrc5;
               
               
              if(img1thumb == "undefined"){
