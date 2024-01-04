@@ -67,9 +67,10 @@
                                           <div class="mb-3">
                                              <label class="col-form-label pt-0">Condition</label>
                                              <select class="form-control form-select  " name="condition"  onchange="iDetails();predict2();button();"  id="condition_id">
-                                                <option value="07/10">07/10</option>
-                                                <option value="08/10">08/10</option>
-                                                <option value="09/10">09/10</option>
+                                                <option value=" ">Select condition</option>
+                                                <option value="7/10">7/10</option>
+                                                <option value="8/10">8/10</option>
+                                                <option value="9/10">9/10</option>
                                                 <option value="10/10">10/10</option>
                                                 <option value="Brand New">Brand New</option>
                                              </select>
@@ -79,7 +80,7 @@
                                           <div class="mb-3">
                                              <label class="col-form-label pt-0">Brand</label>
                                              <select id='selUser' name="brand"  onchange="iDetails();predict2();button();" class="form-control form-select " >
-                                                <option value='0'>Other</option>
+                                                <option value='0'>- Search Brand -</option>
                                              </select>
                                           </div>
                                        </div>
@@ -95,35 +96,36 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-12 row">
-                                       <div class="col-sm-4">
+                                       <div class="col-sm-6">
                                           <label class="col-form-label pt-0" >Material</label>
-                                          <input class="form-control "  type="text" name="material" onchange="SendData()button();" placeholder="Enter Material">
+                                          <input class="form-control "  type="text" name="material"   onchange="iDetails()button();" placeholder="Enter Material">
                                        </div>
                                        <div class="col-sm-4">
-                                          <label class="col-form-label pt-0" >Weight</label>
-                                          <input class="form-control "  type="number" name="weight" onchange="SendData()button();" placeholder="Enter Weight">
-                                       </div>
-                                       <div class="col-sm-4">
-                                          <label class="col-form-label pt-0" >color</label>
+                                          <label class="col-form-label pt-0" >Color</label>
                                           <input class="form-control "  type="text" name="color" onchange="SendData()button();" placeholder="Enter color">
+                                       </div>
+                                       <div class="col-sm-6">
+                                          <label class="col-form-label pt-0" >Weight</label>
+                                          <input class="form-control "  type="number" name="weight"  onchange="SendData()button();" placeholder="Enter Weight">
                                        </div>
                                     </div>
                                     <div class="col-sm-12 row">
-                                        <div class="col-sm-4">
+                                       <div class="col-sm-4">
                                           <label class="col-form-label pt-0" >Product Type</label>
                                           <input class="form-control " type="text" name="producttype" onchange="SendData()button();" placeholder="Enter Product Type">
                                        </div>
-                                       <div class="col-sm-4">
+                                        <div class="col-sm-6">
                                           <label class="col-form-label pt-0" >Product Code</label>
-                                          <input class="form-control " id="pcode" type="text" onchange="SendData()button();" name="pcode"  placeholder="Enter Product Code">
+                                          <input class="form-control " id="pcode" type="text" onchange="iDetails();button();" name="pcode"  placeholder="Enter Product Code">
                                        </div>
-                                       <div class="col-sm-4">
+                                       <div class="col-sm-6">
                                           <label class="col-form-label pt-0">Gender</label>
                                           <select class="form-control form-select  "   onchange="iDetails();button();" name="gender">
-                                             <option value="Men">Men</option>
-                                             <option value="Women">Women</option>
+                                             <option value=" ">Select Gender</option>
+                                             <option value="Male">Men</option>
+                                             <option value="Female">Women</option>
                                              <option value="Unisex">Unisex</option>
-                                              <option value="Kid">Kid</option>
+                                             <option value="Kids">Kids</option>
                                           </select>
                                        </div>
                                     </div>
@@ -132,55 +134,56 @@
                                             <label class="col-form-label pt-0" >Size</label>
                                              <!--<input class="form-control "  type="number" name="SizeEURO"  onchange="SendData()" placeholder="Enter Size">-->
                                              <select class="form-control form-select"  name="SizeEURO"  onchange="iDetails();predict2();button();" name="gender">
-                                                <option value="6">6</option>
-                                                <option value="6.5">6.5</option>
-                                                <option value="7">7</option>
-                                                <option value="7.5">7.5</option>
-                                                <option value="8">8</option>
-                                                <option value="8.5">8.5</option>
-                                                <option value="9">9</option>
-                                                <option value="9.5">9.5</option>
-                                                <option value="10">10</option>
-                                                <option value="10.5">10.5</option>
-                                                <option value="11">11</option>
-                                                <option value="11.5">11.5</option>
-                                                <option value="12">12</option>
-                                                <option value="12.5">12.5</option>
-                                                <option value="13">13</option>
-                                                <option value="13.5">13.5</option>
-                                                <option value="14">14</option>
-                                                <option value="14.5">14.5</option>
-                                                <option value="15">15</option>
-                                                <option value="15.5">15.5</option>
-                                                <option value="16">16</option>
-                                                <option value="16.5">16.5</option>
-                                                <option value="17">17</option>
-                                                <option value="17.5">17.5</option>
-                                                <option value="18">18</option>
-                                                <option value="18.5">18.5</option>
-                                                <option value="19">19</option>
-                                                <option value="19.5">19.5</option>
-                                                <option value="20">20</option>
-                                                <option value="20.5">20.5</option>
-                                                <option value="21">21</option>
-                                                <option value="21.5">21.5</option>
-                                                <option value="22">22</option>
-                                                <option value="22.5">22.5</option>
-                                                <option value="23">23</option>
-                                                <option value="23.5">23.5</option>
-                                                <option value="24">24</option>
-                                                <option value="24.5">24.5</option>
-                                                <option value="25">25</option>
-                                                <option value="25.5">25.5</option>
-                                                <option value="26">26</option>
-                                                <option value="26.5">26.5</option>
+                                                <option value=" ">SELECT SIZE</option>
+                                                <option value="2">6</option>
+                                                <option value="2">6.5</option>
+                                                <option value="2">7</option>
+                                                <option value="2">7.5</option>
+                                                <option value="2">8</option>
+                                                <option value="2">8.5</option>
+                                                <option value="2">9</option>
+                                                <option value="2">9.5</option>
+                                                <option value="2">10</option>
+                                                <option value="2">10.5</option>
+                                                <option value="26">11</option>
+                                                <option value="26">11.5</option>
+                                                <option value="27">12</option>
+                                                <option value="27">12.5</option>
+                                                <option value="27">13</option>
+                                                <option value="27">13.5</option>
+                                                <option value="27">14</option>
+                                                <option value="27">14.5</option>
+                                                <option value="27">15</option>
+                                                <option value="27">15.5</option>
+                                                <option value="27">16</option>
+                                                <option value="27">16.5</option>
+                                                <option value="27">17</option>
+                                                <option value="27">17.5</option>
+                                                <option value="27">18</option>
+                                                <option value="27">18.5</option>
+                                                <option value="27">19</option>
+                                                <option value="27">19.5</option>
+                                                <option value="27">20</option>
+                                                <option value="27">20.5</option>
+                                                <option value="27">21</option>
+                                                <option value="27">21.5</option>
+                                                <option value="27">22</option>
+                                                <option value="27">22.5</option>
+                                                <option value="27">23</option>
+                                                <option value="27">23.5</option>
+                                                <option value="27">24</option>
+                                                <option value="27">24.5</option>
+                                                <option value="27">25</option>
+                                                <option value="27">25.5</option>
+                                                <option value="27">26</option>
+                                                <option value="27">26.5</option>
                                                 <option value="27">27</option>
-                                                <option value="27.5">27.5</option>
-                                                <option value="28">28</option>
-                                                <option value="28.5">28.5</option>
-                                                <option value="29">29</option>
-                                                <option value="29.5">29.5</option>
-                                                <option value="30">30</option>
+                                                <option value="27">27.5</option>
+                                                <option value="27">28</option>
+                                                <option value="27">28.5</option>
+                                                <option value="27">29</option>
+                                                <option value="27">29.5</option>
+                                                <option value="27">30</option>
                                                 <option value="31">31</option>
                                                 <option value="32">32</option>
                                                 <option value="33">33</option>
@@ -201,26 +204,19 @@
                                                 <option value="48">48</option>
                                                 <option value="49">49</option>
                                                 <option value="50">50</option>
-                                                <option value="51">51</option>
-                                                <option value="XXXXS">XXXXS</option>
-                                                <option value="XXXS">XXXS</option>
-                                                <option value="XXS">XXS</option>
-                                                <option value="XS">XS</option>
-                                                <option value="S">S</option>
-                                                <option value="M">M</option>
-                                                <option value="L">L</option>
-                                                <option value="XL">XL</option>
-                                                <option value="XXL">XXL</option>
-                                                <option value="XXXL">XXXL</option>
-                                                <option value="XXXXL">XXXXL</option>
-                                                <option value="XXXXXL">XXXXXL</option>
-                                                <option value="XLStandard">XL Standard</option>
-                                                <option value="Standard">Standard</option>
-                                                <option value="Narrow">Narrow</option>
-                                                <option value="Skinny">Skinny</option>
-                                                <option value="Youth">Youth</option>
-                                                <option value="Toddler">Toddler</option>
-                                                <option value="onesize">One Size</option>
+                                                <option value="Extra Small">4X Small</option>
+                                                <option value="Extra Small">3X Small</option>
+                                                <option value="Extra Small">2X Small</option>
+                                                <option value="Extra Small">Extra Small</option>
+                                                <option value="Small">Small</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Large">Large</option>
+                                                <option value="ExtraLarge">Extra  Large</option>
+                                                <option value="ExtraLarge">2X Large</option>
+                                                <option value="ExtraLarge">3X Large</option>
+                                                <option value="ExtraLarge">4X Large</option>
+                                                <option value="ExtraLarge">One Size</option>
+
                                              </select>
                                         </div>
                                         <div class="col-sm-6">
@@ -477,7 +473,7 @@ $('#shoetypediv').hide();
     const predict2 = () =>{
         // iDetails();
        var conS = $("select[name=condition]").val();
-         var Cond = ( conS == "09/10") ? "Nine" : ( conS == "08/10") ? "Eight" :  ( conS == "07/10") ? "Seven" :( conS == "10/10") ? "Ten" : "Ten";
+         var Cond = ( conS == "9/10") ? "Nine" : ( conS == "8/10") ? "Eight" :  ( conS == "7/10") ? "Seven" :( conS == "10/10") ? "Ten" : "Ten";
         var shoe_type=document.getElementById("shoetype").value;
         // var Price = $("input[name=Price]").val(Cond);
         var Brand = $("#selUser option:selected").text();
@@ -498,7 +494,7 @@ $('#shoetypediv').hide();
                 };
     
                 $.ajax(settings).done(function (response) {
-                console.log(response);
+               //  console.log(response);
                 document.getElementById('predi').value=response;
             document.getElementById('predict').innerHTML = `<p style="margin-left:38%;position: relative;top: -55px;float: right;font-size: 12px;">Suggested price is: <b style="color:red">${response}</b></p>`
     
@@ -593,7 +589,7 @@ $('#shoetypediv').hide();
        var brand = $("#selUser option:selected").text();
        var sku = $("input[name=sku]").val();
        var code = $("input[name=pcode]").val();
-
+       
     
      document.getElementById('iDetails').innerHTML = `
     
@@ -639,9 +635,6 @@ $('#shoetypediv').hide();
         var qty = $("input[name=quantity]").val();
         var made = $("input[name=made]").val();
         var weight = $("input[name=weight]").val();
-        var color = $("input[name=color]").val();
-        var producttype = $("input[name=producttype]").val();
-        var material = $("input[name=material]").val();
         var price = $("input[name=price]").val();
         var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
@@ -687,10 +680,12 @@ $('#shoetypediv').hide();
        var someimage = document.getElementById('sortUl');
    
     var myimg = someimage.getElementsByTagName('img')
-   
+   //  console.log(myimg);
     
        var image1 =myimg[0].currentSrc;
+      //  console.log(image1);
            var image2 = myimg[1].currentSrc;
+         //   console.log(image2);
                var image3 = myimg[2].currentSrc;
                    var image4 = myimg[3].currentSrc;
                        var image5 = myimg[4].currentSrc;
@@ -715,17 +710,19 @@ $('#shoetypediv').hide();
         var qty = $("input[name=quantity]").val();
           var made = $("input[name=made]").val();
          var weight = $("input[name=weight]").val();
-         var color = $("input[name=color]").val();
-          var producttype = $("input[name=producttype]").val();
-          var material = $("input[name=material]").val();
            var price = $("input[name=price]").val();
-           
+           var color = $("input[name=color]").val();
+           var producttype = $("input[name=producttype]").val();
+           var material = $("input[name=material]").val();
        var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
         var location = $("input[name=location]").val();
            var status = $("select[name=status]").val();
         var code = $("input[name=pcode]").val();
+      //   var uk=$("input[name=pcode]").val();
+      //   var us=$("input[name=pcode]").val();
+
            
             //  var vendor = $("#SelectV option:selected").text();
    
@@ -741,11 +738,11 @@ $('#shoetypediv').hide();
    form.append("brand", brand);
    form.append("made", made);
    form.append("weight", weight);
+   form.append("price", price);
+   form.append("code", code);
+   form.append("material", material);
    form.append("color", color);
    form.append("producttype", producttype);
-   form.append("code", pcode);
-   form.append("material", material);
-   form.append("price", price);
    form.append("sku", sku);
    form.append("gender", gender);
     form.append("status", status);
@@ -874,9 +871,7 @@ $('#shoetypediv').hide();
         var condition = $('#condition_id').val()
         var qty = $("input[name=quantity]").val();
           var made = $("input[name=made]").val();
-         var weight = $("input[name=weight]").val
-          var color = $("input[name=color]").val();
-          var producttype = $("input[name=producttype]").val();
+         var weight = $("input[name=weight]").val();
            var price = $("input[name=price]").val();
        var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
@@ -912,14 +907,12 @@ $('#shoetypediv').hide();
    form.append("brand", brand);
    form.append("made", made);
    form.append("weight", weight);
-   form.append("color", color);
-   form.append("producttype", producttype);
    form.append("price", price);
    form.append("sku", sku);
-   form.append("size", size);
-   form.append("material", material);
-   form.append("code", code);
-
+   form.append("Size", size);
+   form.append("Material", material);
+   form.append("Code", code);
+   
     form.append("war", warehouse);
    form.append("gender", gender);
     form.append("status", status);
@@ -984,10 +977,6 @@ $('#shoetypediv').hide();
         var qty = $("input[name=quantity]").val();
           var made = $("input[name=made]").val();
          var weight = $("input[name=weight]").val();
-         var color = $("input[name=color]").val();
-         var producttype = $("input[name=producttype]").val();
-         var code = $("input[name=pcode]").val();
-         var material = $("input[name=material]").val();
            var price = $("input[name=price]").val();
        var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
@@ -1018,10 +1007,6 @@ $('#shoetypediv').hide();
    form.append("brand", brand);
    form.append("made", made);
    form.append("weight", weight);
-    form.append("color", color);
-    form.append("producttype", producttype);
-    form.append("code", pcode);
-    form.append("material", material);
    form.append("price", price);
    form.append("sku", sku);
    form.append("gender", gender);
@@ -1819,12 +1804,12 @@ $('#shoetypediv').hide();
    //     }
    // });
    
-    var URL =  "upload/"
+   //  var URL =  "upload/"
          var imgSrc = []
        Dropzone.options.imageUpload = {
-       maxFilesize: 10, // MB
+       maxFilesize: 0.5, // MB
        maxFiles: 8,
-       addRemoveLinks: true,
+       addRemoveLinks: false,
        init: function() {
            this.on("addedfile", function(file) { fileupload_flag = 1; });
            this.on("complete", function(file) { fileupload_flag = 0; });
@@ -1843,11 +1828,12 @@ $('#shoetypediv').hide();
        },
        success: function( file, response ){
             obj = JSON.parse(response);
+            // console.log(obj);
            //  alert(file.name); // <---- here is your filename
        
-           file.previewElement.parentNode.removeChild(file.previewElement);
-         console.log(imgSrc)
-        
+         //   file.previewElement.parentNode.removeChild(file.previewElement);
+         // console.log(imgSrc)
+         // console.log("file c:"+response[0]);
         
        //  console.log(imgSrc.length)
         
@@ -1858,8 +1844,8 @@ $('#shoetypediv').hide();
    
         }
      
-             imgSrc.push(file.name) 
-       
+            //  imgSrc.push(file.name) 
+            imgSrc.push(obj[0]) 
              
              swapImage(imgSrc[0],imgSrc[1],imgSrc[2],imgSrc[3],imgSrc[4])
              
@@ -1884,11 +1870,11 @@ $('#shoetypediv').hide();
        
       
    
-      $("#img1").attr("src",URL+img1);
-        $("#img2").attr("src",URL+img2);
-          $("#img3").attr("src",URL+img3);
-            $("#img4").attr("src",URL+img4);
-              $("#img5").attr("src",URL+img5);
+      $("#img1").attr("src",img1);
+        $("#img2").attr("src",img2);
+          $("#img3").attr("src",img3);
+            $("#img4").attr("src",img4);
+              $("#img5").attr("src",img5);
               
               
     
@@ -1901,11 +1887,17 @@ $('#shoetypediv').hide();
                
              // console.log("imgsrc1",typeof(imgsrc2))
               
-             var img1thumb = imgsrc1.split("/").pop();
-             var img2thumb = imgsrc2.split("/").pop();
-               var img3thumb = imgsrc3.split("/").pop();
-                var img4thumb = imgsrc4.split("/").pop();
-                 var img5thumb = imgsrc5.split("/").pop();
+            //  var img1thumb = imgsrc1.split("/").pop();
+            //  var img2thumb = imgsrc2.split("/").pop();
+            //    var img3thumb = imgsrc3.split("/").pop();
+            //     var img4thumb = imgsrc4.split("/").pop();
+            //      var img5thumb = imgsrc5.split("/").pop();
+
+            var img1thumb = imgsrc1;
+             var img2thumb = imgsrc2;
+               var img3thumb = imgsrc3;
+                var img4thumb = imgsrc4;
+                 var img5thumb = imgsrc5;
               
               
              if(img1thumb == "undefined"){

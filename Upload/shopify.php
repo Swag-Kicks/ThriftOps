@@ -2,7 +2,7 @@
 include_once("../include/mysql_connection.php");
 
 
-// for new push
+
 
 $curl = curl_init();
 $qty=$_POST['qty'];
@@ -15,6 +15,10 @@ $image3=$_POST['image3'];
 $image4=$_POST['image4'];
 $image5=$_POST['image5'];
 $image6=$_POST['image6'];
+$material=$_POST['material'];
+$code=$_POST['code'];
+$color=$_POST['color'];
+$producttype=$_POST['producttype'];
 // $vendor=$_POST['vendor'];
 $gender=$_POST['gender'];
 $brand=$_POST['brand'];
@@ -26,12 +30,7 @@ $subCat=$_POST['subCat'];
 $status=$_POST['status'];
 $size=$_POST['size'];
 $weight=$row['weight'];
-$color=$_POST['color'];
-$mat=$_POST['material'];
-$producttype=$_POST['producttype'];
-$pcode=$_POST['code'];
-$madein=$_POST['made'];
-
+ 
  
  
  //tagsfix according to csv condition
@@ -39,13 +38,13 @@ $madein=$_POST['made'];
  {
     if( $subCat=='Formal Shoe')
     {
-        $mod=$gender == 'Men'? 'M': ($gender == 'Women' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+        $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
         $gen=$mod.'formal';
         $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
     }
     else
     {
-        $mod=$gender == 'Men'? 'M': ($gender == 'Women' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+        $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
         $lower=lcfirst($subCat);
         $gen=$mod.$lower;
         $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
@@ -55,7 +54,7 @@ $madein=$_POST['made'];
 
   else if($Category=='Bags')
  {
-    $mod=$gender == 'Men'? 'M': ($gender == 'Women' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
+    $mod=$gender == 'Male'? 'M': ($gender == 'Female' ? 'W': ($gender == 'Unisex' ? 'Unisex': 'Kids'));
      $lower=lcfirst($subCat);
      $gen=$mod.$lower;
      $tags=$gen.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat;
@@ -127,7 +126,6 @@ else
           "body_html" => $desc,
             "status" => $status,
             "vendor" => $vendor,
-            "product_type" => $producttype,
             "tags"=> $tags,
         //   "tags" => $gender.",".$brand.",".$condi.",".$P_Name.",".$Category.','.$sku.','.$size.','.$subCat,
           "variants" => array(
@@ -159,10 +157,28 @@ else
                         ),
                         array(
                             "namespace" => "custom",
-                            "key" => "brands",
-                            "value" => $brand,
+                            "key" => "product_type",
+                            "value" => $producttype,
                             "type" =>"single_line_text_field"
                         ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "sub_category",
+                            "value" => $subCat,
+                            "type" =>"single_line_text_field"
+                        ),
+                        // array(
+                        //     "namespace" => "custom",
+                        //     "key" => "uk_size",
+                        //     "value" => $size,
+                        //     "type" =>"single_line_text_field"
+                        // ),
+                        // array(
+                        //     "namespace" => "custom",
+                        //     "key" => "us_size",
+                        //     "value" => $size,
+                        //     "type" =>"single_line_text_field"
+                        // ),
                         array(
                             "namespace" => "custom",
                             "key" => "sku",
@@ -171,8 +187,14 @@ else
                         ),
                         array(
                             "namespace" => "custom",
+                            "key" => "productcode",
+                            "value" => $code,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
                             "key" => "material",
-                            "value" => $mat,
+                            "value" => $material,
                             "type" =>"single_line_text_field"
                         ),
                         array(
@@ -180,19 +202,12 @@ else
                             "key" => "color",
                             "value" => $color,
                             "type" =>"single_line_text_field"
-                        )
-                        ,
-                        array(
-                            "namespace" => "custom",
-                            "key" => "gender",
-                            "value" => $gender,
-                            "type" =>"single_line_text_field"
                         ),
                         array(
                             "namespace" => "custom",
-                            "key" => "description",
-                            "value" => $desc,
-                            "type" =>"multi_line_text_field"
+                            "key" => "made_in",
+                            "value" => $size,
+                            "type" =>"single_line_text_field"
                         ),
                         array(
                             "namespace" => "custom",
@@ -202,20 +217,8 @@ else
                         ),
                         array(
                             "namespace" => "custom",
-                            "key" => "sub_category",
-                            "value" => $subCat,
-                            "type" =>"single_line_text_field"
-                        ),
-                        array(
-                            "namespace" => "custom",
-                            "key" => "productcode",
-                            "value" => $pcode,
-                            "type" =>"single_line_text_field"
-                        ),
-                        array(
-                            "namespace" => "custom",
-                            "key" => "made_in",
-                            "value" => $madein,
+                            "key" => "brands",
+                            "value" => $brand,
                             "type" =>"single_line_text_field"
                         )
                     
