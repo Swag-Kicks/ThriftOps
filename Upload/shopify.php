@@ -15,6 +15,10 @@ $image3=$_POST['image3'];
 $image4=$_POST['image4'];
 $image5=$_POST['image5'];
 $image6=$_POST['image6'];
+$material=$_POST['material'];
+$code=$_POST['code'];
+$color=$_POST['color'];
+$producttype=$_POST['producttype'];
 // $vendor=$_POST['vendor'];
 $gender=$_POST['gender'];
 $brand=$_POST['brand'];
@@ -149,6 +153,72 @@ else
                             "namespace" => "custom",
                             "key" => "newcondition",
                             "value" => $condi,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "product_type",
+                            "value" => $producttype,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "sub_category",
+                            "value" => $subCat,
+                            "type" =>"single_line_text_field"
+                        ),
+                        // array(
+                        //     "namespace" => "custom",
+                        //     "key" => "uk_size",
+                        //     "value" => $size,
+                        //     "type" =>"single_line_text_field"
+                        // ),
+                        // array(
+                        //     "namespace" => "custom",
+                        //     "key" => "us_size",
+                        //     "value" => $size,
+                        //     "type" =>"single_line_text_field"
+                        // ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "sku",
+                            "value" => $sku,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "description",
+                            "value" => $desc,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "productcode",
+                            "value" => $code,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "material",
+                            "value" => $material,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "color",
+                            "value" => $color,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "made_in",
+                            "value" => $size,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "category",
+                            "value" => $Category,
                             "type" =>"single_line_text_field"
                         ),
                         array(

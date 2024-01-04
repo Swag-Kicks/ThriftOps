@@ -100,12 +100,20 @@
                                           <label class="col-form-label pt-0" >Material</label>
                                           <input class="form-control "  type="text" name="material"   onchange="iDetails()button();" placeholder="Enter Material">
                                        </div>
+                                       <div class="col-sm-4">
+                                          <label class="col-form-label pt-0" >Color</label>
+                                          <input class="form-control "  type="text" name="color" onchange="SendData()button();" placeholder="Enter color">
+                                       </div>
                                        <div class="col-sm-6">
                                           <label class="col-form-label pt-0" >Weight</label>
                                           <input class="form-control "  type="number" name="weight"  onchange="SendData()button();" placeholder="Enter Weight">
                                        </div>
                                     </div>
                                     <div class="col-sm-12 row">
+                                       <div class="col-sm-4">
+                                          <label class="col-form-label pt-0" >Product Type</label>
+                                          <input class="form-control " type="text" name="producttype" onchange="SendData()button();" placeholder="Enter Product Type">
+                                       </div>
                                         <div class="col-sm-6">
                                           <label class="col-form-label pt-0" >Product Code</label>
                                           <input class="form-control " id="pcode" type="text" onchange="iDetails();button();" name="pcode"  placeholder="Enter Product Code">
@@ -672,7 +680,7 @@ $('#shoetypediv').hide();
        var someimage = document.getElementById('sortUl');
    
     var myimg = someimage.getElementsByTagName('img')
-    console.log(myimg);
+   //  console.log(myimg);
     
        var image1 =myimg[0].currentSrc;
       //  console.log(image1);
@@ -703,13 +711,18 @@ $('#shoetypediv').hide();
           var made = $("input[name=made]").val();
          var weight = $("input[name=weight]").val();
            var price = $("input[name=price]").val();
-           
+           var color = $("input[name=color]").val();
+           var producttype = $("input[name=producttype]").val();
+           var material = $("input[name=material]").val();
        var gender = $("select[name=gender]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
         var location = $("input[name=location]").val();
            var status = $("select[name=status]").val();
         var code = $("input[name=pcode]").val();
+      //   var uk=$("input[name=pcode]").val();
+      //   var us=$("input[name=pcode]").val();
+
            
             //  var vendor = $("#SelectV option:selected").text();
    
@@ -726,6 +739,10 @@ $('#shoetypediv').hide();
    form.append("made", made);
    form.append("weight", weight);
    form.append("price", price);
+   form.append("code", code);
+   form.append("material", material);
+   form.append("color", color);
+   form.append("producttype", producttype);
    form.append("sku", sku);
    form.append("gender", gender);
     form.append("status", status);
