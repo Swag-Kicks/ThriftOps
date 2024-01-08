@@ -33,6 +33,7 @@ if(isset($_POST["orderid"]))
     $tcs=[];
     $dir="upload/";
     
+    $C_Date = date('Y-m-d/h:i:a');
     
     foreach($_POST['orderid'] as $id)
     {
