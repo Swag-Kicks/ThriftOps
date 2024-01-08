@@ -1,9 +1,158 @@
 <?php
-
+session_start();
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
 
-$query = "SELECT * FROM `Order`";
+
+$query = "SELECT SKU,Date,Order_Number,Order_ID FROM `Order`";
+
+
+if(isset($_SESSION['id']) && $_SESSION['id'] == true) 
+{
+   $cr=$_SESSION['id'];
+   
+   $pr="Select * from User Where Dept_ID=13 AND User_ID='$cr' OR Dept_ID=16 AND User_ID='$cr' OR Dept_ID=3 AND User_ID='$cr'";
+    $resu2 = mysqli_num_rows( mysqli_query($mysql, $pr));
+    if($resu2<1)
+    {
+        echo '<script>alert("Your Are Not Authorized !");window.location.href="../Dashboard/Home.php";</script>';
+    }  
+    else
+    {
+        $my=  mysqli_query($mysql, $pr);
+        $rowq1 =mysqli_fetch_array($my);
+        $war=$rowq1['Warehouse_ID'];
+        
+        
+        if($war==0)
+        {
+           $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join User On Vendor.Name=User.Name Where User.User_ID=$cr group by SK_Prefix LIMIT 1");
+           $run =mysqli_fetch_array($find);
+           $for=$run['SK_Prefix'];
+           $rt="SKU LIKE '%$for-%'";
+        }
+         else if($war==1 || $war==2)
+        {
+            $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join `User` On `Vendor`.Name=`User`.Name where `Vendor`.Warehouse_ID='$war' group by SK_Prefix");
+            $rt = "SKU REGEXP '^(";
+            while ($run = mysqli_fetch_assoc($find))
+            {
+                $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+                $rt .="$skPrefix-|";
+                
+            }
+            
+            if (!empty($rt)) {
+                $rt = rtrim($rt, " | ");
+             }
+             $rt.=")'";
+    
+            
+        }
+        // else if($war==1)
+        // {
+        //   $find=mysqli_query($mysql,"SELECT * FROM Warehouse Where Warehouse_ID='$war'");
+        //   $run =mysqli_fetch_array($find);
+        //   $for=$run['SK_Format'];
+        //   $rt="SKU LIKE '%SK-%' OR SKU LIKE '%FS-%'";
+        //   //$rt="SKU LIKE '%$for-%'";
+          
+        // }
+        // else if($war==2)
+        // {
+        //     $rt="SKU LIKE '%WP-%'";
+        // }
+        else
+        {
+            // $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join User On Vendor.Name=User.Name Where User.User_ID=$cr 
+            // AND `Vendor`.Warehouse_ID='$war'group by SK_Prefix");
+            
+            // $rt = "SKU REGEXP '^(";
+            // while ($run = mysqli_fetch_assoc($find))
+            // {
+            //     $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+            //     $rt .="$skPrefix-|";
+                
+            // }
+            
+            // if (!empty($rt)) {
+            //     $rt = rtrim($rt, " | ");
+            //  }
+            //  $rt.=")'";
+        //   $find=mysqli_query($mysql,"SELECT Vendor FROM Warehouse Where Warehouse_ID='$war'");
+        //   $run =mysqli_fetch_array($find);
+        //   $for=$run['Vendor'];
+        //   $ip=explode(",",$for);
+        //   $sk;
+        //     foreach($ip as $map)
+        //     {
+        //         $vend1="SELECT SK_Prefix FROM `Vendor` Where Vendor_ID='$map' ";
+        //         $venres1=mysqli_query($mysql, $vend1);
+        //         $venrow1 = mysqli_fetch_array($venres1);
+        //         $ven1=$venrow1['SK_Prefix'];
+        //         $sk.=$ven1.",";
+        
+        //     }
+        //     $arr = explode(",", $sk);
+            
+        //     $counts = array_count_values($arr);
+            
+        //     $unique = [];
+        //     foreach($counts as $key => $value) 
+        //     {
+        //       if ($value > 1) 
+        //       {
+        //         array_push($unique, $key);
+        //       }
+        //     }
+        //     // $new_string = implode(",", $unique);
+        //     // echo $new_string."<br>";
+        //     $new_string .= "," . implode(",", array_diff($arr, $unique));
+        //     // echo $new_string;
+        //     $que = explode(",", $new_string);
+        //     $inc=0;
+            
+            // foreach($que as $ma)
+            // {
+                
+            //     if($inc>=1)
+            //     {
+            //         if($ma=='')
+            //         {
+                        
+            //         }
+            //         else
+            //         {
+            //             $rt.=" OR SKU LIKE '%$ma-%'";
+            //         }
+            //     }
+            //     else
+            //     {
+            //         if($ma=='')
+            //         {
+                        
+            //         }
+            //         else
+            //         {
+            //             $rt="SKU LIKE '%$ma-%'";
+            //             $inc++;
+            //         }
+            //     }
+                
+            // }
+            //  $rt.=" AND SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%'";
+            $rt.="NOT SKU REGEXP '^(SK-|WP-|SF-|FS-)'";
+            // $rt.="SKU NOT LIKE '%SK-%' AND SKU NOT LIKE '%WP-%' AND SKU NOT LIKE '%SF-%'";
+        }
+    }
+}
+else 
+{
+   echo '<script>alert("Login Invalid !");window.location.href="../index.php";</script>';
+}
+
+
+
 
 
 if(isset($_POST['cond']))
@@ -16,12 +165,12 @@ if(isset($_POST['cond']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status LIKE "%Booked%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Booked" AND '.$rt.' AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%Booked%" AND Date > "2023-04-01"';
+            $query .= ' WHERE Status="Booked" AND '.$rt.' AND Date > "2023-04-01"';
         }
     }
     if($cond=="Picked")
@@ -30,12 +179,12 @@ if(isset($_POST['cond']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status LIKE "%Received%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status LIKE "%Received%" AND '.$rt.' AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%Received%"';
+            $query .= ' WHERE Status LIKE "%Received%" AND '.$rt;
         }
     }
     if($cond=="Not")
@@ -49,7 +198,7 @@ if(isset($_POST['cond']))
         }
         else
         {
-            $query .= ' WHERE Status LIKE "%Not_Found%"';
+            $query .= ' WHERE Status LIKE "%Not_Found%" AND '.$rt;
         }
     }
 
@@ -62,11 +211,11 @@ if(!empty($_POST['ordernum']))
     $ord=$_POST['ordernum'];
     if(is_numeric($cut))
     {
-        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("Booked","Picked","Not_Found","QC_Rejected")';
+        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in ("Booked","Picked","Not_Found","QC_Rejected") AND '.$rt;
     }
     else
     {
-       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in  ("Booked","Picked","Not_Found","QC_Rejected")';
+       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status in  ("Booked","Picked","Not_Found","QC_Rejected") AND '.$rt;
     }
     
 }
@@ -74,7 +223,7 @@ if(!empty($_POST['ordernum']))
 
 if($_POST['items'] != '')
 {
-  $query .= ' WHERE SKU LIKE "%'.str_replace(' ', '%', $_POST['items']).'%" AND Status in  ("Booked","Picked","Not_Found","QC_Rejected")';
+  $query .= ' WHERE SKU LIKE "%'.str_replace(' ', '%', $_POST['items']).'%" AND Status in  ("Booked","Picked","Not_Found","QC_Rejected") AND '.$rt;
 }
 
 
@@ -85,20 +234,20 @@ if($_POST['sort'])
     $sort=$_POST['sort'];
     if($sort=='ASC')
     {
-        $query .= ' GROUP BY Order_ID ASC';
+        $query .= ' ORDER BY Order_ID ASC';
     }
     if($sort=='DESC')
     {
-        $query .= ' GROUP BY Order_ID DESC';
+        $query .= ' ORDER BY Order_ID DESC';
     }
 }
 else
 {
-    $query .= ' GROUP BY Order_ID DESC';
+    $query .= ' ORDER BY Order_ID DESC';
 }
 
 
-//echo $query;
+echo $query;
 $total_data=mysqli_num_rows(mysqli_query($mysql, $query));
 //print_r($total_data);
 

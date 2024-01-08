@@ -251,7 +251,7 @@ function JSDropDown() {
          $(document).on('change', '#items', function(){
       var items = $('#items').val();
       $.ajax({
-            url:"fetch1.php",
+            url:"fetchs.php",
             method:"POST",
             data:{items:items},
             success:function(data)
