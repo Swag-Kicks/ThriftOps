@@ -5,7 +5,7 @@ session_Start();
 <?php include_once("../include/mysql_connection.php");  ?>
 <?php include ("../include/side_admin.php"); ?>
 <?php include ("../include/loader.php"); ?>
-
+<!--  -->
 <!-- Page Body Start-->
 
 <!--<div class="page-body-wrapper horizontal-menu">-->

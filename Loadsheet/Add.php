@@ -1,9 +1,8 @@
 <?php
 session_start();
+require '../vendor/autoload.php'; // Load the AWS SDK for PHP
 include_once("../include/mysql_connection.php"); 
 date_default_timezone_set("Asia/Karachi");
-require '../vendor/autoload.php'; // Load the AWS SDK for PHP
-
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
@@ -34,7 +33,7 @@ if(isset($_POST["orderid"]))
     $dir="upload/";
     
     $C_Date = date('Y-m-d/h:i:a');
-    
+
     foreach($_POST['orderid'] as $id)
     {
         $records2 = "SELECT *,GROUP_CONCAT(SKU) as Items FROM `Order` WHERE Order_ID='$id' GROUP BY Order_Number"; 

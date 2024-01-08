@@ -2,7 +2,7 @@
 session_start();
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
-
+// 
 
 $query = "SELECT SKU,Date,Order_Number,Order_ID FROM `Order`";
 
