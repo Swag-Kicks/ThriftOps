@@ -105,7 +105,7 @@ $attri=explode(",",$try1);
          <button class="btn btn-danger"  type="button"  onclick="addProductDB('draft','draft')" id="save1" disabled>Save</button>
          <button class="btn btn-danger"  type="button"  onclick="addShopify()" id="Sbutton" disabled>Publish</button>
       </div>
-      <h3><b>Add Products</b></h3>
+      <h3><b>Edit Products</b></h3>
    </div>
    <!-- Container-fluid starts-->
    <div class="container-fluid">
