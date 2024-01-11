@@ -1,6 +1,6 @@
 <?php
 
-include_once("../../include/mysql_connection.php"); 
+// include_once("../../include/mysql_connection.php"); 
 
 
      $sql = "SELECT * FROM Warehouse";
