@@ -215,7 +215,7 @@ $('#change').change(function(){
 
 // const fetchTable = () =>{
 // var settings = {
-//   "url": "https://backup.thriftops.com/Warehouse/api/Topicklist.php",
+//   "url": "https://sys.thriftops.com/Warehouse/api/Topicklist.php",
 //   "method": "GET",
 //   "timeout": 0,
 // };
@@ -262,7 +262,7 @@ $('#change').change(function(){
 
 // const PickedList = () =>{
 // var settings = {
-//   "url": "https://backup.thriftops.com/Warehouse/api/pickedList.php",
+//   "url": "https://sys.thriftops.com/Warehouse/api/pickedList.php",
 //   "method": "GET",
 //   "timeout": 0,
 // };
@@ -301,7 +301,7 @@ $('#change').change(function(){
 
 // const NotfoundList = () =>{
 // var settings = {
-//   "url": "https://backup.thriftops.com/Warehouse/api/notfoundList.php",
+//   "url": "https://sys.thriftops.com/Warehouse/api/notfoundList.php",
 //   "method": "GET",
 //   "timeout": 0,
 // };
@@ -359,7 +359,7 @@ form.append("id", sel.value);
 form.append("status", "Booked");
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/mark.php",
+  "url": "https://sys.thriftops.com/Warehouse/api/mark.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -393,7 +393,7 @@ form.append("status", resultValue);
 // alert(optionsText)
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/mark.php",
+  "url": "https://sys.thriftops.com/Warehouse/api/mark.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -453,7 +453,7 @@ function fnExcelReport()
    function Warehouse(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/Warehouse/api/warehouse.php",
+      "url": "https://sys.thriftops.com/Warehouse/api/warehouse.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -486,7 +486,7 @@ function fnExcelReport()
         let prefix = $('#SelectW').val()
         
         var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/WarehousePick.php?wh="+prefix,
+  "url": "https://sys.thriftops.com/Warehouse/api/WarehousePick.php?wh="+prefix,
   "method": "GET",
   "timeout": 0,
 };
@@ -539,7 +539,7 @@ $.ajax(settings).done(function (response) {
        
          
         var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/WarehousePick.php?wh="+prefix+"&sd="+fromdate+"&ed="+todate,
+  "url": "https://sys.thriftops.com/Warehouse/api/WarehousePick.php?wh="+prefix+"&sd="+fromdate+"&ed="+todate,
   "method": "GET",
   "timeout": 0,
 };
@@ -653,7 +653,7 @@ $.fn.dataTable.ext.errMode = 'none';
  
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/Topicklist.php",
+        url:"https://sys.thriftops.com/Warehouse/api/Topicklist.php",
         method:"POST",
         success:function(data)
         {
@@ -731,7 +731,7 @@ var t=$("#example").DataTable
  
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/pickedList.php",
+        url:"https://sys.thriftops.com/Warehouse/api/pickedList.php",
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -796,7 +796,7 @@ var t=$("#example").DataTable
 
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/notfoundList.php",
+        url:"https://sys.thriftops.com/Warehouse/api/notfoundList.php",
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -910,7 +910,7 @@ var t=$("#example").DataTable
 
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/Topicklist.php",
+        url:"https://sys.thriftops.com/Warehouse/api/Topicklist.php",
         method:"POST",
         data:{page:page},
         success:function(data)

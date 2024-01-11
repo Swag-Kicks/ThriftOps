@@ -397,7 +397,7 @@ hr{
   function CategoryChange(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/ShopifyPush/api/getCat.php",
+      "url": "https://sys.thriftops.com/ShopifyPush/api/getCat.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -429,7 +429,7 @@ hr{
       function Warehouse(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/Warehouse/api/warehouse.php",
+      "url": "https://sys.thriftops.com/Warehouse/api/warehouse.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -468,7 +468,7 @@ hr{
           document.getElementById('mainHeading').innerHTML  = warehouse + " Warehouse"
             
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/getRacks.php?id="+warehouse2,
+  "url": "https://sys.thriftops.com/Warehouse/api/getRacks.php?id="+warehouse2,
   "method": "GET",
   "timeout": 0,
 };
@@ -587,7 +587,7 @@ var params = new window.URLSearchParams(window.location.search);
 var gid = params.get('id');
             
             var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/singleWarehouse.php?id="+gid,
+  "url": "https://sys.thriftops.com/Warehouse/api/singleWarehouse.php?id="+gid,
   "method": "POST",
   "timeout": 0,
 };
@@ -619,7 +619,7 @@ $.ajax(settings).done(function (response) {
 const fetchCapacity = (RackNo) =>{
     
     var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/countCapacity.php?id="+RackNo,
+  "url": "https://sys.thriftops.com/Warehouse/api/countCapacity.php?id="+RackNo,
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -675,7 +675,7 @@ for (var i = 0; i < myClasses.length; i++) {
     
     
 // var settings = {
-//   "url": "https://backup.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
+//   "url": "https://sys.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
 //   "method": "GET",
 //   "timeout": 0,
 // };
@@ -724,7 +724,7 @@ for (var i = 0; i < myClasses.length; i++) {
 //                                   <td>${values.Status}</td>
 //                                   <td>${values.Allocation}</td>
 //                                      <td>${values.DateTime}</td>
-//                                      <td><div class="btn-group dropstart" style=" background: url(https://backup.thriftops.com/assets/images/icons/kebabmenu.png) no-repeat; background-position: left 34px top 50%;">
+//                                      <td><div class="btn-group dropstart" style=" background: url(https://sys.thriftops.com/assets/images/icons/kebabmenu.png) no-repeat; background-position: left 34px top 50%;">
 //   <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
   
 //   </button>
@@ -811,7 +811,7 @@ form.append("Rnumber", Rnumber);
 
 
 var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/addRack.php",
+  "url": "https://sys.thriftops.com/Warehouse/api/addRack.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1003,7 +1003,7 @@ $.fn.dataTable.ext.errMode = 'none';
         
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
+        url:"https://sys.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
         method:"POST",
         data:{page:page},
         success:function(data)
@@ -1107,7 +1107,7 @@ table.destroy();
         
         
       $.ajax({
-        url:"https://backup.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
+        url:"https://sys.thriftops.com/Warehouse/api/getRacks.php?id="+gid,
         method:"POST",
         data:{page:page},
         success:function(data)
