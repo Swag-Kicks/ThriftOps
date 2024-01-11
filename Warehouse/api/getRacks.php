@@ -2,8 +2,8 @@
 
 include_once("../../include/mysql_connection.php"); 
 
-//  $id = $_GET['id'];
-$id=1;
+ $id = $_GET['id'];
+// $id=1;
     //  $sql = "SELECT * FROM `racks` INNER JOIN Warehouse on racks.Warehouse_ID=Warehouse.Warehouse_ID where Warehouse.Warehouse_ID = $id ";
 $sql = "SELECT * FROM `racks` WHERE Warehouse_ID = '$id' GROUP By number asc";
 $result = mysqli_query($mysql, $sql);
