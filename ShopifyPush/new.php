@@ -593,7 +593,7 @@ background-color: red;
         function CategoryChange(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/ShopifyPush/api/getCat.php",
+      "url": "https://sys.thriftops.com/ShopifyPush/api/getCat.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -797,7 +797,7 @@ form.append("image5", image5);
 form.append("desc",desc)
 
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/shopify.php",
+  "url": "https://sys.thriftops.com/ShopifyPush/shopify.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -908,7 +908,7 @@ form.append("vid", v_id);
 
 
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/addProduct.php",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/addProduct.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -999,7 +999,7 @@ form.append("image5", image5);
 
 
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/Qcreject.php",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/Qcreject.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1034,7 +1034,7 @@ $.ajax(settings).done(function (response) {
     frm.append('imageInput', input.files[0]);
     $.ajax({
         method: 'POST',
-        address: 'backup.thriftops.com/ShopifyPush/upload',
+        address: 'sys.thriftops.com/ShopifyPush/upload',
         data: frm,
         contentType: false,
         processData: false,
@@ -1132,7 +1132,7 @@ function Retvalues(){
 
 var form = new FormData();
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1230,7 +1230,7 @@ forwardMapping();
          var id = $("select[name=catID]").val();
          console.log("idssss",id)
         var settings = {
-      "url": "https://backup.thriftops.com/ShopifyPush/api/getallattr.php?id=" + id,
+      "url": "https://sys.thriftops.com/ShopifyPush/api/getallattr.php?id=" + id,
       "method": "POST",
       "timeout": 0,
     };
@@ -1287,7 +1287,7 @@ function subcatchange(){
      d = document.getElementById("Select1").value;
     //  alert(d);
     var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
+  "url": "https://sys.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
   "method": "GET",                        
   "timeout": 0,
 };
@@ -1908,7 +1908,7 @@ $.ajax(settings).done(function (response) {
 
  $("#selUser").select2({
      ajax: { 
-         url: "https://backup.thriftops.com/ShopifyPush/api/Brands.php",
+         url: "https://sys.thriftops.com/ShopifyPush/api/Brands.php",
          type: "post",
          dataType: 'json',
          delay: 250,
@@ -2108,12 +2108,12 @@ function handleDrop(item) {
  
  <script>
 
-//           var URL =  "https://backup.thriftops.com/ShopifyPush/upload/"
+//           var URL =  "https://sys.thriftops.com/ShopifyPush/upload/"
 //          var imgSrc = []
 //         //DropZone
 //         Dropzone.autoDiscover = false;
 //         var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
-//     url: "https://backup.thriftops.com/ShopifyPush/uploads.php", // Set the url for your upload script location
+//     url: "https://sys.thriftops.com/ShopifyPush/uploads.php", // Set the url for your upload script location
 //      autoProcessQueue: true, //This stops auto processing
 //         acceptedFiles:".png,.jpg", //Change it according to your requirement.
 //     paramName: "file", // The name that will be used to transfer the file
@@ -2131,7 +2131,7 @@ function handleDrop(item) {
 //     }
 // });
 
- var URL =  "https://backup.thriftops.com/ShopifyPush/upload/"
+ var URL =  "https://sys.thriftops.com/ShopifyPush/upload/"
       var imgSrc = []
     Dropzone.options.imageUpload = {
     maxFilesize: 0.1, // MB
@@ -2297,7 +2297,7 @@ form.append("status", "Added");
 form.append("typeid", Pid);
 
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/addLog.php",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/addLog.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -2322,7 +2322,7 @@ const checkAlocation =() =>{
    
     
     var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/racksalocation.php?id="+SKUP,
+  "url": "https://sys.thriftops.com/ShopifyPush/api/racksalocation.php?id="+SKUP,
   "method": "POST",
   "timeout": 0,
 };
@@ -2369,7 +2369,7 @@ const getSKU = () =>{
 var value = e.options[e.selectedIndex].value;
     
     var settings = {
-  "url": "https://backup.thriftops.com/Warehouse/api/singleWarehouse.php?id="+value,
+  "url": "https://sys.thriftops.com/Warehouse/api/singleWarehouse.php?id="+value,
   "method": "POST",
   "timeout": 0,
 };
@@ -2440,7 +2440,7 @@ function updateRacks(){
  
    
    var settings = {
-   "url": "https://backup.thriftops.com/ShopifyPush/api/updaterack.php",
+   "url": "https://sys.thriftops.com/ShopifyPush/api/updaterack.php",
    "method": "POST",
    "timeout": 0,
    "processData": false,

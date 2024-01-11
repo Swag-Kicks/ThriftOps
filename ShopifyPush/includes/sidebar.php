@@ -27,7 +27,7 @@
                     <ul class="nav-submenu menu-content">
                       <li><a href="../All_Product/all_product">All Products</a></li>
                       <li><a href="../Ebay/Ebay.php">Ebay Listing</a></li>
-                      <li><a href="https://backup.thriftops.com/ShopifyPush/addProduct.php">Shopify Listing</a></li>
+                      <li><a href="https://sys.thriftops.com/ShopifyPush/addProduct.php">Shopify Listing</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="shopping-cart"></i><span>Procurement</span></a>

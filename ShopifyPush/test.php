@@ -100,7 +100,7 @@
          <button class="btn btn-outline-info" type="button">View Product </button>
          <button class="btn btn-outline-info" type="button">QC Rejected </button>
          <button class="btn btn-primary" onclick="EditPro()" type="button">Edit</button>
-         <!--<a class="btn btn-primary" href="https://backup.thriftops.com/ShopifyPush/editProduct.php">Edit</a>-->
+         <!--<a class="btn btn-primary" href="https://sys.thriftops.com/ShopifyPush/editProduct.php">Edit</a>-->
       </div>
       <h3 ><b class="mleft" id="skuz">SKU</b></h3>
       <label class="mleft"  >Created:&nbsp;&nbsp;<label id="datez"></label></label>
@@ -747,7 +747,7 @@
    frm.append('imageInput', input.files[0]);
    $.ajax({
    method: 'POST',
-   address: 'backup.thriftops.com/ShopifyPush/upload',
+   address: 'sys.thriftops.com/ShopifyPush/upload',
    data: frm,
    contentType: false,
    processData: false,
@@ -803,7 +803,7 @@
    
    var form = new FormData();
    var settings = {
-   "url": "https://backup.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
+   "url": "https://sys.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
    "method": "POST",
    "timeout": 0,
    "processData": false,
@@ -899,7 +899,7 @@
     var id = $("select[name=catID]").val();
     //console.log("idssss",id)
    var settings = {
-   "url": "https://backup.thriftops.com/ShopifyPush/api/getallattr.php?id=" + id,
+   "url": "https://sys.thriftops.com/ShopifyPush/api/getallattr.php?id=" + id,
    "method": "POST",
    "timeout": 0,
    };
@@ -952,7 +952,7 @@
    d = document.getElementById("Select1").value;
    alert(d);
    var settings = {
-   "url": "https://backup.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
+   "url": "https://sys.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
    "method": "GET",                        
    "timeout": 0,
    };
@@ -1170,7 +1170,7 @@
        
         image1 = String(dataI[0]);
         
-    imageA.push('https://backup.thriftops.com/ShopifyPush/'+image1)
+    imageA.push('https://sys.thriftops.com/ShopifyPush/'+image1)
     
        console.log(dataI)
            
@@ -1186,7 +1186,7 @@
    
    $("#selUser").select2({
    ajax: { 
-    url: "https://backup.thriftops.com/ShopifyPush/api/Brands.php",
+    url: "https://sys.thriftops.com/ShopifyPush/api/Brands.php",
     type: "post",
     dataType: 'json',
     delay: 250,
@@ -1385,11 +1385,11 @@
    // console.log(myimg[0].currentSrc)
    
    // }
-             var URL =  "https://backup.thriftops.com/ShopifyPush/upload/"
+             var URL =  "https://sys.thriftops.com/ShopifyPush/upload/"
             var imgSrc = []
            //DropZone
            var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
-       url: "https://backup.thriftops.com/ShopifyPush/upload.php", // Set the url for your upload script location
+       url: "https://sys.thriftops.com/ShopifyPush/upload.php", // Set the url for your upload script location
        paramName: "file", // The name that will be used to transfer the file
        maxFiles: 10,
        maxFilesize: 10, // MB
@@ -1431,7 +1431,7 @@
    var gid = params.get('id');
    
    var settings = {
-   "url": "https://backup.thriftops.com/ShopifyPush/api/Viewproduct.php?id="+gid,
+   "url": "https://sys.thriftops.com/ShopifyPush/api/Viewproduct.php?id="+gid,
    "method": "GET",
    "timeout": 0,
    };
@@ -1506,7 +1506,7 @@
    
    
    // var settings = {
-   //   "url": "https://backup.thriftops.com/ShopifyPush/api/getLogs.php?id="+gid,
+   //   "url": "https://sys.thriftops.com/ShopifyPush/api/getLogs.php?id="+gid,
    //   "method": "GET",
    //   "timeout": 0,
    // };

@@ -261,7 +261,7 @@ getValue(sid)
        
         var form = new FormData();
 var settings = {
-  "url": "https://backup.thriftops.com/All_Product/single.php?shop="+value,
+  "url": "https://sys.thriftops.com/All_Product/single.php?shop="+value,
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -951,7 +951,7 @@ document.getElementById('mainBody').innerHTML += sneakerType  ;
             
              image1 = String(dataI[0]);
              
-         imageA.push('https://backup.thriftops.com/ShopifyPush/'+image1)
+         imageA.push('https://sys.thriftops.com/ShopifyPush/'+image1)
          
             console.log(dataI)
                 
@@ -967,7 +967,7 @@ document.getElementById('mainBody').innerHTML += sneakerType  ;
 
  $("#selUser").select2({
      ajax: { 
-         url: "https://backup.thriftops.com/ShopifyPush/api/Brands.php",
+         url: "https://sys.thriftops.com/ShopifyPush/api/Brands.php",
          type: "post",
          dataType: 'json',
          delay: 250,

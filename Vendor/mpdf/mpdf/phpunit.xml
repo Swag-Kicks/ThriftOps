@@ -1,7 +1,7 @@
 <phpunit
 	bootstrap="tests/bootstrap.php"
 	colors="true"
-	backupGlobals="false"
+	sysGlobals="false"
 	beStrictAboutTestsThatDoNotTestAnything="false">
 
 	<testsuites>

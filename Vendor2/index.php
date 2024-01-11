@@ -1071,7 +1071,7 @@
    
    
    var settings = {
-   "url": "https://backup.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
+   "url": "https://sys.thriftops.com/Vendor2/api/countTypes.php?type=Supplier",
    "method": "POST",
    "timeout": 0,
    };

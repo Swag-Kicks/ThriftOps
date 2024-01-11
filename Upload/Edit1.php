@@ -1760,12 +1760,12 @@ $(document).on('load', '#SelectC', function(){
    
 // </script>
 // <script>
-//   //           var URL =  "https://backup.thriftops.com/ShopifyPush/upload/"
+//   //           var URL =  "https://sys.thriftops.com/ShopifyPush/upload/"
 //   //          var imgSrc = []
 //   //         //DropZone
 //   //         Dropzone.autoDiscover = false;
 //   //         var myDropzone = new Dropzone("#kt_dropzonejs_example_1", {
-//   //     url: "https://backup.thriftops.com/ShopifyPush/uploads.php", // Set the url for your upload script location
+//   //     url: "https://sys.thriftops.com/ShopifyPush/uploads.php", // Set the url for your upload script location
 //   //      autoProcessQueue: true, //This stops auto processing
 //   //         acceptedFiles:".png,.jpg", //Change it according to your requirement.
 //   //     paramName: "file", // The name that will be used to transfer the file

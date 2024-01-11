@@ -22,10 +22,10 @@ while ($row = $result->fetch_assoc())
 
     
     
-    $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='1' AND number='$racknumber'";
+    $confirm1 = "SELECT * FROM `racks` where Warehouse_ID='$id' AND number='$racknumber'";
     $cap=mysqli_num_rows(mysqli_query($mysql, $confirm1));
     
-    $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='1' AND number='$racknumber' AND Status='Empty'";
+    $confirm2 = "SELECT * FROM `racks` where Warehouse_ID='$id' AND number='$racknumber' AND Status='Empty'";
     $cap1=mysqli_num_rows(mysqli_query($mysql, $confirm2));
 
     //for capacity

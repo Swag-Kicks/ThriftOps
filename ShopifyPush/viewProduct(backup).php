@@ -703,7 +703,7 @@ function addProductDB (){
 form.append("att", inputObj);
 
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/addProduct.php",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/addProduct.php",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -725,7 +725,7 @@ $.ajax(settings).done(function (response) {
     frm.append('imageInput', input.files[0]);
     $.ajax({
         method: 'POST',
-        address: 'backup.thriftops.com/ShopifyPush/upload',
+        address: 'sys.thriftops.com/ShopifyPush/upload',
         data: frm,
         contentType: false,
         processData: false,
@@ -781,7 +781,7 @@ function Retvalues(){
 
 var form = new FormData();
 var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
+  "url": "https://sys.thriftops.com/ShopifyPush/api/getProduct.php?id=67",
   "method": "POST",
   "timeout": 0,
   "processData": false,
@@ -1061,7 +1061,7 @@ forwardMapping();
        function MakeSubcat(){
         
         var settings = {
-      "url": "https://backup.thriftops.com/ShopifyPush/api/getallattr.php",
+      "url": "https://sys.thriftops.com/ShopifyPush/api/getallattr.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -1105,7 +1105,7 @@ function subcatchange(){
      d = document.getElementById("Select1").value;
     // alert(d);
     var settings = {
-  "url": "https://backup.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
+  "url": "https://sys.thriftops.com/ShopifyPush/api/getSubattr.php?id="+d,
   "method": "GET",                        
   "timeout": 0,
 };
@@ -1721,7 +1721,7 @@ document.getElementById('mainBody').innerHTML += sneakerType  ;
             
              image1 = String(dataI[0]);
              
-         imageA.push('https://backup.thriftops.com/ShopifyPush/'+image1)
+         imageA.push('https://sys.thriftops.com/ShopifyPush/'+image1)
          
             console.log(dataI)
                 
@@ -1737,7 +1737,7 @@ document.getElementById('mainBody').innerHTML += sneakerType  ;
 
  $("#selUser").select2({
      ajax: { 
-         url: "https://backup.thriftops.com/ShopifyPush/api/Brands.php",
+         url: "https://sys.thriftops.com/ShopifyPush/api/Brands.php",
          type: "post",
          dataType: 'json',
          delay: 250,

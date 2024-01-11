@@ -94,7 +94,7 @@
 6.3.3 (2020-02-12)
 	- Fixed PHP 7.4 - cannot use array offset on integers
 	- Fixed PDF/A-3B validation issue caused by missing pdfaSchema:property.
-	- Removed backup changelog files from repo
+	- Removed sys changelog files from repo
 	- Prevents the deletion of non-existent files in /tmp
 	- Prevent crash in case of no list access in cache path
 	- Check existence of file before delete it

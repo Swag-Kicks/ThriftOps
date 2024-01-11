@@ -260,7 +260,7 @@ function Attribute()
 {
         
     var settings = {
-      "url": "https://backup.thriftops.com/ShopifyPush/api/getattribute.php",
+      "url": "https://sys.thriftops.com/ShopifyPush/api/getattribute.php",
       "method": "POST",
       "timeout": 0,
     };
@@ -303,7 +303,7 @@ const checkdisable = () =>{
 // form.append("attribute", attribute);
 // form.append("catID", catID);
 // var settings = {
-//   "url": "https://backup.thriftops.com/ShopifyPush/api/addCatattr.php",
+//   "url": "https://sys.thriftops.com/ShopifyPush/api/addCatattr.php",
 //   "method": "POST",
 //   "timeout": 0,
 //   "processData": false,

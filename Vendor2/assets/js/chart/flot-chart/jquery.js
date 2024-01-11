@@ -3863,7 +3863,7 @@ var cachedruns,
 		return pass;
 	});
 
-// If slice is not available, provide a backup
+// If slice is not available, provide a sys
 try {
 	slice.call( docElem.childNodes, 0 )[0].nodeType;
 } catch ( e ) {
@@ -4985,11 +4985,11 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				i = "0",
 				unmatched = seed && [],
 				outermost = expandContext != null,
-				contextBackup = outermostContext,
+				contextsys = outermostContext,
 				// We must always have either seed elements or context
 				elems = seed || byElement && Expr.find["TAG"]( "*", expandContext && context.parentNode || context ),
 				// Nested matchers should use non-integer dirruns
-				dirrunsUnique = (dirruns += contextBackup == null ? 1 : Math.E);
+				dirrunsUnique = (dirruns += contextsys == null ? 1 : Math.E);
 
 			if ( outermost ) {
 				outermostContext = context !== document && context;
@@ -5060,7 +5060,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			// Override manipulation of globals by nested matchers
 			if ( outermost ) {
 				dirruns = dirrunsUnique;
-				outermostContext = contextBackup;
+				outermostContext = contextsys;
 			}
 
 			return unmatched;

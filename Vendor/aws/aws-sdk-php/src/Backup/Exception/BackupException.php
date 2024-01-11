@@ -1,9 +1,9 @@
 <?php
-namespace Aws\Backup\Exception;
+namespace Aws\sys\Exception;
 
 use Aws\Exception\AwsException;
 
 /**
- * Represents an error interacting with the **AWS Backup** service.
+ * Represents an error interacting with the **AWS sys** service.
  */
-class BackupException extends AwsException {}
+class sysException extends AwsException {}
