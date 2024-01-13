@@ -2,7 +2,7 @@
 session_Start();
 include_once("mysql_connection.php"); 
 
-$query="SELECT Order_Number FROM `Order` where Date > '2022-12-31' GROUP BY Order_Number DESC HAVING COUNT(DISTINCT SKU) > 1";
+$query="SELECT Order_Number FROM `Order` where Date > '2023-12-31' GROUP BY Order_Number DESC HAVING COUNT(DISTINCT SKU) > 1";
 $records = mysqli_query($mysql, $query); 
 while($data = mysqli_fetch_array($records))
 {
