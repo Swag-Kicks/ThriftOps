@@ -113,8 +113,8 @@ else
     $query .= ' ORDER BY Order_ID DESC';
 }
 
-
-//echo $query;
+testing
+echo $query;
 $total_data=mysqli_num_rows(mysqli_query($mysql, $query));
 //print_r($total_data);
 
