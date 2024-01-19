@@ -41,8 +41,12 @@ if(isset($id))
         display:flex;
         }
        .text-qr {
-            margin-top: 35px;
             margin-left: -16px;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-content: center;
+			justify-content: center;
         }
 		.site{
 			font-size: 28px;
