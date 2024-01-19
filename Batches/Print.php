@@ -70,7 +70,7 @@ if(isset($id))
     	$sql3= "SELECT Name FROM Vendor Where Vendor_ID='".$row['Vendor_ID']."'";
     	$result3= mysqli_query($mysql, $sql3);
         $row3 = mysqli_fetch_array($result3);
-    	$ven=$row3['Name'];
+    	// $ven=$row3['Name'];
 	
 	echo "<main class='qr-body'>
     	    <div id='qrcode'>
@@ -79,8 +79,6 @@ if(isset($id))
     	    <div class='text-qr'>
     	       
     	        <h1 id='skuval'>$SKU</h1>
-    	        <h2>$ven</h2>
-    	        <h2>Batch #$id</h2>
 		        <h4 class='site' style='margin:0;'>Swag-kicks.com</h4>
 		    </div>
 		  </main>";
