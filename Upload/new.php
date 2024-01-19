@@ -68,9 +68,9 @@
                                              <label class="col-form-label pt-0">Condition</label>
                                              <select class="form-control form-select  " name="condition"  onchange="iDetails();predict2();button();"  id="condition_id">
                                                 <option value=" ">Select condition</option>
-                                                <option value="7/10">7/10</option>
-                                                <option value="8/10">8/10</option>
-                                                <option value="9/10">9/10</option>
+                                                <option value="07/10">07/10</option>
+                                                <option value="08/10">08/10</option>
+                                                <option value="09/10">09/10</option>
                                                 <option value="10/10">10/10</option>
                                                 <option value="Brand New">Brand New</option>
                                              </select>
@@ -80,7 +80,7 @@
                                           <div class="mb-3">
                                              <label class="col-form-label pt-0">Brand</label>
                                              <select id='selUser' name="brand"  onchange="iDetails();predict2();button();" class="form-control form-select " >
-                                                <option value='0'>- Search Brand -</option>
+                                                <!-- <option value='0'>- Search Brand -</option> -->
                                              </select>
                                           </div>
                                        </div>
@@ -125,7 +125,6 @@
                                              <option value="Male">Men</option>
                                              <option value="Female">Women</option>
                                              <option value="Unisex">Unisex</option>
-                                             <option value="Kids">Kids</option>
                                           </select>
                                        </div>
                                     </div>

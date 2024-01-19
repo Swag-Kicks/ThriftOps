@@ -30,7 +30,7 @@ $C_Date = date('Y-m-d/h:i:a');
         $Category = $_POST['category'];
          $SubCat = $_POST['subCat'];
          $Inventory_Item_ID=$_POST['v_it_id'];
-         
+         $color=$_POST['color'];
           $Lot_ID=$_POST['Lot_ID'];
           $Size=$_POST['Size'];
          $DateTime=$_POST['DateTime'];
@@ -89,7 +89,7 @@ $C_Date = date('Y-m-d/h:i:a');
     //   '$att'
     //   );";
        $result = mysqli_query($mysql,"Update `addition` Set Title='$title',Shopify_ID='$ShopifyID',Inventory_Item_ID='$Inventory_Item_ID',Variant_ID='$VariantID',Cndition='$condition',Size='$Size' Where SKU='$sku'");
-       $result2= mysqli_query($mysql,"Update `addition` Set Weight='$weight',Brand='$brand',Made='$made ',Material='$material',Gender='$gender',Code='$code',Status='$status',Price='$price',DateTime='$C_Date',Category_ID='$Category',Sub_Category_ID='$SubCat',Quantity='$qty' Where SKU='$sku'");
+       $result2= mysqli_query($mysql,"Update `addition` Set Weight='$weight',Brand='$brand',Made='$made ',Material='$material',Gender='$gender',Code='$code',Color='$color',Status='$status',Price='$price',DateTime='$C_Date',Category_ID='$Category',Sub_Category_ID='$SubCat',Quantity='$qty' Where SKU='$sku'");
        $result3=mysqli_query($mysql,"Update `addition` Set Image_1='$image1', Image_2='$image2', Image_3='$image3', Image_4='$image4', Image_5='$image5',Image_6='$image6',Inventory_Status='Pending',Warehouse_ID='$war',att='$att',Prediction='$pred' WHERE SKU='$sku'");
        
        $sql1 = "INSERT INTO Logs (User_ID,Type,Type_ID,Reference,Status,DateTime) VALUES ('$cr','Product','$ShopifyID','Product Uploaded', 'Upload', '$C_Date')";

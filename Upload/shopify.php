@@ -30,7 +30,7 @@ $subCat=$_POST['subCat'];
 $status=$_POST['status'];
 $size=$_POST['size'];
 $weight=$row['weight'];
- 
+$made =  $_POST['made']; 
  
  
  //tagsfix according to csv condition
@@ -206,7 +206,7 @@ else
                         array(
                             "namespace" => "custom",
                             "key" => "made_in",
-                            "value" => $size,
+                            "value" => $made,
                             "type" =>"single_line_text_field"
                         ),
                         array(
