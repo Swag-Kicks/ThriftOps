@@ -189,7 +189,7 @@
                </div>
                <div style="float:right;">
                   <button class="btn btn-outline-danger" type="button">Close</button>
-                  <button class="btn btn-primary" type="button" id="createButton" onclick="SendData()" disabled>Create</button>
+                  <button class="btn btn-primary" type="button" id="createButton" onclick="SendData()">Create</button>
                   <button class="btn btn-primary" type="button" id="updateButton" onclick="updateVendor()" disabled>Update</button>
                </div>
             </div>
