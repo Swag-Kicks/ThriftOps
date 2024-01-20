@@ -850,7 +850,7 @@ select.mark {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    background: url(https://backup.thriftops.com/assets/images/icons/kebabmenu.png) no-repeat;
+    background: url(https://sys.thriftops.com/assets/images/icons/kebabmenu.png) no-repeat;
     background-position: left 34px top 50%;
 }
 .nav-tabs {
