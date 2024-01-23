@@ -176,6 +176,7 @@ $result1 = mysqli_query($mysql, $sql1);
                                     <option value="Employee">Employee</option>
                                     <option value="Giveaway">Giveaway</option>
                                     <option value="Influencer">Influencer</option>
+                                    <option value="Paid">Paid Order</option>
                                 </select>
                             </div>
                             <div class="col-md-4 f-right row">

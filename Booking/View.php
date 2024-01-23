@@ -185,7 +185,7 @@ session_Start();
                                 <option value="PostEx">PostEx</option>
                                 <option value="Tcs">TCS</option>
                                 <option value="Leopard">Leopard</option>
-                                <option value="Trax">Trax</option>
+                                <!-- <option value="Trax">Trax</option> -->
                                 <option value="Rider">Rider</option>
                                 <option value="CallCourier">Call Courier</option>
                                  <option value="Self">Self Deliver</option>
