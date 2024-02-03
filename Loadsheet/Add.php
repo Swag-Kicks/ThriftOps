@@ -1,15 +1,23 @@
 <?php
 session_start();
-require '../vendor/autoload.php'; // Load the AWS SDK for PHP
 include_once("../include/mysql_connection.php"); 
 date_default_timezone_set("Asia/Karachi");
+$cr=$_SESSION['id'];
+require_once("../vendor/autoload.php");
+$C_Date = date('Y-m-d/h:i:a');
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
+//aws token
+$sql2="Select * from `API_Credentials` Where Platform='Aws'";
+$sh = mysqli_query($mysql, $sql2);
+$row1 = mysqli_fetch_assoc($sh);
 // Replace with your AWS credentials
-$aws_access_key = 'AKIA442OQIPQ2IZFHX7H';
-$aws_secret_key = 'GgxxAE+7RcJYsGuk2pztMZYHMcJwlXda7Hw87d6Q';
+$aws_access_key = $row1['API_Key'];
+$aws_secret_key = $row1['API_Pass'];
 $bucket_name = 'thriftops';
+
+
 // Create an S3 client
 $s3 = new S3Client([
     'version'     => 'latest',
@@ -19,7 +27,6 @@ $s3 = new S3Client([
         'secret' => $aws_secret_key,
     ],
 ]);
-
 
 if(isset($_POST["orderid"]))
 {
