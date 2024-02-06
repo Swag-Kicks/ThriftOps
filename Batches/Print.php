@@ -57,7 +57,7 @@ if(isset($id))
 	</script>
 </head>
 <body>
-    
+    <!--  -->
     <form action="" method="POST" class="View">
     <?php
         if (mysqli_num_rows($result) > 0) {
