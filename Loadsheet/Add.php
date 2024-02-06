@@ -28,7 +28,9 @@ $s3 = new S3Client([
     ],
 ]);
 
-print_r($s3);
+// print_r($s3);
+
+$to_encode = array();
 
 if(isset($_POST["orderid"]))
 {
@@ -256,6 +258,7 @@ if(isset($_POST["orderid"]))
     //postex
     
     if(!empty($postex))
+    
     {
         $pfilename = $dir."Postex_".date('Y-m-d h:i:a').".csv";
         $pfile = fopen($pfilename, 'w');
@@ -274,6 +277,19 @@ if(isset($_POST["orderid"]))
             'ContentType' => "text/csv", 
             'ACL' => 'public-read', 
         ]);
+
+        // echo "File uploaded successfully: {$result['ObjectURL']}";
+        
+        $to_encode[] = $result['ObjectURL'];
+        
+        // echo $to_encode;
+         echo json_encode($to_encode);
+         echo $result['ObjectURL'];
+         die();
+        } 
+        catch (AwsException $e) {
+            echo "Error uploading the file: {$e->getMessage()}";
+        }
         
         if($watch)
         {
