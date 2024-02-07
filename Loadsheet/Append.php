@@ -42,7 +42,7 @@ if(isset($_POST["tracking"]))
         $html .= " <td style='display:none;'><input type='hidden' name='order[]' value='$id'/></td>";
         $html .= "</tr>";
         
-        $update1 = mysqli_query($mysql, "Update `Order` Set WHERE Tracking='$tracking'");
+        $update1 = mysqli_query($mysql, "Update `Order` Set Picked_by='Insert' WHERE Tracking='$tracking'");
         if($update1)
         {
             echo $html;
@@ -52,7 +52,7 @@ if(isset($_POST["tracking"]))
     }
     else if(empty($id))
     {
-        $records3 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Packed' and GROUP BY Status,Order_Number"; 
+        $records3 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Packed' and Picked_by='Insert' GROUP BY Status,Order_Number"; 
         $result3 = mysqli_query($mysql, $records3);
         $row3 = mysqli_fetch_array($result3);
         $id11=$row3['Order_ID'];
@@ -62,7 +62,7 @@ if(isset($_POST["tracking"]))
         }
         else
         {
-            $result3sa2 = mysqli_query($mysql, "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Dispatched' and Status NOT in('Booked','Cancel','Picked','Rebooked','Returned','Recieved','Reattempt','QC_Rejected','Packed','Hold','Delivered','CReturned','Confirmed') and GROUP BY Status,Order_Number");
+            $result3sa2 = mysqli_query($mysql, "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Dispatched' and Status NOT in('Booked','Cancel','Picked','Rebooked','Returned','Recieved','Reattempt','QC_Rejected','Packed','Hold','Delivered','CReturned','Confirmed') and Picked_by='Insert' GROUP BY Status,Order_Number");
             $row3as2 = mysqli_fetch_array($result3sa2);
             $id3=$row3as2['Order_ID'];
             if(!empty($id3))
