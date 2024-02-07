@@ -18,7 +18,7 @@ if(isset($_POST["tracking"]))
     {
         $tracking=$track;
     }
-    
+    // 
     $records2 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Packed' AND Picked_by='' GROUP BY Status,Order_Number"; 
     $result = mysqli_query($mysql, $records2);
     $row = mysqli_fetch_array($result);
