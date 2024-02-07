@@ -23,6 +23,7 @@ if(isset($_POST["tracking"]))
     $result = mysqli_query($mysql, $records2);
     $row = mysqli_fetch_array($result);
     $id=$row['Order_ID'];
+    $num=$row['Order_Number'];
     if(!empty($id))
     {
        
@@ -39,7 +40,8 @@ if(isset($_POST["tracking"]))
         $html .= "<td>" . $qty . "</td>";
         $html .= "<td>" . $total . "</td>";
         $html .= "<td>" . $date . "</td>";
-        $html .= " <td style='display:none;'><input type='hidden' name='order[]' value='$id'/></td>";
+        $html .= " <td style='display:none;'><input type='hidden'  name='order[]' value='$id'/></td>";
+        $html .= " <td style='display:none;'><input type='hidden'  name='ord[]' value='$num'/></td>";
         $html .= "</tr>";
         
         $update1 = mysqli_query($mysql, "Update `Order` Set Picked_by='Insert' WHERE Tracking='$tracking'");
@@ -50,7 +52,7 @@ if(isset($_POST["tracking"]))
         
         
     }
-    else if(empty($id))
+    if(empty($id))
     {
         $records3 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Packed' and Picked_by='Insert' GROUP BY Status,Order_Number"; 
         $result3 = mysqli_query($mysql, $records3);
@@ -79,29 +81,34 @@ if(isset($_POST["tracking"]))
                 {
                     echo "2";
                 }
+                else
+                {
+                     echo "1";
+                }
+                
             }
         }
        
     }
-    else 
-    {
+    // else 
+    // {
         
-        
-        // $records32 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Cancel' GROUP BY Status,Order_Number"; 
-        // $result32 = mysqli_query($mysql, $records32);
-        // $row32 = mysqli_fetch_array($result32);
-        // $id1=$row32['Order_ID'];
-        // if(empty($id1))
-        // {
-        //     echo "2";
-        // }
-        // else
-        // {
-            echo "1";
+    //     echo "1";
+    //     // $records32 = "SELECT * FROM `Order` WHERE Tracking='$tracking' and Status='Cancel' GROUP BY Status,Order_Number"; 
+    //     // $result32 = mysqli_query($mysql, $records32);
+    //     // $row32 = mysqli_fetch_array($result32);
+    //     // $id1=$row32['Order_ID'];
+    //     // if(empty($id1))
+    //     // {
+    //     //     echo "2";
+    //     // }
+    //     // else
+    //     // {
             
-        // }
-    }
-   
+            
+    //     // }
+    // }
+    
 }
 
 
