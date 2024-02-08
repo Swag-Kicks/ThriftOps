@@ -4,7 +4,7 @@ session_start();
 include_once("../include/mysql_connection.php"); 
 date_default_timezone_set("Asia/Karachi");
 $cr=$_SESSION['id'];
-require_once("../vendor/autoload.php");
+require_once("../Vendor/autoload.php");
 $C_Date = date('Y-m-d/h:i:a');
 
 
@@ -18,7 +18,7 @@ if(isset($_POST["orderid"]) && isset($_POST["ord"]))
     $rider=[];
     $callcourier=[];
     $tcs=[];
-    $dir="upload/";
+    $dir="listing.thriftops.com/Loadsheet/upload/";
     
     
  
