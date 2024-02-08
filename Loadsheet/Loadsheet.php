@@ -342,37 +342,32 @@ function JSDropDown() {
         }
     });
     //craete load sheet 
-     $("#saveload").click(function()
-     {
-         var orderid= $('input[name="order[]"]').map(function(){ return this.value; }).get();
-         var table=document.getElementById ("append").innerHTML;
-         
-         $.ajax
-            ({
-                  url: 'Add.php',
-                  type: 'POST',
-                  data: {
-                     orderid:orderid
-                  },
-                  success: function(response) 
-                  {
-                          if(response == 0)
-                          {
-                              toastr.error('There mightbe some issue');
-                          }
-                      
-                          if(response==1)
-                          {
-                            //  $('#' + pr).children('td[data-target=conf_tag]').text(conf_tag);
-                            //  $('#confirm').modal('toggle');
-                            //  $("#status").val([1]);
-                             load_data(1,'','','10','',courier);
-                             $("#barcodeModalCenter").modal('toggle');
-                             toastr.success('Created Successfully');
-                          }
-                    }
-            });
-     });
+    $.ajax({
+        url: 'Add1.php',
+        type: 'POST',
+        data: {
+            orderid: orderid,
+            ord: ord
+        },
+        success: function(response) {
+            if (response == 1) {
+                toastr.error('There might be some issue');
+            } else if (response == 0) {
+                load_data(1, '', '', '10', '', courier); // Assuming courier is defined
+                $("#barcodeModalCenter").modal('toggle');
+                toastr.success('Created Successfully');
+            } else {
+                // Handle other responses or errors
+                toastr.error('Unexpected response: ' + response);
+            }
+        },
+        error: function(xhr, status, error) {
+            // Handle AJAX errors
+            console.error(xhr.responseText);
+            toastr.error('An error occurred: ' + error);
+        }
+    });
+});
     
    
      $(document).on('click', '.page-link', function()
