@@ -7,7 +7,7 @@ if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isse
 
     //Values
     $brand = $_GET['Brand'];
-    $premium = $_GET['shoetype'];
+    $Type = $_GET['shoetype'];
     $size = (int)$_GET['Size'];
     $cond = $_GET['Cond'];
     $sku = $_GET['SKU'];
@@ -18,7 +18,7 @@ if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isse
     $temp=$row['cost'];
     //Requester
     $curl = curl_init();
-    $URL ="http://node.thriftops.com/predict?Brand=$brand&Premium=$shoetype&Size=$size&Cond=$cond";
+    $URL ="http://node.thriftops.com/predict?Brand=$brand&Type=$shoetype&Size=$size&Cond=$cond";
     curl_setopt_array($curl, array(
       CURLOPT_URL => $URL,
       CURLOPT_RETURNTRANSFER => true,
