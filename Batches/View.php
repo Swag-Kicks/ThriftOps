@@ -101,8 +101,7 @@ if(isset($id))
     	    <div class='text-qr'>
     	       
     	        <h1 id='skuval'>$SKU</h1>
-    	        <h2>$ven</h2>
-    	        <h2>Batch #$id</h2>
+    	       
 		        <h4 class='site' style='margin:0;'>Swag-kicks.com</h4>
 		    </div>
 		  </main></div>";
