@@ -1,0 +1,13 @@
+DevOPs Fundamental / Pillar:
+1) IAC --Infrastructure As Code (AWS CloudFormation, Terraform, Azure Resource Manager)
+2) Version Control System (Git, GitHub, BitBucket, Gitlab, SVN, AWS CodeCommit)
+3) Containerziation (Docker, Podman, Vagrant, AWS ECS, Azure ACS) & 
+   Orchestration (Kubernetes, AWS EKS, Openshift, AWS Openshift)
+4) Automation -- 2 types: CI/CD & Configuration Management Tool
+    -------- CICD: 2 Types
+     1) Push Based Mechanism: Jenkins, Github Actions, AWS CI/CD, Azure DevOps, Gitlab 
+     2) Pull Based Mechanism: Argo CD(kubernetes) & Flux CD(EC2)
+
+ -------------CMT: 2 Types
+     1) Push Based: Ansible, AWS System Manager, Newrelic.
+     2) Pull Based: Chef, Puppet, AWS OpsWork.
