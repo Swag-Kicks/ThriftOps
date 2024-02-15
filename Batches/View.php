@@ -88,7 +88,7 @@ if(isset($id))
                                       
                                             
         $SKU=$row["SKU"];
-    	//vendor to be found
+    	//vendor - test to check CI/CD Pipeline
     	$sql3= "SELECT Name FROM Vendor Where Vendor_ID='".$row['Vendor_ID']."'";
     	$result3= mysqli_query($mysql, $sql3);
         $row3 = mysqli_fetch_array($result3);
