@@ -88,7 +88,7 @@ if(isset($id))
                                       
                                             
         $SKU=$row["SKU"];
-    	//vendor
+    	//vendor to be found
     	$sql3= "SELECT Name FROM Vendor Where Vendor_ID='".$row['Vendor_ID']."'";
     	$result3= mysqli_query($mysql, $sql3);
         $row3 = mysqli_fetch_array($result3);
