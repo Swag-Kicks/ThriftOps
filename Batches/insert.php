@@ -36,7 +36,7 @@ if(isset($_POST["grn"]))
             {
                 $bacthid=(int)$batch+1;
             }
-            
+            // 
                 //warehouse
                 $sqw="SELECT * FROM `Vendor` WHERE Vendor_ID='$war'";
                 $resw=mysqli_query($mysql, $sqw);
