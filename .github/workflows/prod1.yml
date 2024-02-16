@@ -21,6 +21,6 @@ jobs:
     - name: Deploy to EC2 Server 1
       run: |
         ssh -v -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} 'bash -s' < deploy-script.sh
-#    - name: Deploy to EC2 Server 2
-#      run: |
-#        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.PROD_THRIFTOPS_2 }} 'bash -s' < deploy-script.sh
+    - name: Deploy to EC2 Server 2
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.PROD_THRIFTOPS_2 }} 'bash -s' < deploy-script.sh
