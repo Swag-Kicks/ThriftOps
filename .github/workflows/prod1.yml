@@ -3,7 +3,7 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      #- Prod  # Change to your main branch name
+      - Prod
 
 jobs:
   deploy:
