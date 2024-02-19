@@ -484,7 +484,7 @@ const initReturn = () =>{
       "contentType": false,
       "data": form
     };
-
+// 
 
     $.ajax(settings).done(function (response) 
     {
