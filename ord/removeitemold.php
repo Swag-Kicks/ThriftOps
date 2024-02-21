@@ -52,7 +52,7 @@ if(isset($_POST['shopid']) && isset($_POST['order']))
         else
         {
             $ship=250;
-            $total=$total;
+            $total=$total+250;
         }
         //delete item
         $query2 =  mysqli_query($mysql, "Delete from `Order` WHERE id='$index'");
