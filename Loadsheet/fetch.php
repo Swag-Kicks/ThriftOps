@@ -3,6 +3,52 @@
 session_start();
 include_once("../include/mysql_connection.php"); 
 error_reporting(0);
+$cr=$_SESSION['id'];
+//session work
+$pr="Select * from User Where Dept_ID=6 AND User_ID='$cr' OR Dept_ID=18 AND User_ID='$cr' OR Dept_ID=3 AND User_ID='$cr'";
+$my=  mysqli_query($mysql, $pr);
+$rowq1 =mysqli_fetch_array($my);
+
+if($rowq1['Dept_ID']==18)
+{
+    $war=$rowq1['Warehouse_ID'];
+    $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join `User` On `Vendor`.Name=`User`.Name where `Vendor`.Warehouse_ID='$war' group by SK_Prefix");
+    $rt = "SKU REGEXP '^(";
+    while ($run = mysqli_fetch_assoc($find))
+    {
+        $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+        $rt .="$skPrefix-|";
+        
+    }
+    
+    if (!empty($rt)) {
+        $rt = rtrim($rt, " | ");
+     }
+     $rt.=")'";
+}
+else
+{
+    //find others
+    $fd=mysqli_query($mysql,"SELECT group_concat(DISTINCT Warehouse_ID) as merge from User Where Dept_ID=18 and Warehouse_ID !=''");
+    $r = mysqli_fetch_assoc($fd);
+    $merge=$r['merge'];
+    $commaSeparatedString = implode(',', explode(',', $merge));
+    $find=mysqli_query($mysql,"SELECT Vendor.SK_Prefix FROM `Vendor` inner join `User` On `Vendor`.Name=`User`.Name where `Vendor`.Warehouse_ID NOT In ($commaSeparatedString) group by SK_Prefix");
+    $rt = "SKU REGEXP '^(";
+    while ($run = mysqli_fetch_assoc($find))
+    {
+        $skPrefix = mysqli_real_escape_string($mysql, $run['SK_Prefix']);
+        $rt .="$skPrefix-|";
+        
+    }
+    
+    if (!empty($rt)) {
+        $rt = rtrim($rt, " | ");
+     }
+     $rt.=")'";
+}
+
+
 
 $query = "SELECT * FROM `Order`";
 
@@ -11,11 +57,11 @@ if(!empty($_POST['ordernum']))
     $ord=$_POST['ordernum'];
     if(is_numeric($cut))
     {
-        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
+        $query .= ' WHERE Order_Number LIKE "%#'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
     }
     else
     {
-       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
+       $query .= ' WHERE Order_Number LIKE "%'.str_replace(' ', '%', $_POST['ordernum']).'%" AND Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
     }
     
 }
@@ -29,13 +75,13 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked")';
         }
             
     }
@@ -45,12 +91,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier="PostEx" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier="PostEx" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier="PostEx"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier="PostEx"';
         }
     }
     if($courier=="Leopard")
@@ -59,12 +105,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
         }
     }
     if($courier=="Self")
@@ -73,12 +119,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier "%'.str_replace(' ', '%', $_POST['courier']).'%"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
         }
     }
     if($courier=="Rider")
@@ -87,12 +133,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
         }
     }
     
@@ -102,12 +148,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
         }
     }
     
@@ -117,12 +163,12 @@ else if(isset($_POST['courier']))
         {
              if(!empty($_POST['to']))
              {
-                 $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
+                 $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%" AND Date Between "'.$_POST['from'].'" AND "'.$_POST['to'].'"';
              }
         }
         else
         {
-            $query .= ' WHERE Status="Packed" AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
+            $query .= ' WHERE Status="Packed" AND '.$rt.' AND Status NOT in ("Booked","Recieved","Dispatched","Confirmed","Hold","Wfr","Cancel","Picked") AND Courier LIKE "%'.str_replace(' ', '%', $_POST['courier']).'%"';
         }
     }
 }
@@ -134,20 +180,20 @@ if($_POST['sort'])
     $sort=$_POST['sort'];
     if($sort=='ASC')
     {
-        $query .= ' GROUP BY Order_ID ASC';
+        $query .= ' GROUP BY Order_Number ASC';
     }
     if($sort=='DESC')
     {
-        $query .= ' GROUP BY Order_ID DESC';
+        $query .= ' GROUP BY Order_Number DESC';
     }
 }
 else
 {
-    $query .= ' GROUP BY Order_ID DESC';
+    $query .= ' GROUP BY Order_Number DESC';
 }
 
 
-//echo $query;
+// echo $query;
 $total_data=mysqli_num_rows(mysqli_query($mysql, $query));
 //print_r($total_data);
 
@@ -236,12 +282,11 @@ $output = '
 
 while($row = mysqli_fetch_array($result))
 {
-    
-    $qty = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM `Order` Where Order_ID='".$row['Order_ID']."'"));
+    $qty = mysqli_num_rows(mysqli_query($mysql, "SELECT * FROM `Order` Where Order_ID='".$row['Order_ID']."' AND Order_Number='".$row["Order_Number"]."'"));
     $output .= '
     <tbody>
     <tr>
-      <td ><input class="checkbox1" name="check[]" type="checkbox" value="'.$row["Order_ID"].'"></td> 
+      <td ><input class="checkbox1" name="check[]" type="checkbox"  ord="'.$row["Order_Number"].'" value="'.$row["Order_ID"].'"></td> 
       <td><a target = "_blank" href="../ord/Order_View.php?GETID='. $row["Order_ID"].'"<i></i><b>'.$row["Order_Number"].'</b></a></td>
       <td>'.$row["Tracking"].'</td>
       <td>'.$qty.'</td>

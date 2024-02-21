@@ -1,8 +1,13 @@
 <?php  
-   session_Start();
-   ?>
+session_Start();
+include_once("../include/mysql_connection.php");
+$cr=$_SESSION['id'];
+//session work
+$pr="Select * from User Where Dept_ID=6 AND User_ID='$cr' OR Dept_ID=18 AND User_ID='$cr' OR Dept_ID=3 AND User_ID='$cr'";
+$my=  mysqli_query($mysql, $pr);
+$rowq1 =mysqli_fetch_array($my);
+?>
 <?php include ("../include/header.php"); ?>
-<?php include_once("../include/mysql_connection.php");  ?>
 <?php include ("../include/side_admin.php"); ?>
 <?php include ("../include/loader.php"); ?>
 <!-- Page Body Start-->
@@ -51,7 +56,13 @@
          </div>
         
          <div class="col-md-2">
-              <a href="Print.php" class="btn btn-primary" >View</a>
+             <?php
+             if($rowq1['Dept_ID']!=18)
+            {
+                echo "<a href='Print.php' class='btn btn-primary' >View</a>";
+            }
+            
+            ?>
          </div>
          
          <div class="col-md-2">
@@ -293,6 +304,10 @@ function JSDropDown() {
          data:{tracking:tracking},
          success:function(data)
          {
+            //  if(!data)
+            //  {
+            //      toastr.error('Order Not Packed Yet');
+            //  }
              if(data==1)
              {
                  toastr.error('Order Not Packed Yet');
@@ -342,32 +357,40 @@ function JSDropDown() {
         }
     });
     //craete load sheet 
-    $.ajax({
-        url: 'Add1.php',
-        type: 'POST',
-        data: {
-            orderid: orderid,
-            ord: ord
-        },
-        success: function(response) {
-            if (response == 1) {
-                toastr.error('There might be some issue');
-            } else if (response == 0) {
-                load_data(1, '', '', '10', '', courier); // Assuming courier is defined
-                $("#barcodeModalCenter").modal('toggle');
-                toastr.success('Created Successfully');
-            } else {
-                // Handle other responses or errors
-                toastr.error('Unexpected response: ' + response);
-            }
-        },
-        error: function(xhr, status, error) {
-            // Handle AJAX errors
-            console.error(xhr.responseText);
-            toastr.error('An error occurred: ' + error);
-        }
-    });
-});
+     $("#saveload").click(function()
+     {
+         var orderid= $('input[name="order[]"]').map(function(){ return this.value; }).get();
+         var ord= $('input[name="ord[]"]').map(function(){ return this.value; }).get();
+          
+         var table=document.getElementById ("append").innerHTML;
+         
+         $.ajax
+            ({
+                  url: 'Add.php',
+                  type: 'POST',
+                  data: {
+                     orderid:orderid,
+                     ord:ord
+                  },
+                  success: function(response) 
+                  {
+                          if(response == 0)
+                          {
+                              toastr.error('There mightbe some issue');
+                          }
+                      
+                          if(response==1)
+                          {
+                            //  $('#' + pr).children('td[data-target=conf_tag]').text(conf_tag);
+                            //  $('#confirm').modal('toggle');
+                            //  $("#status").val([1]);
+                             load_data(1,'','','10','',courier);
+                             $("#barcodeModalCenter").modal('toggle');
+                             toastr.success('Created Successfully');
+                          }
+                    }
+            });
+     });
     
    
      $(document).on('click', '.page-link', function()
@@ -654,8 +677,10 @@ function JSDropDown() {
     $('#btnmodal').click(function(){
        
          var orderid = [];
+         var ord = []; 
          $(':checkbox:checked').each(function(i){
              orderid[i] = $(this).val();
+             ord[i] = $(this).attr("ord"); 
          });
             
          if(orderid.length === 0) //tell you if the array is empty
@@ -667,7 +692,7 @@ function JSDropDown() {
              $.ajax({
                  url:'Add.php',
                  method:'POST',
-                 data:{orderid:orderid},
+                 data:{orderid:orderid,ord:ord},
                  success:function()
                  {
                      for(var i=0; i<orderid.length; i++)
