@@ -25,14 +25,14 @@ class FontVariables
 			// only works using subsets (otherwise would add very large file)
 			// More than 1 font can be specified but each will add to the processing time of the script
 
-			'sysSubsFont' => ['dejavusanscondensed', 'freesans', 'sun-exta'],
+			'backupSubsFont' => ['dejavusanscondensed', 'freesans', 'sun-exta'],
 
 			// Optionally set a font (name as defined below in 'fontdata') to use for CJK characters
 			// in Plane 2 Unicode (> U+20000) when using useSubstitutions.
 			// Use a font like hannomb or sun-extb if available
 			// only works using subsets (otherwise would add very large file)
 
-			'sysSIPFont' => 'sun-extb',
+			'backupSIPFont' => 'sun-extb',
 
 			/*
 			  This array defines translations from font-family in CSS or HTML

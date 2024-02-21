@@ -1,9 +1,9 @@
 <?php
-namespace Aws\sysGateway\Exception;
+namespace Aws\BackupGateway\Exception;
 
 use Aws\Exception\AwsException;
 
 /**
- * Represents an error interacting with the **AWS sys Gateway** service.
+ * Represents an error interacting with the **AWS Backup Gateway** service.
  */
-class sysGatewayException extends AwsException {}
+class BackupGatewayException extends AwsException {}

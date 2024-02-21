@@ -3,8 +3,8 @@
      xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
      bootstrap="./Tests/CrossVersionCompatibility/bootstrap.php"
      colors="true"
-     sysGlobals="false"
-     sysStaticAttributes="false"
+     backupGlobals="false"
+     backupStaticAttributes="false"
      verbose="true"
 >
     <testsuites>

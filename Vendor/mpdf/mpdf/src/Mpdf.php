@@ -82,8 +82,8 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 	var $smCapsScale;
 	var $smCapsStretch;
 
-	var $sysSubsFont;
-	var $sysSIPFont;
+	var $backupSubsFont;
+	var $backupSIPFont;
 	var $fonttrans;
 	var $debugfonts;
 	var $useAdobeCJK;
@@ -25724,12 +25724,12 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 			return 0;
 		}
 
-		// Try in sys subs font
-		if (!is_array($this->sysSubsFont)) {
-			$this->sysSubsFont = ["$this->sysSubsFont"];
+		// Try in backup subs font
+		if (!is_array($this->backupSubsFont)) {
+			$this->backupSubsFont = ["$this->backupSubsFont"];
 		}
 
-		foreach ($this->sysSubsFont as $bsfctr => $bsf) {
+		foreach ($this->backupSubsFont as $bsfctr => $bsf) {
 
 			if ($this->fonttrans[$bsf] == 'chelvetica' || $this->fonttrans[$bsf] == 'ctimes' || $this->fonttrans[$bsf] == 'ccourier') {
 				continue;
@@ -25760,7 +25760,7 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 				if ($char == 173 || $this->_charDefined($cw, $char) || ($char > 1536 && $char < 1791) || ($char > 2304 && $char < 3455 )) {
 					$l++;
 				} else {
-					if ($l == 0 && $bsfctr == (count($this->sysSubsFont) - 1)) { // Not found even in last sys font
+					if ($l == 0 && $bsfctr == (count($this->backupSubsFont) - 1)) { // Not found even in last backup font
 						$cont = mb_substr($writehtml_e, $start + 1);
 						$writehtml_e = mb_substr($writehtml_e, 0, $start + 1, 'UTF-8');
 						array_splice($writehtml_a, $writehtml_i + 1, 0, ['', $cont]);
@@ -25891,11 +25891,11 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 				}
 			}
 
-			// Check sys SIP font (defined in Config\FontVariables)
-			if (isset($this->sysSIPFont) && $this->sysSIPFont) {
+			// Check Backup SIP font (defined in Config\FontVariables)
+			if (isset($this->backupSIPFont) && $this->backupSIPFont) {
 
-				if ($this->currentfontfamily != $this->sysSIPFont) {
-					$font = $this->sysSIPFont;
+				if ($this->currentfontfamily != $this->backupSIPFont) {
+					$font = $this->backupSIPFont;
 				} else {
 					unset($cw);
 					return 0;
@@ -25912,7 +25912,7 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 					$prevFontFamily = $this->FontFamily;
 					$prevFontStyle = $this->currentfontstyle;
 					$prevFontSizePt = $this->FontSizePt;
-					$this->SetFont($this->sysSIPFont, '', '', false);
+					$this->SetFont($this->backupSIPFont, '', '', false);
 					$this->SetFont($prevFontFamily, $prevFontStyle, $prevFontSizePt, false);
 				}
 
@@ -25995,12 +25995,12 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 			}
 		}
 
-		// LASTLY TRY IN sys SUBS FONT
-		if (!is_array($this->sysSubsFont)) {
-			$this->sysSubsFont = ["$this->sysSubsFont"];
+		// LASTLY TRY IN BACKUP SUBS FONT
+		if (!is_array($this->backupSubsFont)) {
+			$this->backupSubsFont = ["$this->backupSubsFont"];
 		}
 
-		foreach ($this->sysSubsFont as $bsfctr => $bsf) {
+		foreach ($this->backupSubsFont as $bsfctr => $bsf) {
 			if ($this->currentfontfamily != $bsf) {
 				$font = $bsf;
 			} else {
@@ -26034,7 +26034,7 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 				if ($char == 173 || $this->_charDefined($cw, $char) || ($char > 1536 && $char < 1791) || ($char > 2304 && $char < 3455 )) {  // Arabic and Indic
 					$l++;
 				} else {
-					if ($l == 0 && $bsfctr == (count($this->sysSubsFont) - 1)) { // Not found even in last sys font
+					if ($l == 0 && $bsfctr == (count($this->backupSubsFont) - 1)) { // Not found even in last backup font
 						$cont = mb_substr($writehtml_e, $start + 1);
 						$writehtml_e = mb_substr($writehtml_e, 0, $start + 1);
 						array_splice($writehtml_a, $writehtml_i + 1, 0, ['', $cont]);

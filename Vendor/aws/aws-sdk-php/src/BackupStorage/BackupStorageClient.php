@@ -1,10 +1,10 @@
 <?php
-namespace Aws\sysStorage;
+namespace Aws\BackupStorage;
 
 use Aws\AwsClient;
 
 /**
- * This client is used to interact with the **AWS sys Storage** service.
+ * This client is used to interact with the **AWS Backup Storage** service.
  * @method \Aws\Result deleteObject(array $args = [])
  * @method \GuzzleHttp\Promise\Promise deleteObjectAsync(array $args = [])
  * @method \Aws\Result getChunk(array $args = [])
@@ -24,4 +24,4 @@ use Aws\AwsClient;
  * @method \Aws\Result startObject(array $args = [])
  * @method \GuzzleHttp\Promise\Promise startObjectAsync(array $args = [])
  */
-class sysStorageClient extends AwsClient {}
+class BackupStorageClient extends AwsClient {}
