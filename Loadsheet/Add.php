@@ -7,7 +7,7 @@ $cr=$_SESSION['id'];
 // echo var_dump($cr) ;
 $C_Date = date('Y-m-d/h:i:a');
 
-echo var_dump($C_Date) ;
+// echo var_dump($C_Date) ;
 
 if(isset($_POST["orderid"]) && isset($_POST["ord"]))
 {
