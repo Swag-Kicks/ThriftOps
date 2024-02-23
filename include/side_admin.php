@@ -316,7 +316,7 @@
       </div>
     </nav>
 <nav id="dept_6" class="none">
-      <div class="main-navbar p-t-80" id="side">
+<div class="main-navbar p-t-80" id="side">
         <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
         <div id="main-nav">           
           <ul class="nav-menu custom-scrollbar p-t-20"  id="myTab">
@@ -324,7 +324,7 @@
               <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
             </li>
             <br>
-            <li class="dropdown"><a class="nav-link" href="../Dashboard/Home.php"><span>Dashboard</span></a>
+            <li class="dropdown"><a class="nav-link" href="http://sys.thriftops.com/Dashboard/Home"><span>Dashboard</span></a>
               <!--<ul class="nav-submenu menu-content">-->
               <!--  <li><a href="index.html">Default</a></li>-->
               <!--  <li><a href="All_Product/all_product">All Products</a></li>-->
@@ -337,66 +337,66 @@
                 
             <!--  </ul>-->
             <!--</li>-->
-            <!--  <li class="dropdown"><a class="nav-link " href="../Vendor2/index"><span>Vendor</span></a>-->
+            <!--  <li class="dropdown"><a class="nav-link " href="http://sys.thriftops.com/Vendor2/index"><span>Vendor</span></a>-->
               <!--<ul class="nav-submenu menu-content">-->
-              <!--  <li><a href="../Vendor2/index">All Vendors</a></li>-->
+              <!--  <li><a href="http://sys.thriftops.com/Vendor2/index">All Vendors</a></li>-->
               <!--</ul>-->
             <!--</li>-->
-            <li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>
-              <ul class="nav-submenu menu-content">
-                  <li><a href="../Vendor2/index.php">Vendor</a></li>
-                <li id="purchase-requests" ><a href="../PR/PR_View.php">Purchase Requests</a></li>
-                <li><a href="../PO/PO_View.php">Purchase Orders</a></li>
-                <li><a href="../GRN/GRN_View.php">Goods Received Notes</a></li>
-                <li><a href="../Batches/Batch_View.php">Batches</a></li>
-              </ul>
-            </li>
+            <!--<li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Procurement</span></a>-->
+            <!--  <ul class="nav-submenu menu-content">-->
+            <!--      <li><a href="http://sys.thriftops.com/Vendor2/index">Vendor</a></li>-->
+            <!--    <li id="purchase-requests" ><a href="http://sys.thriftops.com/PR/PR_View">Purchase Requests</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/PO/PO_View">Purchase Orders</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/GRN/GRN_View">Goods Received Notes</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/Batches/Batch_View">Batches</a></li>-->
+            <!--  </ul>-->
+            <!--</li>-->
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Products</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../All_Product/View.php">All Products</a></li>
-                <li><a href="../Upload/addAttribute.php">Add Category</a></li>
-                <!--<li><a href="../ShopifyPush/addProduct">Add Product</a></li>-->
-                <li><a href="../Upload/new.php">Product Listing</a></li>
-                <!--<li><a href="../All_Product/Qc_reject">QC Rejected</a></li>-->
+                <li><a href="http://sys.thriftops.com/All_Product/View">All Products</a></li>
+                <!--<li><a href="http://sys.thriftops.com/Upload/addAttribute.php">Add Category</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/ShopifyPush/addProduct">Add Product</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/Upload/new.php">Product Listing</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/All_Product/Qc_reject">QC Rejected</a></li>-->
               </ul>
             </li>
-            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>
-              <ul class="nav-submenu menu-content">
-                <li><a href="../ord/View.php">All Orders</a></li>
-                <li><a href="../Booking/View.php">Booking</a></li>
-                <li><a href="../Abandoned/View.php">Abandoned Carts</a></li>
-              </ul>
-            </li>
+            <!--<li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Orders</span></a>-->
+            <!--  <ul class="nav-submenu menu-content">-->
+            <!--    <li><a href="http://sys.thriftops.com/ord/View">All Orders</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/Booking/View">Booking</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/Abandoned/View">Abandoned Carts</a></li>-->
+            <!--  </ul>-->
+            <!--</li>-->
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Inventory</span></a>
               <ul class="nav-submenu menu-content">
                   
-                <li><a href="../Warehouse/View">Warehouses</a></li>
-                <!--<li><a href="../Warehouse/View_Allocation">Item Allocation</a></li>-->
-                <li><a href="../Induction/New.php">Induction</a></li>
-                <li><a href="../Pick/index.php">Pick List</a></li>
+                <li><a href="http://sys.thriftops.com/Warehouse/View">Warehouses</a></li>
+                <!--<li><a href="http://sys.thriftops.com/Warehouse/View_Allocation">Item Allocation</a></li>-->
+                <li><a href="http://sys.thriftops.com/Induction/New">Induction</a></li>
+                <li><a href="http://sys.thriftops.com/Pick/index">Pick List</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
-                <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="http://sys.thriftops.com/Receiving/index.php">Pack List</a></li>
+                <li><a href="http://listing.thriftops.com/Loadsheetnew/Loadsheet">Loadsheet</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
-              <ul class="nav-submenu menu-content">
-                <li><a href="../Return/View.php">All Return</a></li>
-                <li><a href="../Items_Return/index.php">Returning Items</a></li>
-                <li><a href="../Return/refunds">Refunds</a></li>
-              </ul>
-            </li>
+            <!--<li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>-->
+            <!--  <ul class="nav-submenu menu-content">-->
+            <!--    <li><a href="http://sys.thriftops.com/Return/View.php">All Return</a></li>-->
+            <!--    <li><a href="http://sys.thriftops.com/Items_Return/index.php">Returning Items</a></li>-->
+            <!--    <li><a href="https://backup.thriftops.com/Return/refunds">Refunds</a></li>-->
+            <!--  </ul>-->
+            <!--</li>-->
            <!--<li  class="dropdown"><a class="nav-link menu-title  " href="javascript:void(0)"><span>Reports</span></a>-->
            <!--   <ul class="nav-submenu menu-content">-->
-           <!--     <li><a href="../Dashboard2/PnL.php">PNL</a></li>-->
-           <!--     <li><a href="../Dashboard2/hvcdb.php">HVC</a></li>-->
-           <!--     <li><a href="../Dashboard2/ordersreport.php">Orders by Couriers</a></li>-->
-                <!--<li><a href="../PO/PO_View">Purchase Orders</a></li>-->
-                <!--<li><a href="../GRN/GRN_View">Goods Received Notes</a></li>-->
-                <!--<li><a href="../Batches/Batch_View">Batches</a></li>-->
+           <!--     <li><a href="http://sys.thriftops.com/Dashboard2/PnL.php">PNL</a></li>-->
+           <!--     <li><a href="http://sys.thriftops.com/Dashboard2/hvcdb.php">HVC</a></li>-->
+           <!--     <li><a href="http://sys.thriftops.com/Dashboard2/ordersreport.php">Orders by Couriers</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/PO/PO_View">Purchase Orders</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/GRN/GRN_View">Goods Received Notes</a></li>-->
+                <!--<li><a href="http://sys.thriftops.com/Batches/Batch_View">Batches</a></li>-->
            <!--   </ul>-->
            <!-- </li>-->
             <!--<li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Tracking</span>&nbsp;&nbsp;<span class="badge badge-primary">Coming Soon</span></a>-->
