@@ -73,7 +73,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -193,7 +193,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -379,7 +379,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -495,7 +495,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -590,7 +590,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -685,7 +685,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><span>Returns</span></a>
@@ -745,7 +745,7 @@
             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"></i><span>Dispatch</span></a>
               <ul class="nav-submenu menu-content">
                 <li><a href="../Receiving/index.php">Pack List</a></li>
-                <li><a href="../Loadsheet/Loadsheet.php">Loadsheet</a></li>
+                <li><a href="https://listing.thriftops.com/Loadsheetnew/Loadsheet.php">Loadsheet</a></li>
               </ul>
             </li>
           </ul>
