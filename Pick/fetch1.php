@@ -11,7 +11,7 @@ if(isset($_SESSION['id']) && $_SESSION['id'] == true)
 {
    $cr=$_SESSION['id'];
    
-   $pr="Select * from User Where Dept_ID=13 AND User_ID='$cr' OR Dept_ID=16 AND User_ID='$cr' OR Dept_ID=3 AND User_ID='$cr'";
+   $pr="Select * from User Where Dept_ID=13 AND User_ID='$cr' OR Dept_ID=16 AND User_ID='$cr' OR Dept_ID=3 AND User_ID='$cr' OR Dept_ID=6 AND User_ID='$cr'";
     $resu2 = mysqli_num_rows( mysqli_query($mysql, $pr));
     if($resu2<1)
     {
