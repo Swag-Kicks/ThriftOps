@@ -2,12 +2,12 @@
 session_start();
  include_once("../include/mysql_connection.php");
 error_reporting(0);
-if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isset($_GET['SKU']) )
+if(isset($_GET['Brand']) && isset($_GET['Size']) && isset($_GET['Cond']) && isset($_GET['Type']) && isset($_GET['SKU']) )
 {
 
     //Values
     $brand = $_GET['Brand'];
-    $Type = $_GET['shoetype'];
+    $Type = $_GET['Type'];
     $size = (int)$_GET['Size'];
     $cond = $_GET['Cond'];
     $sku = $_GET['SKU'];
