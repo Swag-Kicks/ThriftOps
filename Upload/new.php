@@ -319,8 +319,8 @@
                                     <h5>Original Laces</h5>
                                     <select class="form-control form-select" id="Olaces" name="shoetype"  onchange="predict2();"   required>
                                        <option selected="true" disabled="disabled">-Original Laces</option>
-                                       <option value="0">Yes</option>
-                                       <option value="1">No</option>
+                                       <option value="0">Normal</option>
+                                       <option value="1">Premium</option>
                                     </select>
                                  </div>
                               </div>
