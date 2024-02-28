@@ -310,21 +310,17 @@
                                        <option value="0">Normal</option>
                                        <option value="1">Premium</option>
                                     </select>
-                                 </div>
-                                 <div class="mb-3" id="shoetypediv">
                                     <h5>Original Sole</h5>
                                     <select class="form-control form-select" id="Osole" name="shoetype"  onchange="predict2();"   required>
-                                       <option selected="true" disabled="disabled">-SELECT Shoe Type</option>
+                                       <option selected="true" disabled="disabled">-Original Sole</option>
                                        <option value="0">Yes</option>
                                        <option value="1">No</option>
                                     </select>
-                                 </div>
-                                 <div class="mb-3" id="shoetypediv">
                                     <h5>Original Laces</h5>
                                     <select class="form-control form-select" id="Olaces" name="shoetype"  onchange="predict2();"   required>
-                                       <option selected="true" disabled="disabled">-SELECT Shoe Type</option>
-                                       <option value="0">Normal</option>
-                                       <option value="1">Premium</option>
+                                       <option selected="true" disabled="disabled">-Original Laces</option>
+                                       <option value="0">Yes</option>
+                                       <option value="1">No</option>
                                     </select>
                                  </div>
                               </div>
