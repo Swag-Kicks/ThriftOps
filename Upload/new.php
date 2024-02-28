@@ -305,22 +305,22 @@
                                  </div>
                                  <div class="mb-3" id="shoetypediv">
                                     <h5>Shoe Type</h5>
-                                    <select class="form-control form-select" id="shoetype" name="shoetype"  onchange="predict2();"   required>
+                                    <select class="form-control form-select" id="shoetype" name="shoetype"  onchange="predict2();" required>
                                        <option selected="true" disabled="disabled">-SELECT Shoe Type</option>
                                        <option value="0">Normal</option>
                                        <option value="1">Premium</option>
                                     </select>
-                                    <h5>Original Sole</h5>
-                                    <select class="form-control form-select" id="Osole" name="shoetype"  onchange="predict2();"   required>
-                                       <option selected="true" disabled="disabled">-Original Sole</option>
-                                       <option value="0">Yes</option>
-                                       <option value="1">No</option>
+                                    <label class="col-form-label pt-0">Original Sole</label>
+                                    <select class="form-control form-select  "   onchange="iDetails();button();" name="sole">
+                                       <option value=" ">Original Sole</option>
+                                       <option value="Yes">Yes</option>
+                                       <option value="No">No</option>
                                     </select>
-                                    <h5>Original Laces</h5>
-                                    <select class="form-control form-select" id="Olaces" name="shoetype"  onchange="predict2();"   required>
-                                       <option selected="true" disabled="disabled">-Original Laces</option>
-                                       <option value="0">Normal</option>
-                                       <option value="1">Premium</option>
+                                    <label class="col-form-label pt-0">Original Laces</label>
+                                    <select class="form-control form-select  "   onchange="iDetails();button();" name="laces">
+                                       <option value=" ">Original Laces</option>
+                                       <option value="Yes">Yes</option>
+                                       <option value="No">No</option>
                                     </select>
                                  </div>
                               </div>
@@ -654,6 +654,8 @@ $('#shoetypediv').hide();
         var weight = $("input[name=weight]").val();
         var price = $("input[name=price]").val();
         var gender = $("select[name=gender]").val();
+        var sole = $("select[name=sole]").val();
+        var laces = $("select[name=laces]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
         var location = $("input[name=location]").val();
@@ -732,6 +734,8 @@ $('#shoetypediv').hide();
            var producttype = $("input[name=producttype]").val();
            var material = $("input[name=material]").val();
        var gender = $("select[name=gender]").val();
+       var sole = $("select[name=sole]").val();
+        var laces = $("select[name=laces]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
         var location = $("input[name=location]").val();
@@ -762,6 +766,8 @@ $('#shoetypediv').hide();
    form.append("producttype", producttype);
    form.append("sku", sku);
    form.append("gender", gender);
+   form.append("sole", sole);
+   form.append("laces", laces);
     form.append("status", status);
    form.append("image1", image1);
    form.append("image2", image2);
@@ -891,6 +897,8 @@ $('#shoetypediv').hide();
          var weight = $("input[name=weight]").val();
            var price = $("input[name=price]").val();
        var gender = $("select[name=gender]").val();
+       var sole = $("select[name=sole]").val();
+       var laces = $("select[name=laces]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=Warehouse]").val();
         var location = $("input[name=location]").val();
@@ -932,6 +940,8 @@ $('#shoetypediv').hide();
    
     form.append("war", warehouse);
    form.append("gender", gender);
+   form.append("sole", sole);
+   form.append("laces", laces);
     form.append("status", status);
    form.append("image1", image1);
    form.append("image2", image2);
@@ -996,6 +1006,8 @@ $('#shoetypediv').hide();
          var weight = $("input[name=weight]").val();
            var price = $("input[name=price]").val();
        var gender = $("select[name=gender]").val();
+       var sole = $("select[name=sole]").val();
+       var laces = $("select[name=laces]").val();
         var sku = $("#SKU").val();
         var warehouse = $("select[name=warehouse]").val();
         var location = $("input[name=location]").val();
@@ -1027,7 +1039,8 @@ $('#shoetypediv').hide();
    form.append("price", price);
    form.append("sku", sku);
    form.append("gender", gender);
-   
+   form.append("sole", sole);
+   form.append("laces", laces);
    form.append("image1", image1);
    form.append("image2", image2);
    form.append("image3", image3);

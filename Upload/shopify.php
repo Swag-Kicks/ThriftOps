@@ -21,6 +21,8 @@ $color=$_POST['color'];
 $producttype=$_POST['producttype'];
 // $vendor=$_POST['vendor'];
 $gender=$_POST['gender'];
+$sole=$_POST['sole'];
+$laces=$_POST['laces'];
 $brand=$_POST['brand'];
 $condi=$_POST['condition'];
 $P_Name=$_POST['title'];
@@ -219,6 +221,18 @@ else
                             "namespace" => "custom",
                             "key" => "brands",
                             "value" => $brand,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "Original_sole",
+                            "value" => $sole,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "Original_laces",
+                            "value" => $laces,
                             "type" =>"single_line_text_field"
                         )
                     
