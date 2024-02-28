@@ -304,7 +304,7 @@
                                     </select>
                                  </div>
                                  <div class="mb-3" id="shoetypediv">
-                                    <h5>Shoe Type</h5>
+                                    <h5>Shoe ttttttttttttttttttt</h5>
                                     <select class="form-control form-select" id="shoetype" name="shoetype"  onchange="predict2();" required>
                                        <option selected="true" disabled="disabled">-SELECT Shoe Type</option>
                                        <option value="0">Normal</option>
