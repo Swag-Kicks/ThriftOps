@@ -30,6 +30,8 @@ $subCat=$_POST['subCat'];
 $status=$_POST['status'];
 $size=$_POST['size'];
 $weight=$row['weight'];
+$sole=$_POST['sole'];
+$laces=$_POST['laces'];
  
  
  
@@ -218,6 +220,18 @@ else
                         array(
                             "namespace" => "custom",
                             "key" => "brands",
+                            "value" => $brand,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "original_sole",
+                            "value" => $brand,
+                            "type" =>"single_line_text_field"
+                        ),
+                        array(
+                            "namespace" => "custom",
+                            "key" => "original_laces",
                             "value" => $brand,
                             "type" =>"single_line_text_field"
                         )
