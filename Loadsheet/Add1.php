@@ -8,8 +8,8 @@ use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
 // Replace with your AWS credentials
-$aws_access_key = 'AKIA442OQIPQ2IZFHX7H';
-$aws_secret_key = 'GgxxAE+7RcJYsGuk2pztMZYHMcJwlXda7Hw87d6Q';
+$aws_access_key = 'AKIA442OQIPQZ5EDQSFG';
+$aws_secret_key = 'kEYOpKEgPyrLyKAt7yDN64JCYbOtPsXZSLVYZlVH';
 $bucket_name = 'thriftops';
 // Create an S3 client
 $s3 = new S3Client([

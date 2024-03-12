@@ -1,6 +1,6 @@
 <?php
-// $accessKey = 'AKIA442OQIPQ2IZFHX7H';
-// $secretKey = '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';
+// $accessKey = 'AKIA442OQIPQZ5EDQSFG';
+// $secretKey = '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';
 // $bucketName = 'thriftops';
 // $objectKey = 'products/'; // Change this to the desired object key
 
@@ -55,8 +55,8 @@
 
 
 date_default_timezone_set('Asia/Kolkata');
-$accessKey = 'AKIA442OQIPQ2IZFHX7H';
-$secretKey = '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';
+$accessKey = 'AKIA442OQIPQZ5EDQSFG';
+$secretKey = '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';
 $bucketName = 'thriftops';
 $objectKey = 'products/'; // Change this to the desired object key
 
