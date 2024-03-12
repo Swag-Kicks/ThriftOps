@@ -743,6 +743,7 @@ for ( $i=0 ; $i < sizeof($attri); $i++)
    
    
    function addShopify(){
+      $('#Sbutton').addClass("disabled");
     //   $('#Sbutton').prop("disabled", true);
        
     //   document.getElementById('Sbutton').innerHTML= `Publishing  <i class="fa fa-circle-o-notch fa-spin"></i>`
@@ -1281,7 +1282,7 @@ for ( $i=0 ; $i < sizeof($attri); $i++)
        $.ajax(settings).done(function (response) {
          var data = JSON.parse(response);
          console.log(data);
-        //   document.getElementById('Select1').innerHTML += `<option selected="true" disabled="disabled">-SELECT SUB-CATEGORY</option>`;
+          document.getElementById('Select1').innerHTML += `<option selected="true" disabled="disabled">-SELECT SUB-CATEGORY</option>`;
         
        
          for (var i = 0; i < data.length; i++) {
