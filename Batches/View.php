@@ -77,6 +77,7 @@ if(isset($id))
     
     <form action="" method="POST" class="View">
         <div class="row">
+		<p>testing ali</p>
     <?php
         if (mysqli_num_rows($result) > 0) {
         ?>
